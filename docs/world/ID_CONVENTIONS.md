@@ -1,6 +1,6 @@
-# Convenções iniciais de IDs
+# Convenções de IDs
 
-Este documento organiza somente as regras já estabelecidas em `Base/GDD.md`. Convenções definitivas, schemas e validadores pertencem à Fase 1.
+Este documento resume as regras de ID aplicáveis ao contrato comum da Fase 1. A definição completa de formato de arquivo, referências e semântica está em [`CONTENT_SCHEMA.md`](CONTENT_SCHEMA.md); `Base/GDD.md` continua sendo a fonte canônica.
 
 ## Formato
 
@@ -20,10 +20,23 @@ Regras obrigatórias:
 - nunca reciclar um ID removido;
 - permitir que o nome visível mude sem quebrar referências;
 - fazer cada ID representar uma única entidade;
-- usar nomes de arquivo previsíveis e coerentes com o ID;
 - tratar qualquer referência ausente como erro;
 - não reutilizar IDs de entidades removidas;
 - nunca usar nomes visíveis como chave permanente.
+
+## ID e nome de arquivo
+
+Para entidades persistentes, a pasta determina a categoria, o front matter contém o ID completo e o arquivo usa somente o slug estável após o primeiro ponto. O prefixo não é repetido no arquivo.
+
+| ID | Caminho correto | Caminho incorreto |
+|---|---|---|
+| `npc.lysandra_vale` | `npcs/lysandra_vale.md` | `npcs/npc.lysandra_vale.md` |
+| `spell.purifying_light` | `magic/spells/purifying_light.md` | `magic/spells/spell_purifying_light.md` |
+| `faction.order_of_dawn_healers` | `factions/order_of_dawn_healers.md` | `factions/Ordem_das_Curandeiras.md` |
+
+Manifestos, índices, READMEs e arquivos em `_templates/` são exceções explícitas: eles não representam uma entidade persistente e não recebem nome derivado de ID.
+
+Uma mudança cosmética de nome visível nunca autoriza renomear o ID ou o arquivo. Se uma mudança de ID for legitimamente necessária, ela exigirá migração documentada futura. Conteúdo `deprecated` mantém seu ID reservado; removê-lo do uso ativo não permite reciclá-lo.
 
 ## Exemplos válidos
 

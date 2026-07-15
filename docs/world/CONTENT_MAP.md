@@ -1,11 +1,13 @@
 # Mapa de conteúdo de Eldrath
 
-Este mapa registra a estrutura editorial reservada na Fase 0. As pastas existem para organizar trabalhos futuros; sua existência não significa que entidades, lore ou contratos de dados estejam concluídos.
+Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e o contrato comum da Fase 1 estão concluídos; as pastas de categorias continuam vazias e nenhum schema especializado, entidade ou lore do mundo foi criado.
 
 | Caminho | Categoria | Finalidade | Tipo de conteúdo futuro | Formato planejado | Dependências | Fase responsável | Estado atual |
 |---|---|---|---|---|---|---|---|
-| `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML, a definir | GDD e contratos editoriais | Fases 1–6 | estrutura criada |
-| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | Markdown com front matter e/ou YAML, a definir | convenções, schemas editoriais e referências cruzadas | Fase 1 | aguardando definição |
+| `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML | GDD e contrato editorial comum | Fases 1–6 | manifesto criado; sem entidades |
+| `content/worlds/eldrath/manifest.yaml` | manifesto editorial | Identificar o pacote, seus caminhos e categorias reconhecidas. | metadados do pacote, sem lore | YAML | GDD e contrato editorial comum | Fase 1 | criado |
+| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | Markdown com front matter YAML | contrato editorial comum | Fase 1 | `README.md` e `base_entity.md` criados; especializados não iniciados |
+| `docs/world/CONTENT_SCHEMA.md` | contrato comum | Definir regras compartilhadas de formato, IDs, referências e revisão. | contrato editorial documental | Markdown | GDD | Fase 1 | criado e concluído |
 | `content/worlds/eldrath/calendars/` | calendários | Representar calendário, eras e datas do mundo. | dados temporais e explicações | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/languages/` | idiomas | Registrar idiomas relevantes de Eldrath. | dados linguísticos e lore | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/cultures/` | culturas | Registrar culturas, valores, normas e contexto social. | dados culturais e lore | Markdown estruturado e/ou YAML, a definir | identidade, calendário e idiomas | Fase 2 | não iniciado |
@@ -32,11 +34,11 @@ Este mapa registra a estrutura editorial reservada na Fase 0. As pastas existem 
 | `content/worlds/eldrath/magic/artifacts/` | artefatos | Registrar objetos mágicos únicos ou relevantes. | dados mecânicos, proveniência e lore | Markdown estruturado e/ou YAML, a definir | escolas, efeitos, itens e história | Fase 4 | não iniciado |
 | `content/worlds/eldrath/magic/effects/` | efeitos mágicos | Padronizar efeitos mecânicos referenciáveis. | estados, alterações, duração e condições | Markdown estruturado e/ou YAML, a definir | contratos editoriais e regras de magia | Fase 4 | não iniciado |
 
-## Formatos e limites desta fase
+## Formatos e limites da fase atual
 
 - Markdown será usado para lore, contexto e explicações legíveis por pessoas.
 - YAML ou front matter YAML será usado para dados estruturados que precisem ser lidos e validados futuramente.
-- Os formatos definitivos, schemas editoriais e templates serão criados somente na Fase 1.
-- Nenhum schema completo é definido ou pressuposto neste documento.
-- `world.yaml` e `kingdom.yaml` serão criados em tarefas futuras de suas etapas específicas; eles não existem na Fase 0.
+- O contrato comum, o manifesto e o template genérico foram criados na Fase 1.
+- Schemas e templates especializados ainda não foram iniciados.
+- `world.yaml` e `kingdom.yaml` serão criados em tarefas futuras de suas etapas específicas; eles ainda não existem.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

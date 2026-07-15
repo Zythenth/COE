@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. Ela registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial e o contrato comum da Fase 1 foram concluídos; templates especializados são a próxima atividade. Nenhuma etapa de construção do mundo foi iniciada. Ela registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;

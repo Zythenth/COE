@@ -1,6 +1,8 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reunirá o pacote autoral que define as condições iniciais de Eldrath. Na Fase 0 ela contém somente esta orientação e a estrutura vazia das categorias; nenhuma entidade, lore nova, schema, template, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e o contrato comum de autoria, além da estrutura vazia das categorias; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+
+O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
 ## Conteúdo inicial e estado simulado
 
@@ -10,9 +12,9 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 
 ## Responsabilidade das pastas
 
-| Pasta | Responsabilidade futura | Estado na Fase 0 |
+| Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | aguardando definição na Fase 1 |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | `README.md` e template genérico criados; especializados não iniciados |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -38,7 +40,7 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 | `magic/artifacts/` | Artefatos, efeitos, proveniência e história. | não iniciado |
 | `magic/effects/` | Efeitos mágicos estruturados e referenciáveis. | não iniciado |
 
-`_templates/` não deve receber modelos improvisados. Seus arquivos serão definidos na Fase 1 depois das convenções definitivas, schemas editoriais e regras de referências cruzadas.
+`_templates/` contém o template genérico [`base_entity.md`](_templates/base_entity.md), que reúne apenas os campos comuns. Um template especializado futuro parte dele e adiciona somente os campos documentados para uma categoria. A pasta nunca é conteúdo real e deve ser excluída pelo futuro carregador. Quando uma pasta-folha recebe conteúdo real, seu `.gitkeep` deve ser removido; por isso `_templates/.gitkeep` foi removido ao receber seus arquivos reais de template.
 
 ## IDs e referências
 
@@ -49,11 +51,11 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 - Uma referência ausente é erro; não deve ser resolvida por suposição.
 - IDs removidos não são reciclados e um ID representa apenas uma entidade.
 
-As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/world/ID_CONVENTIONS.md).
+As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/world/ID_CONVENTIONS.md) e no [contrato editorial comum](../../../docs/world/CONTENT_SCHEMA.md).
 
 ## Dados estruturados e lore
 
-Markdown estruturado e YAML serão usados futuramente conforme o tipo de entidade. Front matter YAML poderá armazenar dados conhecidos pelo sistema, enquanto o corpo Markdown poderá registrar lore e explicações. Os formatos definitivos pertencem à Fase 1.
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas especializados ainda pertencem às próximas tarefas da Fase 1.
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -73,8 +75,9 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 5. [`docs/world/CONTENT_MAP.md`](../../../docs/world/CONTENT_MAP.md), finalidade e dependências das categorias;
 6. [`docs/world/CONTENT_STATUS.md`](../../../docs/world/CONTENT_STATUS.md), metas e progresso real;
 7. este README, para as regras locais do pacote de Eldrath;
-8. templates e contratos editoriais, somente depois que forem criados e aprovados na Fase 1.
+8. [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md), contrato comum da Fase 1;
+9. [`manifest.yaml`](manifest.yaml) e os templates, conforme a categoria.
 
 ## Fase e estado atuais
 
-A fase atual é a **Fase 0 — Fundação editorial**. A estrutura foi criada, mas todos os grupos de conteúdo estão não iniciados; `_templates/` aguarda a definição dos contratos editoriais. Nenhuma pasta deve ser preenchida apenas para parecer completa.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** foi iniciada. O contrato comum, o manifesto editorial e o template genérico foram concluídos; templates e schemas especializados ainda não começaram. O ciclo editorial é `draft → in_review → approved → deprecated`; `approved` exige revisão explícita e referências resolvidas. Todas as categorias de entidade permanecem vazias. Nenhuma entidade real existe ainda e nenhuma pasta deve ser preenchida apenas para parecer completa.
