@@ -230,11 +230,11 @@ Cada entrada de `extraction_methods` ou `production_methods` permite `method_id`
 | Prefixo e arquivo | `profession.{slug}`; arquivo `{slug}.md` |
 | Dependências | contrato comum; competências, atributos, recursos, itens, assentamentos, instituições, facções, leis e magia quando existirem |
 
-**Campos.** Além dos campos comuns: `profession_category_key`, `required_skill_keys`, `recommended_attribute_keys`, `training_paths`, `rank_keys`, `typical_tasks`, `production_profiles`, `required_item_ids`, `consumed_resource_ids`, `produced_resource_ids`, `produced_item_ids`, `workplace_type_keys`, `institution_ids`, `faction_ids`, `legal_requirements`, `magical_requirements`, `risks`, `social_status`, `income_model` e `references`.
+**Campos.** Além dos campos comuns: `profession_category_key`, `required_skill_keys`, `recommended_attribute_keys`, `training_paths`, `rank_keys`, `typical_tasks`, `production_profiles`, `required_item_ids`, `consumed_resource_ids`, `produced_resource_ids`, `produced_item_ids`, `workplace_type_keys`, `legal_requirements`, `magical_requirements`, `risks`, `social_status`, `income_model` e `references`.
 
 `rank_keys` usa somente os estágios aplicáveis entre `apprentice`, `worker`, `specialist`, `master`, `leader` e `retired`. A ordem conceitual vem do GDD; uma profissão não precisa usar todos os estágios. Esses ranks descrevem progressão profissional e nunca substituem `content_status`.
 
-Cada `training_paths` usa `path_id`, `path_type_key`, `entry_requirement_keys`, `required_profession_ids`, `institution_ids`, `duration` como quantidade de tempo, `applicable_rank_keys`, `condition_keys` e `notes`. `typical_tasks` usa `task_key`, `applicable_rank_keys`, `required_skill_keys`, `required_item_ids`, `condition_keys`, `duration` e `notes`.
+Cada `training_paths` usa `path_id`, `path_type_key`, `entry_requirement_keys`, `required_profession_ids`, `training_faction_ids`, `duration` como quantidade de tempo, `applicable_rank_keys`, `condition_keys` e `notes`. Instituições de formação são sempre facções e usam IDs `faction.*`; a referência registra requisito de um caminho específico, não uma lista inversa de todas as facções ligadas à profissão. `typical_tasks` usa `task_key`, `applicable_rank_keys`, `required_skill_keys`, `required_item_ids`, `condition_keys`, `duration` e `notes`.
 
 Cada `production_profiles` usa `profile_id`, `applicable_rank_keys`, `production_flows`, `consumption_flows`, `condition_keys`, `modifiers` e `notes`; fluxos e modificadores seguem os contratos compartilhados. As listas resumidas `consumed_resource_ids`, `produced_resource_ids` e `produced_item_ids` declaram capacidades da definição e precisam concordar com os perfis quando ambos forem usados.
 
@@ -242,9 +242,11 @@ Cada `production_profiles` usa `profile_id`, `applicable_rank_keys`, `production
 
 `income_model` permite `model_keys`, `payment_basis_key`, `reference_compensation` pelo contrato de preço, `condition_keys` e `notes`. A referência é editorial; salário atual, renda efetiva, riqueza e contratos de trabalho pertencem ao estado da simulação.
 
-**Corpo Markdown.** `Visão geral`, `Função social`, `Responsabilidades`, `Formação`, `Progressão`, `Tarefas`, `Ferramentas`, `Recursos`, `Produção`, `Riscos`, `Relação com magia`, `Instituições`, `Prestígio` e `Observações editoriais`.
+Associações institucionais gerais são derivadas de `faction.profession_ids`, conforme [SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). A profissão não mantém listas gerais concorrentes de instituições ou facções.
 
-**Proibições.** NPCs e titulares atuais não são listados. Vagas pertencem ao estado do assentamento; competência atual pertence ao NPC; profissão não concede personalidade. Licença ou filiação podem ser requisitos explícitos. Produção usa os contratos compartilhados.
+**Corpo Markdown.** `Visão geral`, `Função social`, `Responsabilidades`, `Formação`, `Progressão`, `Tarefas`, `Ferramentas`, `Recursos`, `Produção`, `Riscos`, `Relação com magia`, `Instituições derivadas`, `Prestígio` e `Observações editoriais`.
+
+**Proibições.** NPCs e titulares atuais não são listados. Cargos institucionais pertencem a `faction.roles` e não são ranks profissionais. Vagas pertencem ao estado do assentamento; competência atual pertence ao NPC; profissão não concede personalidade. Licença ou filiação podem ser requisitos explícitos. Produção usa os contratos compartilhados. Listas gerais de facções associadas são derivadas, não armazenadas na profissão.
 
 ## 14. `item`
 
@@ -283,7 +285,7 @@ Capacidade, infraestrutura e relações iniciais são conteúdo. Produção, con
 
 ## 16. Relação com `route`
 
-Rotas conectam lugares e podem carregar comércio agregado futuramente. `distance` e `base_travel_time` usam `{ value, unit_key }`; `toll.money` usa o contrato monetário. Capacidade e condição iniciais podem iniciar o estado, mas carga, tráfego, risco, controle e pedágio atuais pertencem à simulação. Uma rota não repete definições de unidade, moeda, recurso ou item.
+Rotas conectam lugares e podem carregar comércio agregado futuramente. `distance` e `base_travel_time` usam `{ value, unit_key }`; `initial_state.toll.money` usa o contrato monetário. `initial_state.toll.collector_id` usa `faction.*` para a autoridade institucional de cobrança inicial ou `npc.*` para o cobrador inicialmente designado, sem atribuir controle institucional da rota. Capacidade, condição e pedágio iniciais podem iniciar o estado, mas carga, tráfego, risco, controle e pedágio atuais pertencem à simulação. Uma rota não repete definições de unidade, moeda, recurso ou item.
 
 ## 17. Relação com `kingdom`
 

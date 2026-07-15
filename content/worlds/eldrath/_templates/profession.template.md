@@ -17,7 +17,7 @@ training_paths:
     path_type_key: "{{training_path_type_key}}"
     entry_requirement_keys: []
     required_profession_ids: []
-    institution_ids: []
+    training_faction_ids: []
     duration:
       value: null
       unit_key: null
@@ -68,8 +68,6 @@ consumed_resource_ids: []
 produced_resource_ids: []
 produced_item_ids: []
 workplace_type_keys: []
-institution_ids: []
-faction_ids: []
 legal_requirements:
   - requirement_key: "{{legal_requirement_key}}"
     jurisdiction_id: null
@@ -161,9 +159,9 @@ income_model:
 
 {{magic_relation}}
 
-## Instituições
+## Instituições derivadas
 
-{{institutions}}
+{{derived_institutions}}
 
 ## Prestígio
 

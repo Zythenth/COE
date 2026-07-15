@@ -24,11 +24,6 @@ initial_state:
   magical_tension: null
 magical_traditions:
   - "{{magical_tradition_key}}"
-faction_influence:
-  - faction_id: "{{faction_id}}"
-    influence: null
-    visibility: "{{visibility_key}}"
-    notes: null
 resource_presence:
   - resource_id: "{{resource_id}}"
     abundance: "{{abundance_key}}"
@@ -70,9 +65,9 @@ reputation: null
 
 {{magical_traditions_text}}
 
-## Influência política
+## Contexto político derivado
 
-{{political_influence}}
+{{derived_political_context}}
 
 ## Perigos
 

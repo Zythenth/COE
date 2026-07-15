@@ -14,7 +14,6 @@ region_id: "{{region_id}}"
 settlement_id: null
 parent_location_id: null
 location_type: "{{location_type}}"
-controller_faction_id: null
 access:
   access_level: "{{access_level}}"
   requirements: []
@@ -60,9 +59,9 @@ initial_visibility:
 
 {{access_text}}
 
-## Controlador
+## Controle institucional derivado
 
-{{controller}}
+{{derived_institutional_control}}
 
 ## Características
 

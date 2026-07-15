@@ -1,6 +1,6 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos e de economia material e pelo contrato conceitual de intervenção, percepção e conhecimento; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material e de sociedade, instituições e lei, além do contrato conceitual de intervenção, percepção e conhecimento; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
@@ -18,7 +18,7 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos e três de economia material disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material e quatro de sociedade, instituições e lei disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -27,14 +27,14 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 | `locations/` | Locais especiais, naturais, urbanos, ocultos e sistêmicos. | schema e template disponíveis; pasta real vazia |
 | `routes/` | Conexões entre lugares, deslocamento, custos e riscos. | schema e template disponíveis; pasta real vazia |
 | `npcs/` | Fichas dos NPCs-semente e suas condições iniciais. | não iniciado |
-| `families/` | Famílias, casas, parentesco, herança e memória coletiva. | não iniciado |
-| `factions/` | Facções, instituições, cargos, recursos e objetivos coletivos. | não iniciado |
-| `religions/` | Tradições religiosas, cultos e seus contextos sociais. | não iniciado |
+| `families/` | Famílias, linhagens, casas dinásticas, herança familiar e legado. | schema e template disponíveis; pasta real vazia; zero famílias |
+| `factions/` | Facções, instituições, cargos, autoridade, presença inicial e objetivos coletivos. | schema e template disponíveis; pasta real vazia; zero facções |
+| `religions/` | Tradições religiosas, cultos como crença, doutrinas, práticas e diversidade. | schema e template disponíveis; pasta real vazia; zero religiões |
 | `professions/` | Profissões, tarefas, competências, status e progressão. | schema e template disponíveis; pasta real vazia; zero profissões |
 | `creatures/` | Espécies, habitat, comportamento, ecologia e relação com magia. | não iniciado |
 | `resources/` | Recursos materiais e arcanos relevantes para a vida do reino. | schema e template disponíveis; pasta real vazia; zero recursos |
 | `items/` | Definições de itens relevantes, propriedades, uso e proveniência. | schema e template disponíveis; pasta real vazia; zero itens |
-| `laws/` | Leis gerais, mágicas e detalhadas por jurisdição. | não iniciado |
+| `laws/` | Leis gerais, mágicas e detalhadas por jurisdição, vigência e autoridade. | schema e template disponíveis; pasta real vazia; zero leis |
 | `diseases/` | Doenças, transmissão, sintomas, gravidade e tratamentos. | não iniciado |
 | `events/` | Eventos históricos e eventos-base que compõem o estado inicial. | não iniciado |
 | `rumors/` | Rumores iniciais ou gatilhos, origens e referências causais. | não iniciado |
@@ -59,7 +59,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos e de economia material e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md).
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material e de sociedade, instituições e lei e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md) e o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -79,6 +79,16 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 
 Os templates [`resource.template.md`](_templates/resource.template.md), [`profession.template.md`](_templates/profession.template.md) e [`item.template.md`](_templates/item.template.md) materializam somente os contratos de autoria. As pastas `resources/`, `professions/` e `items/` continuam contendo apenas seus arquivos `.gitkeep`.
 
+## Religião, instituição, família e lei
+
+- **Religião** define tradição de crença, doutrina e prática; uma organização religiosa é `faction.*`, e a facção referencia a religião.
+- **Facção** define organização, cargos, autoridade, políticas e presença territorial inicial; membros e ocupantes atuais pertencerão a NPCs e ao save.
+- **Família** define identidade, linhagem conceitual, tradição e herança familiar; parentesco concreto pertencerá às relações de NPCs. Uma casa política usa também `faction.*`, com referência da facção para a família.
+- **Lei** define regra pública reconhecida, jurisdição, vigência, condições, exceções e sanções; crimes, processos, evidências e julgamentos pertencerão a eventos e ao estado.
+- **Profissão** permanece atividade econômica; **cargo** é uma chave estável dentro de `faction.roles`.
+
+Os templates [`religion.template.md`](_templates/religion.template.md), [`faction.template.md`](_templates/faction.template.md), [`family.template.md`](_templates/family.template.md) e [`law.template.md`](_templates/law.template.md) não são entidades e não alteram as quantidades existentes, que permanecem em zero.
+
 ## Ordem de leitura
 
 1. [`Base/GDD.md`](../../../Base/GDD.md), fonte canônica atual;
@@ -93,4 +103,4 @@ Os templates [`resource.template.md`](_templates/resource.template.md), [`profes
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos e de economia material, seus templates e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre religiões, facções, famílias e leis.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material e de sociedade, instituições e lei, seus templates e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição e difusão religiosa parte de `religion.*`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre escolas de magia, magias, rituais, efeitos e artefatos.

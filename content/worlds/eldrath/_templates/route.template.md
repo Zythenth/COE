@@ -28,14 +28,13 @@ initial_state:
   condition: null
   traffic: null
   magical_instability: null
-controller_faction_id: null
-toll:
-  money:
-    amount: null
-    currency_key: null
-  collector_id: null
-  exemptions: []
-  notes: null
+  toll:
+    money:
+      amount: null
+      currency_key: null
+    collector_id: null
+    exemptions: []
+    notes: null
 seasonal_access:
   - season_key: "{{season_key}}"
     access_state: "{{access_state_key}}"
@@ -71,9 +70,9 @@ risk_profile:
 
 {{travel_modes}}
 
-## Controle
+## Controle institucional derivado
 
-{{control}}
+{{derived_institutional_control}}
 
 ## Pedágios
 

@@ -14,17 +14,9 @@ symbol: null
 colors: []
 motto: null
 foundation: null
-current_era_id: null
 political_system: null
 succession: null
 capital_id: null
-ruler_id: null
-council_ids: []
-general_law_ids: []
-magical_law_ids: []
-dominant_religion_id: null
-tolerated_religion_ids: []
-prohibited_religion_ids: []
 primary_currency_key: null
 currencies:
   - key: "{{currency_key}}"
@@ -41,23 +33,26 @@ currencies:
     notes: null
 calendar_id: null
 language_ids: []
-region_ids: []
-external_relations: []
-metrics:
-  stability: null
-  legitimacy: null
-  prosperity: null
-  security: null
-  cohesion: null
-  freedom: null
-  inequality: null
-  magical_tension: null
-  trust_in_crown: null
-  religious_influence: null
-treasury:
-  money:
-    amount: null
-    currency_key: null
-administrative_capacity: null
-initial_crisis_ids: []
+initial_state:
+  era_id: null
+  ruler_id: null
+  council_faction_ids: []
+  external_relations: []
+  metrics:
+    stability: null
+    legitimacy: null
+    prosperity: null
+    security: null
+    cohesion: null
+    freedom: null
+    inequality: null
+    magical_tension: null
+    trust_in_crown: null
+    religious_influence: null
+  treasury:
+    money:
+      amount: null
+      currency_key: null
+  administrative_capacity: null
+  crisis_ids: []
 founding_event_ids: []

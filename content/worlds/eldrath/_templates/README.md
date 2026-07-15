@@ -33,7 +33,16 @@ Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo 
 | [`profession.template.md`](profession.template.md) | profissão | Markdown com front matter YAML | `../professions/{slug}.md` | contrato comum, recursos, itens, assentamentos e instituições futuras | concluído |
 | [`item.template.md`](item.template.md) | item | Markdown com front matter YAML | `../items/{slug}.md` | contrato comum, unidades, recursos, profissões, economia e magia futura | concluído |
 
-Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
+## Catálogo de sociedade, instituições e lei
+
+| Template | Entidade | Formato | Destino futuro | Dependências | Estado |
+|---|---|---|---|---|---|
+| [`religion.template.md`](religion.template.md) | religião ou tradição de crença | Markdown com front matter YAML | `../religions/{slug}.md` | contrato comum, culturas e contrato transversal | concluído |
+| [`faction.template.md`](faction.template.md) | facção ou instituição | Markdown com front matter YAML | `../factions/{slug}.md` | contrato comum, geografia, economia, religiões e contrato transversal | concluído |
+| [`family.template.md`](family.template.md) | família, linhagem ou casa dinástica | Markdown com front matter YAML | `../families/{slug}.md` | contrato comum, culturas, geografia, facções e leis | concluído |
+| [`law.template.md`](law.template.md) | lei pública reconhecida | Markdown com front matter YAML | `../laws/{slug}.md` | contrato comum, geografia, facções, economia e contrato transversal | concluído |
+
+Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
 
 ## Ordem recomendada
 
@@ -48,6 +57,10 @@ Copie somente o template da entidade que será autorizada para o destino indicad
 9. `route.template.md`;
 10. `resource.template.md`;
 11. `profession.template.md`;
-12. `item.template.md`.
+12. `item.template.md`;
+13. `religion.template.md`;
+14. `faction.template.md`;
+15. `family.template.md`;
+16. `law.template.md`.
 
 Quando o contrato comum ou um schema especializado mudar de forma aprovada, os templates afetados deverão ser revisados antes de novos arquivos serem aprovados. O ciclo de revisão de um template é o mesmo do conteúdo: elaboração, revisão, aprovação explícita e eventual depreciação documentada.

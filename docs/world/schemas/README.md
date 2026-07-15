@@ -12,6 +12,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | [GEOGRAPHY_ENTITIES.md](GEOGRAPHY_ENTITIES.md) | `region`, `settlement`, `location`, `route` | contrato comum e entidades fundamentais | concluído |
 | [MATERIAL_ECONOMY_ENTITIES.md](MATERIAL_ECONOMY_ENTITIES.md) | `resource`, `profession`, `item` e contratos econômicos compartilhados | contrato comum, entidades fundamentais e geografia | concluído |
 | [INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md](INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) | contrato transversal de estado de campanha; não cria entidades | GDD, contrato comum e economia material | concluído |
+| [SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md) | `religion`, `faction`, `family` e `law` | contrato comum, entidades fundamentais, geografia, economia material e contrato transversal | concluído |
 
 ## Ordem de dependência
 
@@ -20,9 +21,10 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 3. geografia (região, assentamento, local e rota);
 4. economia material (recursos, profissões, itens e estruturas compartilhadas);
 5. intervenção, percepção, conhecimento e causalidade;
-6. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+6. sociedade, instituições, famílias e lei;
+7. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material e o contrato conceitual de intervenção estão concluídos. A próxima categoria é religiões, facções, famílias e leis; magia, NPCs, narrativa e saúde ainda não foram iniciados.
+O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção e os contratos de religião, facção, família e lei estão concluídos. A próxima categoria documental é escolas de magia, magias, rituais, efeitos e artefatos; NPCs, narrativa e saúde ainda não foram iniciados.
 
 ## Regras de manutenção
 

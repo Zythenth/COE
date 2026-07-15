@@ -13,13 +13,8 @@ notes: "{{editorial_notes}}"
 region_id: "{{region_id}}"
 settlement_type: "{{settlement_type}}"
 administrative_roles: []
-ruler_id: null
-governing_faction_ids: []
-local_law_ids: []
-dominant_religion_ids: []
-tolerated_religion_ids: []
-institution_ids: []
 initial_state:
+  ruler_id: null
   population: null
   housing_capacity: null
   wealth: null
@@ -112,11 +107,6 @@ initial_prices:
       settlement_id: null
       effective_date: null
       source: null
-faction_presence:
-  - faction_id: "{{faction_id}}"
-    presence: null
-    visibility: "{{visibility_key}}"
-    notes: null
 local_problems:
   - problem_key: "{{problem_key}}"
     severity: null
@@ -135,9 +125,9 @@ local_problems:
 
 {{regional_position}}
 
-## Governo
+## Governo derivado
 
-{{government}}
+{{derived_government}}
 
 ## População
 
@@ -155,13 +145,13 @@ local_problems:
 
 {{trade_text}}
 
-## Instituições
+## Instituições derivadas
 
-{{institutions}}
+{{derived_institutions}}
 
-## Religião
+## Contexto religioso derivado
 
-{{religion}}
+{{derived_religious_context}}
 
 ## Magia
 
