@@ -28,6 +28,12 @@ Consequentemente:
 - modelos de renda não registram salário atual;
 - propriedades, localização, condição e quantidade de uma cópia de item pertencem à futura instância.
 
+### 2.1 Intervenções materiais futuras
+
+Uma Intervenção do Arquiteto pertence ao estado da campanha. Para objetos discretos, ela aponta para uma `item_instance`, nunca para o arquivo estático `item.*`; para recursos fungíveis, aponta para uma quantidade atual persistida no save, nunca para a definição `resource.*`. O conteúdo pode definir capacidades, unidades, limites, condições e propriedades autorizadas, mas não registra a intervenção concreta.
+
+Mover, soltar, colocar, retirar ou transferir uma instância precisa preservar proprietário ou recipiente, origem, destino, condição, proveniência e inexistência de uso duplo quando aplicáveis. Adicionar ou retirar recurso precisa validar quantidade, unidade, reserva e não negatividade. Comando, evento, evidências e percepções seguem o [contrato conceitual de intervenção](INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md).
+
 ## 3. Quantidade
 
 Estrutura compartilhada:
@@ -310,6 +316,7 @@ O schema completo de `artifact` permanece adiado. Até sua criação, `artifact_
 - Recurso é fungível e quantitativo; item é uma definição discreta; artefato é entidade mágica relevante; instância pertence ao estado.
 - Moeda não é recurso, item ou entidade independente nesta versão.
 - Definição de item não tem proprietário nem localização atual; profissão não tem titulares atuais.
+- Intervenção material usa `item_instance` ou quantidade atual de recurso no estado; nunca move nem reescreve a definição estática.
 - Referências de conteúdo `approved` existem, placeholders foram removidos e prosa não contradiz dados.
 
 ## 21. Validação manual
@@ -325,6 +332,8 @@ Antes de encaminhar um arquivo para revisão, conferir:
 - referências resolvidas e categorias corretas;
 - separação entre valor de referência, preço inicial local e preço atual;
 - ausência de estado atual em conteúdo;
+- ausência de intervenções concretas, percepções ou histórico de campanha em conteúdo estático;
+- uso de `item_instance`, e não da definição `item`, como futuro alvo de movimentação;
 - coerência entre listas resumidas e fluxos detalhados;
 - regras de agregação, unicidade, proveniência, durabilidade e relação com artefato;
 - corpo Markdown completo e coerente;

@@ -2,11 +2,13 @@
 
 Chronicles of Eldrath é um simulador local de reino mágico vivo, simulação social e narrativa emergente. Seu mundo deve avançar por regras reproduzíveis: personagens com conhecimento limitado tomam decisões coerentes, acontecimentos preservam causas e consequências, rumores alteram crenças e instituições, e a história permanece consultável. O usuário assume os papéis complementares de Arquiteto, Observador e Cronista, sem controlar um herói e sem precisar comandar continuamente o reino.
 
+Além de observar a evolução do reino, o usuário poderá realizar intervenções controladas. Os personagens perceberão somente os efeitos e evidências disponíveis no mundo, formando interpretações próprias sobre suas causas.
+
 O núcleo planejado será determinístico, local-first, predominantemente single-player e completo sem IA generativa. IA poderá futuramente atuar apenas como acabamento opcional de apresentação, nunca como fundamento lógico da simulação.
 
 ## Estado atual
 
-O projeto está na **Fase 1 — Contratos editoriais e templates**. A fundação editorial foi concluída e a construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
+O projeto está na **Fase 1 — Contratos editoriais e templates**. A fundação editorial, os contratos fundamentais, geográficos, de economia material e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos; a fase continua em andamento. A construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
 
 Eldrath será construído, auditado e congelado antes das especificações de produto e interface, da preparação visual e da programação.
 

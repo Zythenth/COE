@@ -1,7 +1,7 @@
 # Contrato editorial comum de conteúdo
 
 **Versão do contrato:** `1.0.0`  
-**Estado:** concluído para a fundação comum da Fase 1; schemas especializados ainda não foram iniciados.
+**Estado:** contrato comum concluído; schemas fundamentais, geográficos e de economia material e contrato conceitual de intervenção concluídos; Fase 1 em andamento.
 
 ## Objetivo
 
@@ -14,11 +14,15 @@ Em caso de conflito sobre o mundo, [`Base/GDD.md`](../../Base/GDD.md) permanece 
 - `content/` conterá as definições iniciais autorais: entidades, dados estruturados, lore e relações que existem antes de uma campanha.
 - Lore complementa os dados estruturados; não os contradiz nem substitui dados mecânicos necessários.
 - O estado futuro da simulação — acontecimentos, mutações, saves e histórico de campanha — não pertence a `content/`. `data/` só será criado na etapa de programação autorizada.
+- Intervenções do Arquiteto, comandos, eventos de campanha, instâncias de item, quantidades atuais de recursos, evidências, percepções, crenças adquiridas, memórias e rumores derivados pertencem ao estado da campanha, nunca ao pacote estático.
+- O conteúdo estático pode definir capacidades, limites e condições permitidas para intervenções futuras, sem registrar uma intervenção concreta.
 - `_templates/` guarda modelos editoriais, nunca conteúdo real e nunca deve ser carregado como entidade pelo futuro carregador.
 - `assets/` contém recursos complementares associados a entidades; a ausência de arte não invalida conteúdo.
 - `design/` guarda material de processo visual futuro e não é conteúdo do mundo.
 
 Este contrato não cria entidades, lore, calendário, enums do mundo, regras de simulação ou implementação executável.
+
+O contrato conceitual de [intervenção, percepção e conhecimento](schemas/INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) preserva a distinção entre causa real restrita, fato, evidência, percepção, interpretação, conhecimento, crença, suspeita, memória e rumor. Futuros schemas de NPC, evento, rumor e memória deverão obedecer a essa separação. Não existe categoria nem quantidade planejada de “intervenções iniciais”.
 
 ## Formato dos arquivos
 

@@ -1,6 +1,6 @@
 # Mapa de conteúdo de Eldrath
 
-Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o contrato comum e os schemas e templates fundamentais, geográficos e de economia material da Fase 1 estão concluídos; as pastas de categorias continuam vazias e nenhum conteúdo real ou lore do mundo foi criado.
+Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o contrato comum, os schemas e templates fundamentais, geográficos e de economia material e o contrato conceitual de intervenção, percepção e conhecimento da Fase 1 estão concluídos; as pastas de categorias continuam vazias e nenhum conteúdo real ou lore do mundo foi criado.
 
 | Caminho | Categoria | Finalidade | Tipo de conteúdo futuro | Formato planejado | Dependências | Fase responsável | Estado atual |
 |---|---|---|---|---|---|---|---|
@@ -8,7 +8,8 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o c
 | `content/worlds/eldrath/manifest.yaml` | manifesto editorial | Identificar o pacote, seus caminhos e categorias reconhecidas. | metadados do pacote, sem lore | YAML | GDD e contrato editorial comum | Fase 1 | criado |
 | `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | YAML puro e Markdown com front matter YAML | contrato comum e schemas especializados | Fase 1 | template comum, cinco templates fundamentais, quatro geográficos e três de economia material concluídos; sem conteúdo real |
 | `docs/world/CONTENT_SCHEMA.md` | contrato comum | Definir regras compartilhadas de formato, IDs, referências e revisão. | contrato editorial documental | Markdown | GDD | Fase 1 | criado e concluído |
-| `docs/world/schemas/` | schemas especializados | Definir contratos editoriais por conjunto de entidades. | contratos editoriais documentais | Markdown | GDD e contrato comum | Fase 1 | `FOUNDATIONAL_ENTITIES.md`, `GEOGRAPHY_ENTITIES.md` e `MATERIAL_ECONOMY_ENTITIES.md` concluídos |
+| `docs/world/schemas/` | schemas especializados | Definir contratos editoriais por conjunto de entidades e contratos conceituais transversais. | contratos editoriais documentais | Markdown | GDD e contrato comum | Fase 1 | contratos fundamentais, geográficos, de economia material e de intervenção/percepção concluídos |
+| `docs/world/schemas/INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md` | contrato transversal | Separar intervenção, causa real, alteração, evidência, percepção, conhecimento, crença, memória, rumor e consequência. | contrato conceitual de estado de campanha | Markdown | GDD, contrato comum e economia material | Fase 1 | concluído; não é entidade, schema executável nem conteúdo inicial |
 | `content/worlds/eldrath/calendars/` | calendários | Representar calendário, eras e datas do mundo. | dados temporais e explicações | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/languages/` | idiomas | Registrar idiomas relevantes de Eldrath. | dados linguísticos e lore | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/cultures/` | culturas | Registrar culturas, valores, normas e contexto social. | dados culturais e lore | Markdown estruturado e/ou YAML, a definir | identidade, calendário e idiomas | Fase 2 | não iniciado |
@@ -40,6 +41,7 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o c
 - Markdown será usado para lore, contexto e explicações legíveis por pessoas.
 - YAML ou front matter YAML será usado para dados estruturados que precisem ser lidos e validados futuramente.
 - Os schemas geográfico e de economia material e os templates de região, assentamento, local, rota, recurso, profissão e item foram criados na Fase 1; todas as pastas reais correspondentes continuam vazias.
+- O contrato conceitual de intervenção, percepção e conhecimento foi concluído sem criar template, pasta de conteúdo, entidade ou quantidade planejada de intervenções iniciais.
 - `world.yaml` e `kingdom.yaml` ainda não foram criados; conteúdo real permanece inexistente.
 - A próxima etapa documental é criar os schemas de religiões, facções, famílias e leis.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

@@ -1,6 +1,13 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos e de economia material foram concluídos. Os templates de `resource`, `profession` e `item` estão disponíveis, sem materializar conteúdo. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhum recurso, profissão, item ou outra entidade do mundo foi criado nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos e de economia material e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos. Os templates de `resource`, `profession` e `item` estão disponíveis, sem materializar conteúdo; intervenções pertencem ao estado futuro da campanha e não possuem template nem quantidade inicial planejada. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhum recurso, profissão, item ou outra entidade do mundo foi criado nesta tarefa.
+
+Estado das subetapas recentes da Fase 1:
+
+- economia material: concluída;
+- contrato de intervenção, percepção e conhecimento: concluído;
+- sociedade, instituições e leis: próxima atividade;
+- Fase 1: em andamento.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
