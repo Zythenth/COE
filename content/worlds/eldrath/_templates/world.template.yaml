@@ -1,0 +1,25 @@
+# Template editorial; não é conteúdo real. Placeholders são proibidos em conteúdo approved.
+schema_version: "1.0.0"
+id: "world.{{world_slug}}"
+name: "{{world_name}}"
+content_status: draft
+tags: []
+aliases: []
+summary: "{{summary}}"
+references: []
+art: []
+notes: "{{editorial_notes}}"
+identity:
+  world_name: "{{world_name}}"
+  native_name: null
+primary_calendar_id: null
+initial_date: null
+initial_era_id: null
+language_ids: []
+culture_ids: []
+initial_kingdom_id: null
+units:
+  distance: null
+  duration: null
+  currency: null
+  population: null

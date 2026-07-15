@@ -1,13 +1,14 @@
 # Mapa de conteúdo de Eldrath
 
-Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e o contrato comum da Fase 1 estão concluídos; as pastas de categorias continuam vazias e nenhum schema especializado, entidade ou lore do mundo foi criado.
+Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o contrato comum e os schemas e templates fundamentais da Fase 1 estão concluídos; as pastas de categorias continuam vazias e nenhum conteúdo real ou lore do mundo foi criado.
 
 | Caminho | Categoria | Finalidade | Tipo de conteúdo futuro | Formato planejado | Dependências | Fase responsável | Estado atual |
 |---|---|---|---|---|---|---|---|
 | `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML | GDD e contrato editorial comum | Fases 1–6 | manifesto criado; sem entidades |
 | `content/worlds/eldrath/manifest.yaml` | manifesto editorial | Identificar o pacote, seus caminhos e categorias reconhecidas. | metadados do pacote, sem lore | YAML | GDD e contrato editorial comum | Fase 1 | criado |
-| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | Markdown com front matter YAML | contrato editorial comum | Fase 1 | `README.md` e `base_entity.md` criados; especializados não iniciados |
+| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | YAML puro e Markdown com front matter YAML | contrato comum e schemas especializados | Fase 1 | template comum e cinco templates fundamentais concluídos; sem conteúdo real |
 | `docs/world/CONTENT_SCHEMA.md` | contrato comum | Definir regras compartilhadas de formato, IDs, referências e revisão. | contrato editorial documental | Markdown | GDD | Fase 1 | criado e concluído |
+| `docs/world/schemas/` | schemas especializados | Definir contratos editoriais por conjunto de entidades. | contratos editoriais documentais | Markdown | GDD e contrato comum | Fase 1 | `FOUNDATIONAL_ENTITIES.md` concluído; schemas geográficos não iniciados |
 | `content/worlds/eldrath/calendars/` | calendários | Representar calendário, eras e datas do mundo. | dados temporais e explicações | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/languages/` | idiomas | Registrar idiomas relevantes de Eldrath. | dados linguísticos e lore | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/cultures/` | culturas | Registrar culturas, valores, normas e contexto social. | dados culturais e lore | Markdown estruturado e/ou YAML, a definir | identidade, calendário e idiomas | Fase 2 | não iniciado |
@@ -38,7 +39,7 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e o 
 
 - Markdown será usado para lore, contexto e explicações legíveis por pessoas.
 - YAML ou front matter YAML será usado para dados estruturados que precisem ser lidos e validados futuramente.
-- O contrato comum, o manifesto e o template genérico foram criados na Fase 1.
-- Schemas e templates especializados ainda não foram iniciados.
-- `world.yaml` e `kingdom.yaml` serão criados em tarefas futuras de suas etapas específicas; eles ainda não existem.
+- O contrato comum, o manifesto, o template genérico, o schema de entidades fundamentais e cinco templates especializados foram criados na Fase 1.
+- `world.yaml` e `kingdom.yaml` ainda não foram criados; conteúdo real permanece inexistente.
+- A próxima etapa é criar schemas e templates geográficos para região, assentamento, local e rota.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

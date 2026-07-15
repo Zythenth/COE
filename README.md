@@ -6,32 +6,29 @@ O núcleo planejado será determinístico, local-first, predominantemente single
 
 ## Estado atual
 
-O projeto está na **Fase 0 — Fundação editorial**. Nesta fase existem somente a fonte canônica, os documentos de organização editorial e as reservas de pastas para conteúdo, assets e design. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
+O projeto está na **Fase 1 — Contratos editoriais e templates**. A fundação editorial foi concluída e a construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
 
-A abordagem obrigatória é **mundo primeiro, programação depois**: Eldrath será construído, auditado e congelado; em seguida serão produzidas as especificações de produto e interface, o guia Anti-AI, o sistema de design e as referências visuais; somente na Fase 11 começará a programação.
-
-A fonte canônica atual é o [Game Design Document](Base/GDD.md). Cada grupo de conteúdo será produzido e revisado por tarefas separadas. Documentos futuros de `Base/` não devem ser criados antecipadamente, nem mesmo como arquivos vazios.
+Eldrath será construído, auditado e congelado antes das especificações de produto e interface, da preparação visual e da programação.
 
 ## Mapa da raiz
 
 | Caminho | Finalidade atual |
 |---|---|
-| `Base/` | Contém somente o GDD canônico nesta fase. |
-| `docs/world/` | Reúne mapa, ordem de autoria, convenções iniciais de IDs e controle de estado. |
+| `docs/world/` | Reúne mapa, ordem de autoria, convenções iniciais de IDs, contratos editoriais e controle de estado. |
 | `content/worlds/eldrath/` | Reserva o pacote autoral que definirá o estado inicial do mundo. |
 | `assets/` | Reserva a organização de artes futuras associadas a entidades. |
 | `design/` | Reserva documentação e artefatos futuros do processo visual. |
-| `design/stitch/` | Reserva organizacional para a Fase 10; não contém material do Stitch. |
+| `design/stitch/` | Reserva organizacional para uma etapa visual futura. |
 
-Detalhes editoriais estão no [mapa de conteúdo](docs/world/CONTENT_MAP.md), na [ordem de autoria](docs/world/AUTHORING_ORDER.md), nas [convenções de IDs](docs/world/ID_CONVENTIONS.md) e no [controle de estado](docs/world/CONTENT_STATUS.md).
+Detalhes públicos da organização editorial estão no [mapa de conteúdo](docs/world/CONTENT_MAP.md), na [ordem de autoria](docs/world/AUTHORING_ORDER.md), nas [convenções de IDs](docs/world/ID_CONVENTIONS.md) e no [controle de estado](docs/world/CONTENT_STATUS.md).
 
 ## Conteúdo, assets e design
 
 - `content/` guardará entidades, regras editoriais, dados estruturados e lore que definem o mundo inicial. O estado alterado por uma campanha será responsabilidade futura da simulação e não será regravado nesses arquivos a cada avanço de tempo.
 - `assets/` guardará imagens e outros recursos complementares. Nenhuma funcionalidade dependerá de imagens, e a ausência de arte não poderá impedir o uso do conteúdo.
-- `design/` guardará referências, briefings, prompts, capturas, exportações, auditorias e versões do trabalho visual futuro. Essa pasta não integra os dados canônicos do mundo.
+- `design/` guardará referências, briefings, capturas, exportações, auditorias e versões do trabalho visual futuro. Essa pasta não integra os dados canônicos do mundo.
 
-`design/stitch/` está vazia por intenção e serve apenas como reserva. O Google Stitch ainda não deve ser utilizado, e nenhuma integração MCP deve ser configurada nesta fase.
+`design/stitch/` está vazia por intenção e serve apenas como reserva para uma etapa visual futura.
 
 ## Política de assets
 
@@ -39,8 +36,4 @@ Detalhes editoriais estão no [mapa de conteúdo](docs/world/CONTENT_MAP.md), na
 - Metadados, direção artística, formatos finais e critérios de revisão serão definidos em etapas posteriores.
 - Artes de NPCs, facções, magias, regiões, cidades e demais assentamentos serão produzidas em tarefas próprias, depois dos respectivos conteúdos e IDs.
 - `assets/ui/` não deve receber botões, inputs, tabelas ou componentes de interface gerados como imagens.
-- Não há imagens provisórias, referências baixadas ou prompts visuais na Fase 0.
-
-## Documentos futuros
-
-`Base/ANTI_AI_DESIGN_GUIDE.md`, `Base/DESIGN_SYSTEM.md` e `Base/STITCH_WORKFLOW.md` ainda não existem. O guia Anti-AI será criado na Fase 8; o sistema de design e o fluxo do Stitch, na Fase 9. A ausência desses documentos é esperada agora e não deve ser contornada com arquivos vazios.
+- Não há imagens provisórias ou referências baixadas nesta fase.

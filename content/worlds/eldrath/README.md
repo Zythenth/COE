@@ -14,7 +14,7 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | `README.md` e template genérico criados; especializados não iniciados |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico e cinco templates fundamentais disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -55,7 +55,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas especializados ainda pertencem às próximas tarefas da Fase 1.
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas fundamentais estão no [índice de schemas](../../../docs/world/schemas/README.md); os próximos schemas da Fase 1 cobrirão geografia.
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -80,4 +80,4 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** foi iniciada. O contrato comum, o manifesto editorial e o template genérico foram concluídos; templates e schemas especializados ainda não começaram. O ciclo editorial é `draft → in_review → approved → deprecated`; `approved` exige revisão explícita e referências resolvidas. Todas as categorias de entidade permanecem vazias. Nenhuma entidade real existe ainda e nenhuma pasta deve ser preenchida apenas para parecer completa.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais e seus templates foram concluídos. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias.

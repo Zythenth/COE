@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 iniciada: o contrato editorial comum, o manifesto editorial e o template genérico foram criados; schemas especializados ainda não foram iniciados. As quantidades existentes contam entidades materializadas nos arquivos de conteúdo, não menções ou exemplos do GDD. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas fundamentais e os templates fundamentais foram concluídos. As quantidades existentes contam entidades materializadas nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
@@ -35,4 +35,4 @@ Fase 0 concluída. Fase 1 iniciada: o contrato editorial comum, o manifesto edit
 | Doenças | a definir | 0 | não iniciado | ambiente, saúde, recursos e magia | Fase 4 | `content/worlds/eldrath/diseases/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Abrange leis gerais, mágicas e detalhadas; quantidade não definida. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates fundamentais concluídos não alteram essas quantidades. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
