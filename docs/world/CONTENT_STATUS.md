@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, além do contrato conceitual de intervenção, percepção e conhecimento, foram concluídos. Os cinco templates mágicos estão disponíveis sem materializar conteúdo; intervenções e instâncias de efeito pertencem ao estado futuro da campanha e não possuem template nem quantidade inicial planejada. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas e doenças, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições, foram concluídos. Os templates de criatura e doença estão disponíveis sem materializar conteúdo; condições, instâncias de doença, diagnósticos, ferimentos e demais estados atuais pertencem ao save e não possuem pasta, prefixo ou template de conteúdo. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -11,7 +11,11 @@ Estado das subetapas recentes da Fase 1:
 - contratos de escolas mágicas, magias, rituais, efeitos e artefatos: concluídos;
 - templates de escola mágica, magia, ritual, efeito mágico e artefato: concluídos;
 - entidades reais do sistema mágico: não iniciadas;
-- criaturas, doenças, saúde e condições relacionadas: próxima atividade documental;
+- contratos de criaturas e doenças: concluídos;
+- templates de criatura e doença: concluídos;
+- contrato conceitual de saúde e condições relacionadas: concluído;
+- entidades reais de criatura e doença: não iniciadas;
+- NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico: próxima atividade documental;
 - Fase 1: em andamento.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
@@ -43,8 +47,8 @@ Estado das subetapas recentes da Fase 1:
 | Escolas mágicas | 15 | 0 | não iniciado | princípios mágicos, instituições e leis | Fase 4 | `content/worlds/eldrath/magic/schools/` | Schema e template concluídos; escolas e subescolas usam `magic_school.*`; nenhuma escola foi criada. | 2026-07-15 |
 | Rituais | a definir | 0 | não iniciado | escolas, magias, efeitos e instituições | Fase 4 | `content/worlds/eldrath/magic/rituals/` | Schema e template concluídos; o GDD não fixa quantidade e nenhum ritual foi criado. | 2026-07-15 |
 | Efeitos mágicos | a definir | 0 | não iniciado | contratos editoriais e regras de magia | Fase 4 | `content/worlds/eldrath/magic/effects/` | Schema e template concluídos; o GDD não fixa quantidade e nenhuma definição de efeito foi criada. | 2026-07-15 |
-| Criaturas | a definir | 0 | não iniciado | geografia, ecologia e magia | Fase 4 | `content/worlds/eldrath/creatures/` | O GDD não fixa quantidade. | 2026-07-15 |
-| Doenças | a definir | 0 | não iniciado | ambiente, saúde, recursos e magia | Fase 4 | `content/worlds/eldrath/diseases/` | O GDD não fixa quantidade. | 2026-07-15 |
+| Criaturas | a definir | 0 | não iniciado | geografia, ecologia, economia, magia e saúde | Fase 4 | `content/worlds/eldrath/creatures/` | Schema e template concluídos; `creature.*` representa espécie ou tipo; o GDD não fixa quantidade e nenhuma criatura foi criada. | 2026-07-15 |
+| Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os sociais e jurídicos, não alteram essas quantidades. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas e doenças, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas, não categorias contáveis de conteúdo. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.

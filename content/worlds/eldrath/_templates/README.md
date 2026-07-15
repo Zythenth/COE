@@ -52,7 +52,14 @@ Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo 
 | [`magic_effect.template.md`](magic_effect.template.md) | definição reutilizável de efeito mágico | Markdown com front matter YAML | `../magic/effects/{slug}.md` | contrato comum, quantidade, percepção e regras mágicas | concluído |
 | [`artifact.template.md`](artifact.template.md) | artefato | Markdown com front matter YAML | `../magic/artifacts/{slug}.md` | efeitos, itens, recursos, história, percepção e leis | concluído |
 
-Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Escolas, magias, rituais, efeitos e artefatos devem conservar as estruturas do [contrato do sistema mágico](../../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), inclusive legalidade contextual, custos verificáveis, referências a efeitos e separação do estado da campanha. Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
+## Catálogo de criaturas, saúde e doenças
+
+| Template | Entidade | Formato | Destino futuro | Dependências | Estado |
+|---|---|---|---|---|---|
+| [`creature.template.md`](creature.template.md) | espécie, tipo ou arquétipo de criatura | Markdown com front matter YAML | `../creatures/{slug}.md` | geografia, economia, ecologia, magia, percepção e saúde | concluído |
+| [`disease.template.md`](disease.template.md) | definição estática de doença | Markdown com front matter YAML | `../diseases/{slug}.md` | criaturas, ambiente, economia, profissões, magia, leis e percepção | concluído |
+
+Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Escolas, magias, rituais, efeitos e artefatos devem conservar as estruturas do [contrato do sistema mágico](../../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), inclusive legalidade contextual, custos verificáveis, referências a efeitos e separação do estado da campanha. Criaturas e doenças devem conservar as fronteiras do [contrato de criaturas, saúde e doenças](../../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md): espécie não é indivíduo, doença não é instância e condição atual pertence ao save. Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml`, pasta `conditions/` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
 
 ## Ordem recomendada
 
@@ -76,6 +83,8 @@ Copie somente o template da entidade que será autorizada para o destino indicad
 18. `spell.template.md`;
 19. `ritual.template.md`;
 20. `magic_effect.template.md`;
-21. `artifact.template.md`.
+21. `artifact.template.md`;
+22. `creature.template.md`;
+23. `disease.template.md`.
 
 Quando o contrato comum ou um schema especializado mudar de forma aprovada, os templates afetados deverão ser revisados antes de novos arquivos serem aprovados. O ciclo de revisão de um template é o mesmo do conteúdo: elaboração, revisão, aprovação explícita e eventual depreciação documentada.

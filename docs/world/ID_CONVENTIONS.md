@@ -52,6 +52,17 @@ O contrato especializado do sistema mágico finaliza os prefixos abaixo. Escolas
 
 `parent_school_id` referencia outro `magic_school.*`; não existe `magic_subschool.*`. Uma aplicação usa `magic_effect_id` para referenciar `magic_effect.*`; não existe arquivo `effect_instance`. As regras completas estão em [`MAGIC_SYSTEM_ENTITIES.md`](schemas/MAGIC_SYSTEM_ENTITIES.md).
 
+## Prefixos de criaturas e doenças
+
+O contrato especializado de criaturas, saúde e doenças finaliza os dois prefixos de conteúdo abaixo. Condições de saúde e ocorrências concretas pertencem ao save e não recebem prefixo ou arquivo de conteúdo próprio.
+
+| Entidade | Prefixo | Caminho de entidade |
+|---|---|---|
+| espécie, tipo ou arquétipo de criatura | `creature.` | `creatures/{slug}.md` |
+| definição estática de doença | `disease.` | `diseases/{slug}.md` |
+
+Um indivíduo persistente usa futuramente `npc.*` e referencia `creature.*`. Uma instância de doença referencia `disease.*` no save. Não existem nesta fase os prefixos `condition.`, `injury.`, `symptom.`, `poison.`, `infection.` ou `health.`. As regras completas estão em [`CREATURE_HEALTH_AND_DISEASE_ENTITIES.md`](schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md).
+
 ## Exemplos válidos
 
 | ID | Motivo |
@@ -64,6 +75,8 @@ O contrato especializado do sistema mágico finaliza os prefixos abaixo. Escolas
 | `ritual.example_ritual` | Exemplo exclusivamente estrutural de procedimento ritual. |
 | `magic_effect.example_effect` | Exemplo exclusivamente estrutural de definição reutilizável. |
 | `artifact.example_artifact` | Exemplo exclusivamente estrutural de artefato. |
+| `creature.example_creature` | Exemplo exclusivamente estrutural de espécie ou tipo de criatura. |
+| `disease.example_disease` | Exemplo exclusivamente estrutural de definição de doença. |
 | `event.seed.plague_of_white_ash` | Usa segmentos de tipo para identificar um evento-semente e mantém o nome estável em minúsculas. |
 
 ## Exemplos inválidos

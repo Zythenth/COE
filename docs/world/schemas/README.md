@@ -14,6 +14,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | [INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md](INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) | contrato transversal de estado de campanha; não cria entidades | GDD, contrato comum e economia material | concluído |
 | [SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md) | `religion`, `faction`, `family` e `law` | contrato comum, entidades fundamentais, geografia, economia material e contrato transversal | concluído |
 | [MAGIC_SYSTEM_ENTITIES.md](MAGIC_SYSTEM_ENTITIES.md) | `magic_school`, `spell`, `ritual`, `magic_effect` e `artifact` | contratos anteriores, especialmente economia material, intervenção, sociedade e lei | concluído |
+| [CREATURE_HEALTH_AND_DISEASE_ENTITIES.md](CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) | `creature`, `disease` e estruturas conceituais de saúde e condições; não cria entidades de condição | contratos anteriores, especialmente geografia, economia, intervenção, sociedade, lei e magia | concluído |
 
 ## Ordem de dependência
 
@@ -24,9 +25,10 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 5. intervenção, percepção, conhecimento e causalidade;
 6. sociedade, instituições, famílias e lei;
 7. sistema mágico;
-8. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+8. criaturas, doenças, saúde e condições relacionadas;
+9. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei e o sistema mágico estão concluídos. A próxima categoria documental cobre criaturas, doenças, saúde e condições relacionadas; NPCs e narrativa ainda não foram iniciados.
+O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei, o sistema mágico e os contratos de criaturas, doenças, saúde e condições relacionadas estão concluídos. A próxima categoria documental cobre NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico; NPCs e narrativa ainda não foram iniciados.
 
 ## Regras de manutenção
 

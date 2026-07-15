@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, além do contrato conceitual de intervenção, percepção e conhecimento da Fase 1, foram concluídos. Os contratos mágicos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade documental cobre criaturas, doenças, saúde e condições relacionadas. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas e doenças, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições da Fase 1, foram concluídos. Os contratos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade documental cobre NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -31,17 +31,17 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 27. religiões e cultos — contrato e template concluídos; entidades não iniciadas;
 28. facções e instituições — contrato e template concluídos; entidades não iniciadas;
 29. famílias e casas — contrato e template concluídos; entidades não iniciadas;
-30. contrato e template de leis — concluídos; entidades não iniciadas;
+30. contrato e template de leis — concluídos; entidades detalhadas não iniciadas e reservadas às Fases 2 e 4;
 31. escolas de magia — contrato e template concluídos; entidades não iniciadas;
 32. magias — contrato e template concluídos; entidades não iniciadas;
 33. rituais — contrato e template concluídos; entidades não iniciadas;
 34. efeitos mágicos — contrato e template concluídos; entidades não iniciadas;
 35. artefatos — contrato e template concluídos; entidades não iniciadas;
 36. itens — contrato e template concluídos; entidades não iniciadas;
-37. criaturas — próxima atividade documental;
-38. doenças;
-39. saúde e condições relacionadas;
-40. leis detalhadas;
+37. criaturas — contrato e template concluídos; entidades não iniciadas;
+38. doenças — contrato e template concluídos; entidades não iniciadas;
+39. saúde e condições relacionadas — contrato conceitual concluído; sem entidade, pasta, prefixo ou template próprios;
+40. contratos e templates de NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico — próxima atividade documental;
 41. planejamento dos NPCs-semente;
 42. criação dos NPCs-semente;
 43. relações iniciais;
@@ -94,7 +94,8 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 | 6–15 | Fundamentos do mundo | Dependem dos contratos para registrar a identidade macro, o tempo, a sociedade e o reino sem formatos incompatíveis. |
 | 16–25 | Geografia e vida material | Dependem do contexto macro para localizar territórios, assentamentos, circulação, recursos e economia coerentemente. |
 | 26 | Contrato transversal de intervenção | Depende da economia material e estabelece causalidade, percepção e conhecimento antes dos contratos sociais. |
-| 27–40 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
+| 27–39 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
+| 40 | Contratos de NPCs | Dependem dos contratos sociais, geográficos, econômicos, mágicos e de saúde para separar pessoa, estado, conhecimento, inventário e capacidades sem metaconhecimento. |
 | 41–48 | NPCs e história inicial | Dependem de todos os sistemas sociais, geográficos, mágicos e de saúde anteriores para criar pessoas e conflitos conectados ao mundo. |
 | 49–56 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
 | 57–65 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |
