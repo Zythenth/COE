@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para tradições religiosas, organizações institucionais, grupos familiares e regras jurídicas. Ele define representação autoral, propriedade canônica, referências e validação manual. Não é schema executável, JSON Schema, linguagem de regras, código, conteúdo real ou lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.2`, permanece a fonte canônica. Este contrato integra o GDD sem modificá-lo.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica. Este contrato integra o GDD sem modificá-lo.
 
 ## 1. Escopo e regras compartilhadas
 

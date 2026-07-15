@@ -14,6 +14,7 @@ classification:
   taxonomic_group_key: "{{taxonomic_group_key}}"
   origin_classification_key: "{{origin_classification_key}}"
   classification_keys: []
+  threat_taxonomy_keys: []
 origin:
   description: "{{origin_description}}"
   region_ids: []
@@ -113,6 +114,19 @@ communication_profile:
 social_profile:
   sociability_key: "{{sociability_key}}"
   group_structure_keys: []
+  organization_keys: []
+  hierarchy_keys: []
+  discipline_keys: []
+  leadership_keys: []
+  typical_group_size:
+    minimum:
+      value: null
+      unit_key: null
+    maximum:
+      value: null
+      unit_key: null
+  can_form_hordes: null
+  can_form_siege_forces: null
   cooperation_keys: []
   conflict_keys: []
   variation_keys: []
@@ -123,6 +137,17 @@ political_agency_profile:
 behavior_profile:
   activity_period_keys: []
   seasonal_behavior_keys: []
+  aggressiveness:
+    value: null
+    scale_key: "{{aggressiveness_scale_key}}"
+  fear_response_keys: []
+  motivation_keys: []
+  attack_trigger_keys: []
+  preferred_target_category_keys: []
+  preferred_target_entity_ids: []
+  strategy_keys: []
+  pursuit_condition_keys: []
+  withdrawal_condition_keys: []
   behaviors:
     - behavior_key: "{{behavior_key}}"
       trigger_keys: []
@@ -135,6 +160,47 @@ behavior_profile:
   threat_response_keys: []
   care_behavior_keys: []
   variation_keys: []
+movement_profile:
+  locomotion_keys: []
+  environment_keys: []
+  route_requirement_keys: []
+  travel_capability_keys: []
+  pursuit_capability_keys: []
+  interruption_condition_keys: []
+  limitation_keys: []
+threat_capabilities:
+  attack_capability_keys: []
+  hunt_capability_keys: []
+  resource_damage_capability_keys: []
+  route_disruption_capability_keys: []
+  siege_capability_keys: []
+  occupation_capability_keys: []
+  corruption_capability_keys: []
+  negotiation_capability_keys: []
+  command_capability_keys: []
+  infiltration_capability_keys: []
+  nest_capability_keys: []
+  portal_capability_keys: []
+  capability_profiles:
+    - capability_key: "{{threat_capability_key}}"
+      requirement_keys: []
+      allowed_target_category_keys: []
+      limitation_keys: []
+      signal_keys: []
+      risk_keys: []
+      consequence_keys: []
+      notes: null
+invocation_and_cult_relations:
+  invocable: null
+  commandable: null
+  veneration_possible: null
+  relation_faction_ids: []
+  relation_religion_ids: []
+  invocation_requirement_keys: []
+  command_resistance_keys: []
+  bond_keys: []
+  limitation_keys: []
+  consequence_keys: []
 diet_profile:
   diet_category_keys: []
   required_resource_ids: []
@@ -187,6 +253,19 @@ ecological_pressures:
     effect_direction_key: "{{ecological_effect_direction_key}}"
     relevance: null
     notes: null
+ecological_consequence_profiles:
+  - consequence_key: "{{ecological_consequence_key}}"
+    affected_region_ids: []
+    affected_settlement_ids: []
+    affected_location_ids: []
+    affected_route_ids: []
+    affected_creature_ids: []
+    affected_resource_ids: []
+    affected_disease_ids: []
+    affected_magic_effect_ids: []
+    condition_keys: []
+    required_event_type_keys: []
+    notes: null
 magic_relation:
   affinity_magic_school_ids: []
   resistance_magic_school_ids: []
@@ -226,6 +305,15 @@ defense_profile:
       parameters: []
       condition_keys: []
       trigger_keys: []
+weakness_profiles:
+  - weakness_key: "{{weakness_key}}"
+    weakness_type_key: "{{weakness_type_key}}"
+    condition_keys: []
+    countermeasure_entity_ids: []
+    countermeasure_keys: []
+    evidence_keys: []
+    limitation_keys: []
+    notes: null
 domestication_profile:
   possible: null
   requirement_keys: []
@@ -317,7 +405,7 @@ deferred_decisions:
   - "{{deferred_decision}}"
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Ele segue o [contrato de criaturas, saúde e doenças](../../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md). Placeholders são proibidos em conteúdo `approved`; a entidade representa espécie ou tipo, nunca um indivíduo persistente. População e distribuição atuais pertencem ao save, e relações específicas de hospedeiro, vetor e reservatório são derivadas de `disease.*`.
+> **Aviso de template:** este arquivo não é conteúdo real. Ele segue o [contrato de criaturas, saúde e doenças](../../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) e o [contrato de ameaças monstruosas e incursões](../../../../docs/world/schemas/MONSTROUS_THREATS_AND_INCURSIONS.md). Placeholders são proibidos em conteúdo `approved`; a entidade representa espécie ou tipo, nunca indivíduo persistente, grupo atual ou horda atual. População, ameaças, ataques e incursões concretos pertencem ao save.
 
 # Visão geral
 
@@ -347,6 +435,22 @@ deferred_decisions:
 
 {{behavior_and_activity}}
 
+## Organização, grupos e hordas possíveis
+
+{{organization_groups_and_horde_capability}}
+
+## Movimento, perseguição e retirada
+
+{{movement_pursuit_and_withdrawal}}
+
+## Capacidades de ameaça, cerco, corrupção e negociação
+
+{{threat_siege_corruption_and_negotiation_capabilities}}
+
+## Invocadores, cultos e comando
+
+{{invocation_cults_and_command}}
+
 ## Dieta e relações ecológicas
 
 {{diet_and_ecological_relations}}
@@ -367,6 +471,10 @@ deferred_decisions:
 
 {{danger_and_defense}}
 
+## Estratégias e fraquezas
+
+{{strategies_and_weaknesses}}
+
 ## Domesticação e treinamento
 
 {{domestication_and_training}}
@@ -382,6 +490,10 @@ deferred_decisions:
 ## Sinais, rastros e evidências
 
 {{signals_tracks_and_evidence}}
+
+## Consequências ecológicas possíveis
+
+{{possible_ecological_consequences}}
 
 ## Lore editorial
 

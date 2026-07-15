@@ -1,11 +1,11 @@
 # Contrato editorial comum de conteúdo
 
 **Versão do contrato:** `1.0.0`  
-**Estado:** contrato comum concluído; schemas fundamentais, geográficos e de economia material e contrato conceitual de intervenção concluídos; Fase 1 em andamento.
+**Estado:** contrato comum e contratos especializados previstos até eventos, rumores, conflitos e ameaças monstruosas concluídos; Fase 1 em andamento e aguardando auditoria editorial final.
 
 ## Objetivo
 
-Este documento define o contrato editorial compartilhado por todos os arquivos de conteúdo de Eldrath: formato, identidade, referências, semântica de valores, revisão e verificação manual. Ele não substitui os schemas especializados futuros de NPCs, regiões, assentamentos, facções, magias, eventos ou qualquer outra entidade.
+Este documento define o contrato editorial compartilhado por todos os arquivos de conteúdo de Eldrath: formato, identidade, referências, semântica de valores, revisão e verificação manual. Ele não substitui os schemas especializados de NPCs, regiões, assentamentos, facções, magias, eventos ou qualquer outra entidade.
 
 Em caso de conflito sobre o mundo, [`Base/GDD.md`](../../Base/GDD.md) permanece a fonte canônica. Este contrato define como registrar conteúdo sem antecipar as regras específicas de cada categoria.
 
@@ -22,7 +22,7 @@ Em caso de conflito sobre o mundo, [`Base/GDD.md`](../../Base/GDD.md) permanece 
 
 Este contrato não cria entidades, lore, calendário, enums do mundo, regras de simulação ou implementação executável.
 
-O contrato conceitual de [intervenção, percepção e conhecimento](schemas/INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) preserva a distinção entre causa real restrita, fato, evidência, percepção, interpretação, conhecimento, crença, suspeita, memória e rumor. Futuros schemas de NPC, evento, rumor e memória deverão obedecer a essa separação. Não existe categoria nem quantidade planejada de “intervenções iniciais”.
+O contrato conceitual de [intervenção, percepção e conhecimento](schemas/INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) preserva a distinção entre causa real restrita, fato, evidência, percepção, interpretação, conhecimento, crença, suspeita, memória e rumor. Os contratos de NPC, evento, rumor e história obedecem a essa separação. Não existe categoria nem quantidade planejada de “intervenções iniciais”.
 
 ## Formato dos arquivos
 
@@ -182,7 +182,7 @@ O fluxo é `draft → in_review → approved → deprecated`.
 
 ## Categorias de conteúdo
 
-| Categoria | Prefixo de ID planejado | Formato principal | Template especializado futuro | Dependências gerais | Estado atual |
+| Categoria | Prefixo de ID planejado | Formato principal | Template especializado | Dependências gerais | Estado atual |
 |---|---|---|---|---|---|
 | `calendars/` | `calendar` | Markdown com front matter YAML | sim | identidade e contrato comum | vazia |
 | `languages/` | `language` | Markdown com front matter YAML | sim | identidade e contrato comum | vazia |
@@ -201,8 +201,9 @@ O fluxo é `draft → in_review → approved → deprecated`.
 | `items/` | `item` | Markdown com front matter YAML | sim | recursos, profissões, economia e magia | vazia |
 | `laws/` | `law` | Markdown com front matter YAML | sim | reino, política, culturas e magia | vazia |
 | `diseases/` | `disease` | Markdown com front matter YAML | sim | ambiente, assentamentos, recursos e magia | vazia |
-| `events/` | `event` | Markdown com front matter YAML | sim | entidades envolvidas e cronologia | vazia |
-| `rumors/` | `rumor` | Markdown com front matter YAML | sim | eventos, NPCs, lugares e facções | vazia |
+| `events/` | `event` | Markdown com front matter YAML | sim | entidades envolvidas, causalidade e cronologia | vazia |
+| `rumors/` | `rumor` | Markdown com front matter YAML | sim | fontes, eventos, NPCs, lugares e facções | vazia |
+| `conflicts/` | `conflict` | Markdown com front matter YAML | sim | lados, interesses, pressões, eventos e gatilhos | vazia |
 | `magic/schools/` | `school` | Markdown com front matter YAML | sim | princípios mágicos, instituições e leis | vazia |
 | `magic/spells/` | `spell` | Markdown com front matter YAML | sim | escolas, efeitos, leis e instituições | vazia |
 | `magic/rituals/` | `ritual` | Markdown com front matter YAML | sim | escolas, magias, efeitos e instituições | vazia |

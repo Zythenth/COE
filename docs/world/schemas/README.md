@@ -16,6 +16,8 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | [MAGIC_SYSTEM_ENTITIES.md](MAGIC_SYSTEM_ENTITIES.md) | `magic_school`, `spell`, `ritual`, `magic_effect` e `artifact` | contratos anteriores, especialmente economia material, intervenção, sociedade e lei | concluído |
 | [CREATURE_HEALTH_AND_DISEASE_ENTITIES.md](CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) | `creature`, `disease` e estruturas conceituais de saúde e condições; não cria entidades de condição | contratos anteriores, especialmente geografia, economia, intervenção, sociedade, lei e magia | concluído |
 | [NPC_SYSTEM_ENTITIES.md](NPC_SYSTEM_ENTITIES.md) | `npc` e subregistros incorporados de objetivos, medos, segredos, memória, conhecimento, crenças, relações e estado inicial | todos os contratos anteriores | concluído |
+| [EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md](EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md) | `event`, `rumor`, `conflict`, causalidade, gatilhos, arcos e projeções históricas | todos os contratos anteriores | concluído |
+| [MONSTROUS_THREATS_AND_INCURSIONS.md](MONSTROUS_THREATS_AND_INCURSIONS.md) | ameaças, populações, grupos, hordas, ataques, incursões, defesas e consequências; não cria novas entidades | criaturas, geografia, economia, sociedade, magia, NPCs, eventos e conflitos | concluído |
 
 ## Ordem de dependência
 
@@ -28,9 +30,10 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 7. sistema mágico;
 8. criaturas, doenças, saúde e condições relacionadas;
 9. NPCs persistentes e seus subregistros incorporados;
-10. eventos, rumores, história, causalidade e conflitos, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+10. eventos, rumores, história, causalidade e conflitos;
+11. ameaças monstruosas, grupos agregados, ataques e incursões, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei, o sistema mágico, os contratos de criaturas, doenças, saúde e condições relacionadas e o contrato completo de NPCs estão concluídos. O template de NPC está disponível, mas nenhuma entidade real foi criada. A próxima categoria documental cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais.
+O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei, o sistema mágico, os contratos de criaturas, doenças, saúde e condições relacionadas, o contrato completo de NPCs e os contratos de eventos, rumores, história, conflitos, ameaças e incursões estão concluídos. Os templates correspondentes estão disponíveis, mas nenhuma entidade real foi criada. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
 
 ## Regras de manutenção
 

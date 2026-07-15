@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições da Fase 1, foram concluídos. Os contratos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade documental cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial e os contratos e templates previstos nesta subetapa da Fase 1 foram concluídos, incluindo NPCs, eventos, rumores, história, cadeias causais, conflitos latentes, ameaças monstruosas e incursões. Os contratos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade é a auditoria editorial final, consolidação e encerramento explícito da fase. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -42,7 +42,7 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 38. doenças — contrato e template concluídos; entidades não iniciadas;
 39. saúde e condições relacionadas — contrato conceitual concluído; sem entidade, pasta, prefixo ou template próprios;
 40. contratos e template de NPCs, personalidade, valores, necessidades, emoções, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico — concluídos; entidades não iniciadas;
-41. contratos e templates de eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais — próxima atividade documental;
+41. contratos e templates de eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos, além do contrato de ameaças monstruosas e incursões — concluídos; a auditoria editorial final e a consolidação da Fase 1 são a próxima atividade;
 42. planejamento dos NPCs-semente;
 43. criação dos NPCs-semente;
 44. relações iniciais;
@@ -96,7 +96,7 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 | 16–25 | Geografia e vida material | Dependem do contexto macro para localizar territórios, assentamentos, circulação, recursos e economia coerentemente. |
 | 26 | Contrato transversal de intervenção | Depende da economia material e estabelece causalidade, percepção e conhecimento antes dos contratos sociais. |
 | 27–39 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
-| 40–41 | Contratos de NPCs e da história inicial | Dependem dos contratos sociais, geográficos, econômicos, mágicos e de saúde para separar pessoa, estado, conhecimento, inventário, causalidade e narrativa sem metaconhecimento. |
+| 40–41 | Contratos de NPCs, história inicial e ameaças | Dependem dos contratos sociais, geográficos, econômicos, mágicos e de saúde para separar pessoa, espécie, estado agregado, conhecimento, inventário, causalidade, rumor, conflito e narrativa sem metaconhecimento. A subetapa termina com auditoria editorial final antes da autoria do mundo. |
 | 42–49 | NPCs e história inicial | Dependem de todos os contratos anteriores para criar pessoas e conflitos conectados ao mundo. |
 | 50–57 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
 | 58–66 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |

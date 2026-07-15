@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para NPCs persistentes. Ele define representação autoral, propriedade canônica, estruturas incorporadas, estado inicial, limites de percepção e validação manual. Não é schema executável, JSON Schema, DSL, código, save, entidade real ou lore de Eldrath.
 
-Em caso de conflito, [Base/GDD.md](../../../Base/GDD.md), versão 1.2, permanece a fonte canônica.
+Em caso de conflito, [Base/GDD.md](../../../Base/GDD.md), versão 1.3, permanece a fonte canônica.
 
 ## 1. Objetivo
 
@@ -749,11 +749,11 @@ Permanecem para fases posteriores:
 - linguagem executável de condições e validação automatizada;
 - formato persistente de NPC promovido, item_instance, saúde, propriedade e histórico;
 - regras detalhadas de sucessão, herança, emprego, salário e contratos;
-- contrato editorial de eventos, rumores, história e conflitos;
+- entidades reais de eventos, rumores, história e conflitos;
 - banco de dados, API, interface, código e assets.
 
 ## 34. Estado editorial
 
 Este contrato e o template de NPC concluem a subetapa documental de NPCs da Fase 1. Eles não criam as 30 entidades-semente, não materializam as âncoras mencionadas no GDD e não iniciam a Fase 5.
 
-A próxima atividade da Fase 1 cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais.
+Os contratos de eventos, rumores, história, cadeias causais, conflitos latentes, gatilhos e ameaças monstruosas foram concluídos depois deste contrato. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.

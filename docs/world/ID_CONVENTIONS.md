@@ -92,6 +92,24 @@ relationship.source_slug.target_slug
 
 `belief.*` usa um campo estruturado para distinguir crença de suspeita; não existe prefixo `suspicion.`. Não existem arquivos ou pastas independentes para objetivos, medos, segredos, memórias, crenças, conhecimento, relações, reputações, emoções ou necessidades. O ID do NPC e os IDs incorporados permanecem estáveis quando nomes, títulos, família, profissão, residência ou condição histórica mudarem. As regras completas estão em [`NPC_SYSTEM_ENTITIES.md`](schemas/NPC_SYSTEM_ENTITIES.md).
 
+## Prefixos de eventos, rumores e conflitos
+
+| Entidade de conteúdo | Prefixo | Caminho de entidade |
+|---|---|---|
+| evento histórico inicial, evento-base ou possibilidade editorial | `event.` | `events/{slug}.md` |
+| rumor inicial ou afirmação transmissível de conteúdo | `rumor.` | `rumors/{slug}.md` |
+| conflito latente | `conflict.` | `conflicts/{slug}.md` |
+
+`event.*` identifica somente conteúdo estático. Eventos concretos da campanha usam IDs técnicos definidos futuramente e não podem ser confundidos com `event.*`. O namespace `event.seed.*` permanece permitido; o nome do arquivo usa o slug estável completo após `event.`, preservando segmentos adicionais conforme a regra futura do schema especializado.
+
+Rumor, crença e memória usam proprietários diferentes. `rumor.*` é conteúdo transmissível; `belief.*` e `memory.*` continuam subregistros de NPC ou do save. Versões derivadas de rumor na campanha pertencem ao estado e preservam genealogia.
+
+`conflict.*` define tensão latente e possibilidades iniciais. Estado atual, eventos produzidos, resultado e vencedor pertencem ao save. Gatilhos e arcos são subestruturas; não recebem prefixo ou pasta próprios.
+
+Horda, população, grupo, força de cerco, ataque, incursão, infestação e invasão concretos pertencem ao estado da campanha e não recebem prefixos de conteúdo nesta fase. Monstros, demônios, mortos-vivos, enxames e demais classificações continuam usando `creature.*`; um indivíduo persistente usa `npc.*`.
+
+As regras completas estão em [`EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md`](schemas/EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md) e [`MONSTROUS_THREATS_AND_INCURSIONS.md`](schemas/MONSTROUS_THREATS_AND_INCURSIONS.md).
+
 ## Exemplos válidos
 
 | ID | Motivo |
@@ -109,6 +127,8 @@ relationship.source_slug.target_slug
 | `goal.npc_slug.stable_goal` | Exemplo estrutural de objetivo incorporado, previsível e associado ao slug estável do NPC. |
 | `relationship.source_slug.target_slug` | Exemplo estrutural de relação direcionada; a ordem identifica origem e alvo. |
 | `event.seed.plague_of_white_ash` | Usa segmentos de tipo para identificar um evento-semente e mantém o nome estável em minúsculas. |
+| `rumor.example_rumor` | Exemplo exclusivamente estrutural de rumor inicial ou definição transmissível. |
+| `conflict.example_conflict` | Exemplo exclusivamente estrutural de conflito latente sem resultado predeterminado. |
 
 ## Exemplos inválidos
 

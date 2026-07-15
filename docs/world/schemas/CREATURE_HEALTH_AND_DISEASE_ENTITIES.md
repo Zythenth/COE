@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para espécies e tipos de criaturas, definições de doenças e estruturas compartilhadas de saúde. Ele define representação autoral, propriedade canônica, referências, separação entre conteúdo e campanha e validação manual. Não é schema executável, JSON Schema, DSL, código, conteúdo real, diagnóstico médico nem lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.2`, permanece a fonte canônica. O núcleo futuro deve permanecer completo, determinístico e utilizável sem IA generativa.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica. O núcleo futuro deve permanecer completo, determinístico e utilizável sem IA generativa.
 
 ## 1. Objetivo
 
@@ -22,7 +22,10 @@ Definir como representar:
 - deficiências, intoxicações e envenenamentos;
 - imunidade, resistência, diagnóstico, prognóstico e tratamento;
 - saúde verdadeira, saúde percebida, evidência e conhecimento limitado;
-- integrações com geografia, economia, sociedade, magia, leis, eventos, intervenções e estado da campanha.
+- integrações com geografia, economia, sociedade, magia, leis, eventos, intervenções e estado da campanha;
+- classificação e capacidades de fauna perigosa, monstros, demônios e outras ameaças;
+- comportamento, organização, formação possível de grupos, cerco, corrupção, negociação e retirada;
+- integração de espécies com populações, hordas, ataques e incursões sem armazenar seu estado atual.
 
 O contrato permite autoria verificável sem criar criaturas, doenças, condições, NPCs, eventos ou regras executáveis.
 
@@ -38,13 +41,19 @@ Dependências editoriais:
 6. [sociedade, instituições e lei](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md), para cultura, religião, facções, jurisdição e legalidade;
 7. [sistema mágico](MAGIC_SYSTEM_ENTITIES.md), para escolas, magias, rituais, artefatos, efeitos e corrupção.
 
-Não são criados nesta tarefa: entidades reais, pasta `conditions/`, template de condição, instâncias de doença, sintomas individuais, ferimentos individuais, venenos, infecções, saves, fórmulas, assets, banco, API, código ou validação automatizada.
+Este contrato anterior é integrado posteriormente pelos contratos de [eventos, rumores, história e conflitos](EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md) e de [ameaças monstruosas e incursões](MONSTROUS_THREATS_AND_INCURSIONS.md), sem inverter a ordem de dependência.
+
+Não são criados nesta tarefa: entidades reais, pastas separadas de demônios, monstros, hordas, invasões, incursões, mortos-vivos ou enxames, pasta `conditions/`, template de condição, template de ameaça, instâncias de doença, sintomas individuais, ferimentos individuais, venenos, infecções, saves, fórmulas, assets, banco, API, código ou validação automatizada.
 
 ## 3. Termos e separações obrigatórias
 
 - **Criatura:** definição `creature.*` de espécie, tipo ou arquétipo; não é automaticamente um indivíduo.
 - **Indivíduo agregado:** ocorrência comum acompanhada por população ou estado da campanha, sem identidade persistente completa.
 - **Indivíduo persistente:** ocorrência com nome, memória, relações, objetivos, conhecimento, inventário, trajetória ou relevância histórica; usa futuramente `npc.*` e referencia sua espécie ou tipo.
+- **População, grupo ou horda:** representação agregada atual no save; não é definição de espécie nem conjunto obrigatório de NPCs.
+- **Ameaça:** risco contextual sustentado por entidade ou grupo, capacidade, motivação e oportunidade.
+- **Ataque:** ação concreta registrada como evento de campanha.
+- **Incursão:** processo causal de formação, aproximação, ataque e consequências.
 - **Doença:** definição estática `disease.*`, transmissível ou progressiva segundo regras próprias.
 - **Instância de doença:** ocorrência concreta em um hospedeiro; pertence ao save.
 - **Infecção:** instância de doença infecciosa ou parasitária; não é entidade de conteúdo independente.
@@ -68,7 +77,7 @@ Não são criados nesta tarefa: entidades reais, pasta `conditions/`, template d
 
 Ambas usam Markdown com front matter YAML, um arquivo por entidade, `schema_version: "1.0.0"` e `content_status: draft` ao iniciar a autoria.
 
-Não existem nesta fase os prefixos `condition.`, `injury.`, `symptom.`, `poison.`, `infection.` ou `health.`. Também não existe pasta `conditions/`.
+Não existem nesta fase os prefixos `condition.`, `injury.`, `symptom.`, `poison.`, `infection.` ou `health.`. Também não existe pasta `conditions/`. Classificações demoníacas, monstruosas, corrompidas, mortas-vivas, invocadas, colossais, lendárias ou de enxame continuam usando `creature.*`.
 
 ## 5. Regras compartilhadas
 
@@ -96,6 +105,9 @@ Datas e momentos do mundo continuam sujeitos ao calendário futuro. Durações q
 | população e distribuição iniciais agregadas | `creature.initial_state` | listas inversas em regiões e locais |
 | população, distribuição, migração e pressão de caça atuais | save da campanha | `creature.*` |
 | indivíduo persistente | futuro `npc.*` | entidade `creature.*` concorrente |
+| capacidades estáveis de formar grupo, atacar, cercar, corromper, negociar ou retirar | `creature.*` | estado atual de ameaça |
+| população, grupo, horda, força de cerco e ameaça atuais | save da campanha | `creature.*` |
+| ataque, incursão, perdas e consequências concretos | eventos e save | definição estática de criatura |
 | definição, transmissão, estágios e tratamentos possíveis da doença | `disease.*` | NPC, criatura ou tratamento atual |
 | relações específicas de hospedeiro, vetor e reservatório | `disease.*` | listas inversas manuais em `creature.*` |
 | instância, estágio, sintomas e transmissibilidade atuais | save da campanha | `disease.*` |
@@ -124,7 +136,7 @@ Campos especializados:
 - `alternative_form_ids`: outras definições `creature.*` somente quando forem tipos distintos e não estados atuais;
 - `deferred_decisions`: decisões editoriais específicas adiadas.
 
-Classificação organiza a autoria e não determina comportamento, moralidade ou legalidade.
+Classificação organiza a autoria e não determina comportamento, moralidade ou legalidade. `classification` pode distinguir por chaves controladas fauna perigosa, fera, monstro, demônio, aberração arcana, criatura corrompida, morto-vivo, enxame, criatura invocada, criatura colossal, criatura lendária ou entidade única. Nenhuma chave cria pasta ou prefixo próprio.
 
 ### 7.3 Anatomia abstrata
 
@@ -159,6 +171,8 @@ Estruturas independentes registram:
 
 Uma capacidade possível não afirma que todo indivíduo a exerce da mesma forma.
 
+`social_profile` também declara organização social, hierarquia, disciplina, tamanho típico de grupo e capacidade de formar bandos, matilhas, enxames, hordas ou forças de cerco. Esses campos definem possibilidade e limites; composição, quantidade, coesão, líder e local atuais pertencem ao save.
+
 ### 7.6 Comportamento e atividade
 
 `behavior_profile` pode registrar:
@@ -171,15 +185,29 @@ Uma capacidade possível não afirma que todo indivíduo a exerce da mesma forma
 - comportamento aprendido e treinável;
 - limitações e exceções.
 
+Para ameaças, também registra agressividade, medo, motivações possíveis, gatilhos de ataque, alvos preferidos, estratégias, condições de perseguição e condições de retirada. Tendência de ataque nunca equivale a ataque atual ou inevitável.
+
 Comportamentos são tendências e capacidades, não ações atuais nem personalidade de cada indivíduo.
 
-### 7.7 Dieta e relações ecológicas
+### 7.7 Movimento, perseguição e capacidades de ameaça
+
+`movement_profile` registra modos, velocidade ou alcance somente quando mensurável, ambientes válidos, capacidade de perseguir, limitações, requisitos de rota e condições de interrupção. Movimento atual pertence ao save.
+
+`threat_capabilities` registra possibilidades de ataque, caça, dano a recurso, interrupção de rota, cerco, ocupação, corrupção, abertura ou uso de portal, proteção de ninho, negociação, comando, infiltração e retirada. Cada capacidade possui chave, requisitos, alvos permitidos, limitações, sinais, riscos e consequências possíveis.
+
+`invocation_and_cult_relations` registra capacidade de ser invocada, comandada, venerada ou relacionada a cultos e facções, com requisitos, limites, resistência, formas de vínculo e consequências possíveis. Relações concretas e comandos atuais pertencem ao save.
+
+`weakness_profiles` registra vulnerabilidades exploráveis, condições, contramedidas, sinais e limites. Fraqueza não garante sucesso defensivo.
+
+`ecological_consequence_profiles` registra consequências possíveis sobre habitat, recursos, outras criaturas, doenças, magia, assentamentos e rotas. Consequência concreta exige evento.
+
+### 7.8 Dieta e relações ecológicas
 
 `diet_profile` declara categorias alimentares, requisitos, fontes e restrições. Relações entre criaturas ficam em `ecological_relations`, com direção única, `relation_key`, `relation_type_key`, `target_creature_id`, condições, intensidade ou relevância e notas.
 
 Predação é registrada no consumidor ou predador como relação dirigida ao alvo. A lista de predadores de uma espécie é derivada consultando relações que a apontam; não se mantêm listas inversas concorrentes. Relações com recursos alimentares usam `resource.*` quando a definição existir.
 
-### 7.8 Habitat, clima e distribuição
+### 7.9 Habitat, clima e distribuição
 
 `habitat_compatibility` descreve compatibilidade por:
 
@@ -194,15 +222,15 @@ Compatibilidade não afirma presença atual. Regiões e locais não mantêm list
 
 `migration_profile` e `territoriality_profile` descrevem capacidade, gatilhos, padrões e limites possíveis. Migração e território atuais pertencem ao save.
 
-### 7.9 População inicial agregada
+### 7.10 População inicial agregada
 
 `initial_state.population_distribution` pode semear distribuição agregada. Cada entrada aponta para exatamente um `region_id`, `settlement_id` ou `location_id` e registra `quantity`, `unit_key`, capacidade ambiental inicial opcional, tendência inicial, data e fundamento.
 
 Depois da inicialização, o save possui quantidade atual, capacidade ambiental, tendência, nascimentos e mortes agregados, migração, caça, predação, doença, expansão, extinção local e eventos ambientais. População nunca fica negativa.
 
-Indivíduos comuns permanecem agregados até adquirirem relevância. Um indivíduo persistente usa `npc.*` e referencia `creature.*`; não há duas identidades concorrentes.
+Indivíduos comuns permanecem agregados até adquirirem relevância. Um indivíduo persistente usa `npc.*` e referencia `creature.*`; não há duas identidades concorrentes. Grupos, hordas e forças de cerco são registros agregados do save e não materializam todos os integrantes como NPCs.
 
-### 7.10 Ecologia simplificada
+### 7.11 Ecologia simplificada
 
 `ecological_pressures` acompanha apenas pressões relevantes:
 
@@ -220,13 +248,13 @@ Indivíduos comuns permanecem agregados até adquirirem relevância. Um indivíd
 
 Cada pressão define chave, fonte, condições, direção do efeito e relevância editorial. Não é cadeia alimentar completa, fórmula nem estado atual.
 
-### 7.11 Relação com magia
+### 7.12 Relação com magia
 
 `magic_relation` pode registrar afinidades, resistências, vulnerabilidades, dependências, manifestações, escolas relacionadas, efeitos possíveis e evidências. Afinidade não concede automaticamente magia conhecida, domínio, moralidade ou status legal.
 
 Corrupção atual e efeitos aplicados pertencem ao save. Relações mecânicas usam `magic_school.*` e `magic_effect.*`; prosa não substitui aplicações estruturadas.
 
-### 7.12 Saúde estrutural da espécie
+### 7.13 Saúde estrutural da espécie
 
 `species_health_profile` pode registrar:
 
@@ -239,13 +267,13 @@ Corrupção atual e efeitos aplicados pertencem ao save. Relações mecânicas u
 
 Relações específicas com uma doença — hospedeiro possível, vetor, reservatório, suscetibilidade ou imunidade específica — pertencem a `disease.*` e são derivadas na visão da criatura. Imunidade individual ou adquirida nunca fica neste arquivo.
 
-### 7.13 Perigo, defesa, domesticação e treinamento
+### 7.14 Perigo, defesa, domesticação e treinamento
 
-`danger_profile` descreve riscos possíveis, gatilhos e alvos, sem reputação universal. `defense_profile` registra evasão, proteção, resistência, ataque ou outra capacidade defensiva.
+`danger_profile` descreve riscos possíveis, agressividade, motivações, gatilhos e alvos, sem reputação universal. `defense_profile` registra evasão, proteção, resistência, ataque, fraquezas, estratégias defensivas ou outra capacidade. Ataques e defesas atuais pertencem ao save e geram eventos.
 
 `domestication_profile` e `training_profile` declaram possibilidade, requisitos, limites, riscos, bem-estar, competências e profissões relacionadas. Possibilidade de domesticação não concede propriedade, obediência ou legalidade.
 
-### 7.14 Recursos e itens potencialmente obtidos
+### 7.15 Recursos e itens potencialmente obtidos
 
 `yield_profiles` pode registrar obtenção por coleta não letal, queda natural, criação, domesticação, caça, morte, processamento ou evento especial. Cada entrada possui:
 
@@ -259,7 +287,7 @@ Relações específicas com uma doença — hospedeiro possível, vetor, reserva
 
 A definição declara possibilidade, não concessão automática. A obtenção concreta exige evento, condições, competência, ferramenta, quantidade disponível, legalidade e consequência, todos no estado da campanha.
 
-### 7.15 Profissões, cultura, sinais e evidências
+### 7.16 Profissões, cultura, sinais e evidências
 
 `profession_interactions` registra capacidades ou riscos direcionados a `profession.*`, sem listar trabalhadores atuais.
 
@@ -616,7 +644,7 @@ Sintoma não prova causa. Teste pode falhar. Autoridade profissional aumenta a q
 
 ## 19. Intervenções do Arquiteto
 
-Uma intervenção autorizada pode causar exposição, aplicar condição permitida, mover vetor, disponibilizar tratamento, produzir evidência, remover efeito removível ou alterar ambiente dentro das regras.
+Uma intervenção autorizada pode causar exposição, aplicar condição permitida, mover vetor, disponibilizar tratamento, produzir evidência, remover efeito removível ou alterar ambiente dentro das regras. Também pode despertar, introduzir ou deslocar criatura; fortalecer ou enfraquecer ameaça; formar ou mover horda; abrir portal; criar ninho; libertar entidade; atrair ameaça; iniciar incursão; ou fornecer sinais, quando o modo e os contratos aplicáveis autorizarem.
 
 Ela não pode editar silenciosamente diagnóstico, conceder conhecimento médico automático, ocultar sua causa administrativa do log, ignorar imunidade, matar sem evento ou violar determinismo. NPCs percebem somente efeitos e evidências por vias válidas.
 
@@ -648,15 +676,21 @@ Caça, criação, comércio, transporte, sacrifício, domesticação, uso de par
 
 Exposição, diagnóstico, tratamento, agravamento, recuperação, sequela e morte produzem eventos quando relevantes. Evidências alimentam percepções; percepções podem produzir memórias, crenças e rumores sem revelar a causa verdadeira.
 
-### NPCs futuros
+### NPCs persistentes
 
-O NPC persistente referencia sua espécie ou tipo `creature.*` quando aplicável e mantém saúde, imunidade, deficiências, diagnósticos, conhecimento e tratamentos no estado inicial ou save conforme o futuro contrato. Nenhum NPC acessa metadados administrativos.
+O NPC persistente referencia sua espécie ou tipo `creature.*` quando aplicável e mantém saúde, imunidade, deficiências, diagnósticos, conhecimento e tratamentos no estado inicial ou save conforme [`NPC_SYSTEM_ENTITIES.md`](NPC_SYSTEM_ENTITIES.md). Nenhum NPC acessa metadados administrativos.
+
+### Eventos, conflitos, ameaças e incursões
+
+`event.*` define evento de conteúdo; o evento concreto da campanha registra ataque, ferimento, deslocamento, retirada e consequência. `conflict.*` pode definir tensão monstruosa ou demoníaca sem resultado antecipado. População, grupo, horda, força de cerco, ameaça, ataque e incursão atuais pertencem ao save e seguem [`MONSTROUS_THREATS_AND_INCURSIONS.md`](MONSTROUS_THREATS_AND_INCURSIONS.md).
+
+Espécie fornece capacidades; o estado fornece quantidade, grupo, local, objetivo e comando atuais. A definição não seleciona alvo concreto, não inicia ataque sozinha e não mantém estado de horda.
 
 ## 21. Conteúdo estático, estado inicial, campanha e derivados
 
 ### Conteúdo estático
 
-Define espécie, corpo abstrato, comportamento, habitat compatível, pressões, doença, transmissão possível, sintomas possíveis, tratamentos possíveis, regras e limites.
+Define espécie, corpo abstrato, comportamento, organização possível, habitat compatível, capacidades de ameaça, pressões, doença, transmissão possível, sintomas possíveis, tratamentos possíveis, regras e limites.
 
 ### Estado inicial
 
@@ -664,7 +698,7 @@ Define espécie, corpo abstrato, comportamento, habitat compatível, pressões, 
 
 ### Estado atual da campanha
 
-Possui população e distribuição atuais, indivíduos, ferimentos, infecções, sintomas, diagnósticos, tratamentos, dor, fadiga, imunidade individual, efeitos, mortes, evidências, conhecimento e rumores.
+Possui população e distribuição atuais, grupos, hordas, forças de cerco, ameaças, ataques, incursões, indivíduos, ferimentos, infecções, sintomas, diagnósticos, tratamentos, dor, fadiga, imunidade individual, efeitos, mortes, evidências, conhecimento e rumores.
 
 ### Campos derivados
 
@@ -721,6 +755,11 @@ IA generativa pode propor ou apresentar texto sujeito a revisão, mas não deter
 24. Quantidades usam `value` e `unit_key`; probabilidades usam `0`–`1`.
 25. Condição geral de saúde é derivada dos componentes.
 26. Nenhuma mecânica de saúde existe somente na prosa.
+27. Classificação demoníaca ou monstruosa não determina irracionalidade ou hostilidade.
+28. Hordas, grupos e forças atuais não ficam em `creature.*`.
+29. Grandes grupos não exigem um NPC por integrante.
+30. Ataque concreto exige causa, capacidade, oportunidade, alvo e consequência.
+31. Sinais não concedem identificação ou metaconhecimento automático.
 
 ## 25. Validação manual
 
@@ -731,6 +770,11 @@ Antes de encaminhar conteúdo futuro para revisão:
 - confirmar chaves locais ASCII em `snake_case`;
 - validar referências por categoria e ausência de nomes usados como chaves;
 - distinguir espécie, indivíduo agregado e NPC persistente;
+- conferir classificação, inteligência, organização, tamanho típico de grupo e capacidade de formar hordas;
+- validar territorialidade, agressividade, motivações, ataque, alvos, sinais, movimento, perseguição, cerco, corrupção, negociação e retirada;
+- conferir relações com invocadores, cultos e magia sem comando atual no conteúdo;
+- validar estratégias, fraquezas, perigos e consequências ecológicas;
+- confirmar ausência de horda, população, grupo, ataque ou incursão atual no arquivo;
 - conferir anatomia abstrata sem pressupor corpo humano;
 - confirmar habitat compatível separado de presença atual;
 - validar população inicial agregada, unidade e alvo geográfico único;
@@ -752,7 +796,7 @@ Antes de encaminhar conteúdo futuro para revisão:
 - confirmar corpo Markdown coerente e sem mecânica concorrente;
 - confirmar ausência de placeholders em conteúdo `approved`;
 - confirmar funcionamento editorial completo sem IA e sem arte;
-- confirmar que nenhuma entidade real, pasta `conditions/`, template adicional, save, asset, DSL, código ou schema executável foi criado por este contrato.
+- confirmar que nenhuma entidade real, pasta proibida, template adicional, save, asset, DSL, código ou schema executável foi criado por este contrato.
 
 ## 26. Decisões adiadas
 
@@ -761,13 +805,13 @@ Permanecem deliberadamente adiados:
 - criaturas, doenças, nomes, lore, classificações e vocabulários reais de Eldrath;
 - quantidades de criaturas e doenças, ambas `a definir`;
 - anatomias, estágios de vida, habitats, dietas e populações reais;
-- enum final de categorias de criatura, doença, condição, sintoma, ferimento, deficiência, toxina, risco e resultado;
+- enum final de categorias de criatura, ameaça, organização, grupo, doença, condição, sintoma, ferimento, deficiência, toxina, risco e resultado;
 - unidades, valores, doses, durações, probabilidades e faixas concretas;
 - fórmulas de transmissão, progressão, resistência, imunidade, diagnóstico, tratamento, recuperação e mortalidade;
-- contrato futuro de `npc.*`, eventos, memórias, rumores, relações e inventário;
+- entidades reais de `npc.*`, eventos, memórias, rumores, relações e inventário;
 - formato persistente de saúde, instância de doença, condição, diagnóstico, tratamento e população;
 - autoria de instâncias iniciais de doença e condições no futuro pacote de estado inicial;
-- regras executáveis de ecologia, migração, domesticação, treinamento, acessibilidade e cuidado;
+- regras executáveis de ecologia, migração, domesticação, treinamento, formação de grupos, escolha de alvo, perseguição, cerco, retirada, acessibilidade e cuidado;
 - políticas concretas de conteúdo sensível;
 - validação automatizada, JSON Schema, banco, API, interface e implementação;
 - assets, direção visual e arte.

@@ -1,6 +1,6 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças, de NPCs, de eventos, rumores, história e conflitos e de ameaças monstruosas e incursões, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
@@ -8,7 +8,7 @@ O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compart
 
 O conteúdo inicial descreve entidades, relações, regras editoriais, fatos históricos e condições existentes antes do avanço de uma campanha. Ele será escrito em arquivos versionados e auditáveis.
 
-O estado produzido pela simulação registrará acontecimentos e mutações de uma campanha: tempo transcorrido, decisões, eventos, relações alteradas, mortes, rumores e outras consequências. Intervenções do Arquiteto, comandos, `item_instance`, quantidades atuais de recursos, evidências, percepções, crenças adquiridas, memórias e rumores derivados também pertencerão a esse estado. Esse estado será responsabilidade futura da programação e da persistência. A simulação não deverá reescrever os arquivos autorais a cada tick.
+O estado produzido pela simulação registrará acontecimentos e mutações de uma campanha: tempo transcorrido, decisões, eventos, relações alteradas, mortes, rumores e outras consequências. Intervenções do Arquiteto, comandos, `item_instance`, quantidades atuais de recursos, evidências, percepções, crenças adquiridas, memórias, rumores derivados, populações, grupos, hordas, forças, ataques e incursões em andamento também pertencerão a esse estado. Esse estado será responsabilidade futura da programação e da persistência. A simulação não deverá reescrever os arquivos autorais a cada tick.
 
 O conteúdo estático poderá definir capacidades, limites e condições permitidas, mas não haverá pasta, template, entidade ou quantidade planejada de “intervenções iniciais”. Fatos, percepções, interpretações, crenças e conhecimento permanecem conceitos distintos conforme o [contrato de intervenção, percepção e conhecimento](../../../docs/world/schemas/INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md).
 
@@ -18,7 +18,7 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico, dois de criaturas e doenças e um de NPC disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico, dois de criaturas e doenças, um de NPC e três de eventos, rumores e conflitos disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -31,20 +31,21 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 | `factions/` | Facções, instituições, cargos, autoridade, presença inicial e objetivos coletivos. | schema e template disponíveis; pasta real vazia; zero facções |
 | `religions/` | Tradições religiosas, cultos como crença, doutrinas, práticas e diversidade. | schema e template disponíveis; pasta real vazia; zero religiões |
 | `professions/` | Profissões, tarefas, competências, status e progressão. | schema e template disponíveis; pasta real vazia; zero profissões |
-| `creatures/` | Espécies e tipos, anatomia abstrata, habitat, comportamento, ecologia, saúde estrutural e relação com magia. | schema e template disponíveis; pasta real vazia; zero criaturas; quantidade a definir |
+| `creatures/` | Espécies e tipos, anatomia abstrata, habitat, comportamento, ecologia, saúde estrutural, capacidades de ameaça e relação com magia. | schema e template disponíveis; pasta real vazia; zero criaturas; quantidade a definir |
 | `resources/` | Recursos materiais e arcanos relevantes para a vida do reino. | schema e template disponíveis; pasta real vazia; zero recursos |
 | `items/` | Definições de itens relevantes, propriedades, uso e proveniência. | schema e template disponíveis; pasta real vazia; zero itens |
 | `laws/` | Leis gerais, mágicas e detalhadas por jurisdição, vigência e autoridade. | schema e template disponíveis; pasta real vazia; zero leis |
 | `diseases/` | Definições de doenças, transmissão, estágios, sintomas, diagnóstico e tratamentos possíveis. | schema e template disponíveis; pasta real vazia; zero doenças; quantidade a definir; instâncias pertencem ao save |
-| `events/` | Eventos históricos e eventos-base que compõem o estado inicial. | não iniciado |
-| `rumors/` | Rumores iniciais ou gatilhos, origens e referências causais. | não iniciado |
+| `events/` | Eventos históricos e eventos-base de conteúdo, com causas, consequências, projeções e gatilhos autorais. | schema e template disponíveis; contém somente `.gitkeep`; zero eventos de 40 planejados |
+| `rumors/` | Rumores iniciais de conteúdo, versões, genealogia, origens e referências causais. | schema e template disponíveis; contém somente `.gitkeep`; zero rumores de 20 planejados |
+| `conflicts/` | Conflitos latentes, partes, interesses, pressões, escalada, gatilhos e resoluções possíveis. | schema e template disponíveis; contém somente `.gitkeep`; zero conflitos de 8 planejados |
 | `magic/schools/` | Escolas e subescolas mágicas, princípios, taxonomia e relações. | schema e template disponíveis; pasta real vazia; zero escolas |
 | `magic/spells/` | Magias com requisitos, custos, efeitos, riscos e lore complementar. | schema e template disponíveis; pasta real vazia; zero magias |
 | `magic/rituals/` | Rituais, papéis, etapas, interrupções e resultados estruturados. | schema e template disponíveis; pasta real vazia; zero rituais |
 | `magic/artifacts/` | Artefatos, efeitos, estado inicial, proveniência e história. | schema e template disponíveis; pasta real vazia; zero artefatos |
 | `magic/effects/` | Definições de efeitos mágicos estruturadas e referenciáveis. | schema e template disponíveis; pasta real vazia; zero efeitos |
 
-`_templates/` contém o template genérico [`base_entity.md`](_templates/base_entity.md), que reúne apenas os campos comuns. Um template especializado futuro parte dele e adiciona somente os campos documentados para uma categoria. A pasta nunca é conteúdo real e deve ser excluída pelo futuro carregador. Quando uma pasta-folha recebe conteúdo real, seu `.gitkeep` deve ser removido; por isso `_templates/.gitkeep` foi removido ao receber seus arquivos reais de template.
+`_templates/` contém o template genérico [`base_entity.md`](_templates/base_entity.md), que reúne apenas os campos comuns. Um template especializado parte dele e adiciona somente os campos documentados para uma categoria. A pasta nunca é conteúdo real e deve ser excluída pelo futuro carregador. Quando uma pasta-folha recebe conteúdo real, seu `.gitkeep` deve ser removido; por isso `_templates/.gitkeep` foi removido ao receber seus arquivos reais de template.
 
 ## IDs e referências
 
@@ -59,7 +60,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas, saúde e doenças e de NPCs e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md), o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md), o contrato mágico em [`MAGIC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), o contrato de saúde em [`CREATURE_HEALTH_AND_DISEASE_ENTITIES.md`](../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) e o contrato de NPCs em [`NPC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/NPC_SYSTEM_ENTITIES.md).
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas, saúde e doenças, de NPCs, de eventos, rumores, história e conflitos e de ameaças monstruosas e incursões, além do contrato transversal de intervenção, estão no [índice de schemas](../../../docs/world/schemas/README.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -123,6 +124,17 @@ Os templates [`creature.template.md`](_templates/creature.template.md) e [`disea
 
 O template [`npc.template.md`](_templates/npc.template.md) materializa o [contrato de NPCs](../../../docs/world/schemas/NPC_SYSTEM_ENTITIES.md), não é entidade e não altera as metas de 30 NPCs-semente e até 150 persistentes. A pasta `npcs/` continua contendo somente `.gitkeep`.
 
+## Evento, rumor, conflito e ameaça monstruosa
+
+- **Evento de conteúdo** `event.*` registra fato histórico ou evento-base autoral; **evento de campanha** é ocorrência técnica do save e não recebe arquivo na pasta `events/`.
+- **Rumor** `rumor.*` é uma alegação transmissível com fonte e genealogia próprias; não é sinônimo de fato, crença, memória, lenda ou causa real.
+- **Conflito** `conflict.*` descreve tensão latente, partes, interesses, pressões, escalada, gatilhos e resoluções possíveis sem predeterminar vencedor.
+- **Criatura** `creature.*` continua sendo espécie, tipo ou arquétipo; indivíduo persistente usa `npc.*`, enquanto população, grupo, horda e força são representações agregadas do estado.
+- **Ameaça** é uma condição capaz de produzir dano; **ataque** é uma ação delimitada; **incursão** é um processo causal com formação, aproximação, sinais, resposta, resolução e consequências.
+- Ataques, incursões, ninhos ativos, portais ativos, ocupações e corrupções em curso pertencem ao save. O conteúdo estático define capacidades, limitações e sementes aprovadas, não resultados inevitáveis.
+
+Os templates [`event.template.md`](_templates/event.template.md), [`rumor.template.md`](_templates/rumor.template.md) e [`conflict.template.md`](_templates/conflict.template.md) materializam o [contrato de eventos, rumores, história e conflitos](../../../docs/world/schemas/EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md). Capacidades de espécie e as fronteiras de ataques e incursões seguem o [contrato de ameaças monstruosas e incursões](../../../docs/world/schemas/MONSTROUS_THREATS_AND_INCURSIONS.md). Nenhum desses templates cria entidade real nem altera as metas de 40 eventos-base, 20 rumores iniciais ou gatilhos e 8 conflitos latentes.
+
 ## Ordem de leitura
 
 1. [`Base/GDD.md`](../../../Base/GDD.md), fonte canônica atual;
@@ -137,4 +149,4 @@ O template [`npc.template.md`](_templates/npc.template.md) materializa o [contra
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, seus templates e os contratos conceituais de intervenção, percepção, conhecimento, saúde e condições foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*`, taxonomia mágica parte de `magic_school.*`, habitat e distribuição inicial partem de `creature.*`, relações epidemiológicas específicas partem de `disease.*` e estado inicial individual parte de `npc.initial_state`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas especializados previstos, seus templates e os contratos conceituais de intervenção, percepção, conhecimento, saúde, condições, eventos, rumores, história, conflitos, ameaças monstruosas e incursões foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*`, taxonomia mágica parte de `magic_school.*`, habitat e capacidades de ameaça partem de `creature.*`, relações epidemiológicas específicas partem de `disease.*`, estado inicial individual parte de `npc.initial_state` e eventos, rumores e conflitos autorais partem de `event.*`, `rumor.*` e `conflict.*`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima atividade é a auditoria editorial final, a consolidação e o encerramento explícito da Fase 1; a construção do mundo não começou.

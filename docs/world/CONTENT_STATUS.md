@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições, foram concluídos. O template de NPC está disponível sem materializar conteúdo; objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados e não possuem pastas próprias. Condições, instâncias de doença, diagnósticos, ferimentos e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: os contratos editoriais e templates previstos, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, foram concluídos. Os contratos de NPCs já estavam concluídos no HEAD. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -18,8 +18,11 @@ Estado das subetapas recentes da Fase 1:
 - contrato de NPCs, personalidade, valores, necessidades, emoções, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico: concluído;
 - template de NPC persistente: concluído;
 - entidades reais de NPC: não iniciadas;
-- eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais: próxima atividade documental;
-- Fase 1: em andamento.
+- contratos de eventos, rumores, história, cadeias causais, arcos e gatilhos: concluídos;
+- templates de evento, rumor e conflito: concluídos;
+- contrato de ameaças monstruosas, grupos, hordas, ataques e incursões: concluído;
+- conteúdo real de eventos, rumores, conflitos, criaturas e ameaças: não iniciado;
+- Fase 1: em andamento; aguarda auditoria editorial final.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
@@ -38,9 +41,9 @@ Estado das subetapas recentes da Fase 1:
 | Magias | 60 | 0 | não iniciado | escolas, efeitos, instituições e leis mágicas | Fase 4 | `content/worlds/eldrath/magic/spells/` | Schema e template concluídos; nenhuma magia foi criada. | 2026-07-15 |
 | Artefatos | 12 | 0 | não iniciado | escolas, efeitos, itens e história | Fase 4 | `content/worlds/eldrath/magic/artifacts/` | Schema e template concluídos; nenhum artefato foi criado. | 2026-07-15 |
 | Profissões | 20 | 0 | não iniciado | produção, comércio, instituições e assentamentos | Fase 3 | `content/worlds/eldrath/professions/` | Schema e template concluídos; a meta continua em 20 e a quantidade existente continua zero. | 2026-07-15 |
-| Eventos-base | 40 | 0 | não iniciado | entidades do mundo, causalidade e cronologia | Fase 5 | `content/worlds/eldrath/events/` | Eventos históricos e eventos-base serão distinguidos pelos contratos editoriais. | 2026-07-15 |
-| Rumores iniciais ou gatilhos | 20 | 0 | não iniciado | eventos, NPCs, facções e lugares | Fase 5 | `content/worlds/eldrath/rumors/` | Nenhum rumor ou gatilho foi criado. | 2026-07-15 |
-| Conflitos latentes | 8 | 0 | não iniciado | NPCs, facções, eventos, rumores e relações | Fase 5 | a definir | A representação editorial definitiva será decidida na Fase 1. | 2026-07-15 |
+| Eventos-base | 40 | 0 | não iniciado | entidades do mundo, causalidade e cronologia | Fase 5 | `content/worlds/eldrath/events/` | Contrato e template concluídos; `event.*` é conteúdo estático e evento concreto de campanha usa identidade técnica separada; a pasta contém somente `.gitkeep`. | 2026-07-15 |
+| Rumores iniciais ou gatilhos | 20 | 0 | não iniciado | eventos, NPCs, facções e lugares | Fase 5 | `content/worlds/eldrath/rumors/` | Contrato e template concluídos; a pasta contém somente `.gitkeep`; nenhum rumor ou gatilho foi criado. | 2026-07-15 |
+| Conflitos latentes | 8 | 0 | não iniciado | NPCs, facções, eventos, rumores, relações e ameaças | Fase 5 | `content/worlds/eldrath/conflicts/` | Contrato e template concluídos; a pasta contém somente `.gitkeep`; estado atual e resultado pertencem ao save. | 2026-07-15 |
 | Calendários | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/calendars/` | Inclui calendário e eras conforme escopo futuro. | 2026-07-15 |
 | Idiomas | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/languages/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Culturas | a definir | 0 | não iniciado | identidade, calendário e idiomas | Fase 2 | `content/worlds/eldrath/cultures/` | O GDD não fixa quantidade. | 2026-07-15 |
@@ -54,4 +57,4 @@ Estado das subetapas recentes da Fase 1:
 | Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças e NPCs, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados, não categorias contáveis de conteúdo. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
