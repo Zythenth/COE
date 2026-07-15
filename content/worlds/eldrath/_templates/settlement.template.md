@@ -32,34 +32,86 @@ initial_state:
   prosperity: null
   tension: null
 production:
-  - resource_id: "{{resource_id}}"
-    amount: null
-    unit: null
-    period: "{{period_key}}"
-    modifiers: []
+  - flow_id: "{{production_flow_id}}"
+    resource_id: null
+    item_id: null
+    quantity:
+      value: null
+      unit_key: null
+    period_key: null
+    required_profession_ids: []
+    required_location_type_keys: []
+    required_item_ids: []
+    input_refs: []
+    output_refs: []
+    condition_keys: []
+    waste_outputs: []
     notes: null
 consumption:
-  - resource_id: "{{resource_id}}"
-    amount: null
-    unit: null
-    period: "{{period_key}}"
-    modifiers: []
+  - flow_id: "{{consumption_flow_id}}"
+    resource_id: null
+    item_id: null
+    quantity:
+      value: null
+      unit_key: null
+    period_key: null
+    required_profession_ids: []
+    required_location_type_keys: []
+    required_item_ids: []
+    input_refs: []
+    output_refs: []
+    condition_keys: []
+    waste_outputs: []
     notes: null
 trade:
-  - resource_id: "{{resource_id}}"
-    amount: null
-    unit: null
-    period: "{{period_key}}"
+  - trade_id: "{{trade_id}}"
+    resource_id: null
+    item_id: null
+    quantity:
+      value: null
+      unit_key: null
+    period_key: null
     direction: "{{trade_direction_key}}"
     counterparty_id: null
-    modifiers: []
+    initial_price:
+      money:
+        amount: null
+        currency_key: null
+      quantity_basis:
+        value: null
+        unit_key: null
+      quality_key: null
+      settlement_id: null
+      effective_date: null
+      source: null
+    condition_keys: []
     notes: null
-resource_stocks:
-  - resource_id: "{{resource_id}}"
-    amount: null
-    unit: null
-    capacity: null
+initial_stocks:
+  - resource_id: null
+    item_id: null
+    quantity:
+      value: null
+      unit_key: null
+    quality_key: null
+    storage_location_id: null
+    reserved_quantity:
+      value: null
+      unit_key: null
     notes: null
+initial_prices:
+  - resource_id: null
+    item_id: null
+    price:
+      money:
+        amount: null
+        currency_key: null
+      quantity_basis:
+        value: null
+        unit_key: null
+      quality_key: null
+      settlement_id: null
+      effective_date: null
+      source: null
 faction_presence:
   - faction_id: "{{faction_id}}"
     presence: null
@@ -73,7 +125,7 @@ local_problems:
     notes: null
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são proibidos em conteúdo `approved`.
+> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são proibidos em conteúdo `approved`. Produção, consumo, comércio, estoques e preços representam somente capacidades, relações e valores iniciais; valores atuais pertencem ao estado futuro da simulação.
 
 # Visão geral
 

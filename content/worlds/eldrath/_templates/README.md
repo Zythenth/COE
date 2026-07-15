@@ -25,7 +25,15 @@ Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo 
 | [`location.template.md`](location.template.md) | local | Markdown com front matter YAML | `../locations/{slug}.md` | contrato comum, região, assentamento opcional e schemas futuros relacionados | concluído |
 | [`route.template.md`](route.template.md) | rota | Markdown com front matter YAML | `../routes/{slug}.md` | contrato comum e extremos `settlement.*` ou `location.*` aprovados | concluído |
 
-Copie somente o template da entidade que será autorizada, substitua seus placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real.
+## Catálogo de economia material
+
+| Template | Entidade | Formato | Destino futuro | Dependências | Estado |
+|---|---|---|---|---|---|
+| [`resource.template.md`](resource.template.md) | recurso | Markdown com front matter YAML | `../resources/{slug}.md` | contrato comum, unidades, geografia e economia material | concluído |
+| [`profession.template.md`](profession.template.md) | profissão | Markdown com front matter YAML | `../professions/{slug}.md` | contrato comum, recursos, itens, assentamentos e instituições futuras | concluído |
+| [`item.template.md`](item.template.md) | item | Markdown com front matter YAML | `../items/{slug}.md` | contrato comum, unidades, recursos, profissões, economia e magia futura | concluído |
+
+Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
 
 ## Ordem recomendada
 
@@ -37,6 +45,9 @@ Copie somente o template da entidade que será autorizada, substitua seus placeh
 6. `region.template.md`;
 7. `settlement.template.md`;
 8. `location.template.md`;
-9. `route.template.md`.
+9. `route.template.md`;
+10. `resource.template.md`;
+11. `profession.template.md`;
+12. `item.template.md`.
 
 Quando o contrato comum ou um schema especializado mudar de forma aprovada, os templates afetados deverão ser revisados antes de novos arquivos serem aprovados. O ciclo de revisão de um template é o mesmo do conteúdo: elaboração, revisão, aprovação explícita e eventual depreciação documentada.

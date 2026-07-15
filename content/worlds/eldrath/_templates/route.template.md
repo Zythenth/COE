@@ -16,10 +16,10 @@ directionality: "{{directionality}}"
 route_type: "{{route_type}}"
 distance:
   value: null
-  unit: null
+  unit_key: null
 base_travel_time:
   value: null
-  unit: null
+  unit_key: null
 access_modes:
   - "{{access_mode}}"
 initial_state:
@@ -30,8 +30,9 @@ initial_state:
   magical_instability: null
 controller_faction_id: null
 toll:
-  amount: null
-  currency_id: null
+  money:
+    amount: null
+    currency_key: null
   collector_id: null
   exemptions: []
   notes: null
@@ -48,7 +49,7 @@ risk_profile:
   notes: null
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são proibidos em conteúdo `approved`; origem e destino devem ser diferentes e usar IDs `settlement.*` ou `location.*` aprovados.
+> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são proibidos em conteúdo `approved`; origem e destino devem ser diferentes e usar IDs `settlement.*` ou `location.*` aprovados. Distância, duração, tráfego e pedágio aqui são propriedades ou condições iniciais, nunca estado atual da campanha.
 
 # Visão geral
 

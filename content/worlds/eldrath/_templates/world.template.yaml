@@ -18,8 +18,15 @@ initial_era_id: null
 language_ids: []
 culture_ids: []
 initial_kingdom_id: null
-units:
-  distance: null
-  duration: null
-  currency: null
-  population: null
+unit_system:
+  system_key: "{{unit_system_key}}"
+  name: "{{unit_system_name}}"
+  notes: null
+unit_definitions:
+  - key: "{{unit_key}}"
+    quantity_type: "{{quantity_type_key}}"
+    name: "{{unit_name}}"
+    symbol: "{{unit_symbol}}"
+    base_unit_key: null
+    conversion_factor: null
+    notes: null

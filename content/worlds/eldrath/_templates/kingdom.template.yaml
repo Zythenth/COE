@@ -25,7 +25,20 @@ magical_law_ids: []
 dominant_religion_id: null
 tolerated_religion_ids: []
 prohibited_religion_ids: []
-currency_id: null
+primary_currency_key: null
+currencies:
+  - key: "{{currency_key}}"
+    name: "{{currency_name}}"
+    symbol: "{{currency_symbol}}"
+    subdivisions:
+      - key: "{{subdivision_key}}"
+        name: "{{subdivision_name}}"
+        symbol: "{{subdivision_symbol}}"
+        conversion_factor: null
+        notes: null
+    exchange_reference: null
+    legal_tender: null
+    notes: null
 calendar_id: null
 language_ids: []
 region_ids: []
@@ -41,7 +54,10 @@ metrics:
   magical_tension: null
   trust_in_crown: null
   religious_influence: null
-treasury: null
+treasury:
+  money:
+    amount: null
+    currency_key: null
 administrative_capacity: null
 initial_crisis_ids: []
 founding_event_ids: []

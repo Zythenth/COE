@@ -1,6 +1,6 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e o contrato comum de autoria, além da estrutura vazia das categorias; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial, o contrato comum e os contratos especializados fundamentais, geográficos e de economia material, além da estrutura vazia das categorias; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
@@ -10,11 +10,13 @@ O conteúdo inicial descreve entidades, relações, regras editoriais, fatos his
 
 O estado produzido pela simulação registrará acontecimentos e mutações de uma campanha: tempo transcorrido, decisões, eventos, relações alteradas, mortes, rumores e outras consequências. Esse estado será responsabilidade futura da programação e da persistência. A simulação não deverá reescrever os arquivos autorais a cada tick.
 
+Na economia, os arquivos autorais poderão registrar propriedades estáveis, valores e relações iniciais, capacidades, métodos permitidos e referências. Estoque, preço, produção, consumo, salário, riqueza e tráfego atuais, além de escassez, inflação, dívida e contratos ativos, pertencerão ao estado futuro.
+
 ## Responsabilidade das pastas
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais e quatro templates geográficos disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos e três de economia material disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -26,10 +28,10 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 | `families/` | Famílias, casas, parentesco, herança e memória coletiva. | não iniciado |
 | `factions/` | Facções, instituições, cargos, recursos e objetivos coletivos. | não iniciado |
 | `religions/` | Tradições religiosas, cultos e seus contextos sociais. | não iniciado |
-| `professions/` | Profissões, tarefas, competências, status e progressão. | não iniciado |
+| `professions/` | Profissões, tarefas, competências, status e progressão. | schema e template disponíveis; pasta real vazia; zero profissões |
 | `creatures/` | Espécies, habitat, comportamento, ecologia e relação com magia. | não iniciado |
-| `resources/` | Recursos materiais e arcanos relevantes para a vida do reino. | não iniciado |
-| `items/` | Itens relevantes, propriedades, uso e proveniência. | não iniciado |
+| `resources/` | Recursos materiais e arcanos relevantes para a vida do reino. | schema e template disponíveis; pasta real vazia; zero recursos |
+| `items/` | Definições de itens relevantes, propriedades, uso e proveniência. | schema e template disponíveis; pasta real vazia; zero itens |
 | `laws/` | Leis gerais, mágicas e detalhadas por jurisdição. | não iniciado |
 | `diseases/` | Doenças, transmissão, sintomas, gravidade e tratamentos. | não iniciado |
 | `events/` | Eventos históricos e eventos-base que compõem o estado inicial. | não iniciado |
@@ -55,7 +57,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas fundamentais e geográficos estão no [índice de schemas](../../../docs/world/schemas/README.md).
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas fundamentais, geográficos e de economia material estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -65,6 +67,15 @@ Dados mecânicos e lore devem permanecer distinguíveis:
 - o conteúdo deve permanecer completo e utilizável sem IA generativa.
 
 Assets são complementares: nenhuma entidade ou regra depende de imagem, e a ausência de arte não invalida conteúdo. A pasta `design/` trata do processo visual futuro e não faz parte dos dados do mundo.
+
+## Recurso, item, artefato e instância
+
+- **Recurso** é fungível, mensurável e tratado economicamente por quantidade.
+- **Item** é a definição de um tipo de objeto discreto, possivelmente agregável ou durável; seu arquivo não representa cada cópia.
+- **Artefato** será uma entidade do sistema mágico para objeto relevante, único ou historicamente importante, com origem, poderes, riscos e história próprios; poderá referenciar um item-base sem ser reduzido a item comum.
+- **Instância de item** será uma cópia pertencente ao estado da simulação e poderá guardar proprietário, localização, quantidade, condição, durabilidade, proveniência e modificadores.
+
+Os templates [`resource.template.md`](_templates/resource.template.md), [`profession.template.md`](_templates/profession.template.md) e [`item.template.md`](_templates/item.template.md) materializam somente os contratos de autoria. As pastas `resources/`, `professions/` e `items/` continuam contendo apenas seus arquivos `.gitkeep`.
 
 ## Ordem de leitura
 
@@ -80,4 +91,4 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais e geográficos e seus templates foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos e de economia material e seus templates foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre religiões, facções, famílias e leis.

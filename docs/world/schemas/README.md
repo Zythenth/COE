@@ -10,15 +10,17 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 |---|---|---|---|
 | [FOUNDATIONAL_ENTITIES.md](FOUNDATIONAL_ENTITIES.md) | `world`, `calendar`, `language`, `culture`, `kingdom` | contrato comum | concluído |
 | [GEOGRAPHY_ENTITIES.md](GEOGRAPHY_ENTITIES.md) | `region`, `settlement`, `location`, `route` | contrato comum e entidades fundamentais | concluído |
+| [MATERIAL_ECONOMY_ENTITIES.md](MATERIAL_ECONOMY_ENTITIES.md) | `resource`, `profession`, `item` e contratos econômicos compartilhados | contrato comum, entidades fundamentais e geografia | concluído |
 
 ## Ordem de dependência
 
 1. contrato comum;
 2. entidades fundamentais (`world`, calendário, idioma, cultura e reino);
 3. geografia (região, assentamento, local e rota);
-4. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+4. economia material (recursos, profissões, itens e estruturas compartilhadas);
+5. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais e as entidades geográficas estão concluídos. A próxima categoria é recursos, profissões, economia e conteúdo material; sociedade, magia, NPCs, narrativa, saúde e leis detalhadas ainda não foram iniciados.
+O contrato comum, as entidades fundamentais, as entidades geográficas e a economia material estão concluídos. A próxima categoria é religiões, facções, famílias e leis; magia, NPCs, narrativa e saúde ainda não foram iniciados.
 
 ## Regras de manutenção
 

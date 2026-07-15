@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais e os schemas e templates geográficos foram concluídos. As quantidades existentes contam entidades materializadas nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma região, assentamento, local, rota ou outra entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos e de economia material foram concluídos. Os templates de `resource`, `profession` e `item` estão disponíveis, sem materializar conteúdo. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhum recurso, profissão, item ou outra entidade do mundo foi criado nesta tarefa.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto 
 | NPCs persistentes | até 150 | 0 | não iniciado | NPCs-semente e futura simulação | Fases 5 e 12 | `content/worlds/eldrath/npcs/` | Meta máxima do mundo-semente; estado simulado será responsabilidade futura. | 2026-07-15 |
 | Magias | 60 | 0 | não iniciado | escolas, efeitos, instituições e leis mágicas | Fase 4 | `content/worlds/eldrath/magic/spells/` | Nenhum arquivo de magia foi criado. | 2026-07-15 |
 | Artefatos | 12 | 0 | não iniciado | escolas, efeitos, itens e história | Fase 4 | `content/worlds/eldrath/magic/artifacts/` | Nenhum artefato foi criado. | 2026-07-15 |
-| Profissões | 20 | 0 | não iniciado | produção, comércio, instituições e assentamentos | Fase 3 | `content/worlds/eldrath/professions/` | Nenhuma profissão foi criada. | 2026-07-15 |
+| Profissões | 20 | 0 | não iniciado | produção, comércio, instituições e assentamentos | Fase 3 | `content/worlds/eldrath/professions/` | Schema e template concluídos; a meta continua em 20 e a quantidade existente continua zero. | 2026-07-15 |
 | Eventos-base | 40 | 0 | não iniciado | entidades do mundo, causalidade e cronologia | Fase 5 | `content/worlds/eldrath/events/` | Eventos históricos e eventos-base serão distinguidos pelos contratos editoriais. | 2026-07-15 |
 | Rumores iniciais ou gatilhos | 20 | 0 | não iniciado | eventos, NPCs, facções e lugares | Fase 5 | `content/worlds/eldrath/rumors/` | Nenhum rumor ou gatilho foi criado. | 2026-07-15 |
 | Conflitos latentes | 8 | 0 | não iniciado | NPCs, facções, eventos, rumores e relações | Fase 5 | a definir | A representação editorial definitiva será decidida na Fase 1. | 2026-07-15 |
@@ -26,8 +26,8 @@ Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto 
 | Idiomas | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/languages/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Culturas | a definir | 0 | não iniciado | identidade, calendário e idiomas | Fase 2 | `content/worlds/eldrath/cultures/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Rotas | a definir | 0 | não iniciado | regiões, assentamentos e locais | Fase 3 | `content/worlds/eldrath/routes/` | Schema e template concluídos; nenhuma rota foi criada. | 2026-07-15 |
-| Recursos | a definir | 0 | não iniciado | regiões, clima e economia | Fase 3 | `content/worlds/eldrath/resources/` | A lista conceitual do GDD não é uma contagem de arquivos aprovados. | 2026-07-15 |
-| Itens | a definir | 0 | não iniciado | recursos, profissões, economia e magia | Fase 4 | `content/worlds/eldrath/items/` | O GDD não fixa quantidade. | 2026-07-15 |
+| Recursos | a definir | 0 | não iniciado | regiões, clima e economia | Fase 3 | `content/worlds/eldrath/resources/` | Schema e template concluídos; a lista conceitual do GDD não é uma contagem de arquivos aprovados. | 2026-07-15 |
+| Itens | a definir | 0 | não iniciado | recursos, profissões, economia e magia | Fase 4 | `content/worlds/eldrath/items/` | Schema e template concluídos; o GDD não fixa quantidade e nenhum item foi criado. | 2026-07-15 |
 | Escolas mágicas | a definir | 0 | não iniciado | princípios mágicos, instituições e leis | Fase 4 | `content/worlds/eldrath/magic/schools/` | A lista de escolas iniciais do GDD não é tratada aqui como meta numérica de arquivos. | 2026-07-15 |
 | Rituais | a definir | 0 | não iniciado | escolas, magias, efeitos e instituições | Fase 4 | `content/worlds/eldrath/magic/rituals/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Efeitos mágicos | a definir | 0 | não iniciado | contratos editoriais e regras de magia | Fase 4 | `content/worlds/eldrath/magic/effects/` | O GDD não fixa quantidade. | 2026-07-15 |
@@ -35,4 +35,4 @@ Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto 
 | Doenças | a definir | 0 | não iniciado | ambiente, saúde, recursos e magia | Fase 4 | `content/worlds/eldrath/diseases/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Abrange leis gerais, mágicas e detalhadas; quantidade não definida. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates fundamentais concluídos não alteram essas quantidades. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os econômicos, não alteram essas quantidades. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
