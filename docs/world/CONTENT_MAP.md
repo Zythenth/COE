@@ -6,16 +6,16 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o c
 |---|---|---|---|---|---|---|---|
 | `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML | GDD e contrato editorial comum | Fases 1–6 | manifesto criado; sem entidades |
 | `content/worlds/eldrath/manifest.yaml` | manifesto editorial | Identificar o pacote, seus caminhos e categorias reconhecidas. | metadados do pacote, sem lore | YAML | GDD e contrato editorial comum | Fase 1 | criado |
-| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | YAML puro e Markdown com front matter YAML | contrato comum e schemas especializados | Fase 1 | template comum e cinco templates fundamentais concluídos; sem conteúdo real |
+| `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | YAML puro e Markdown com front matter YAML | contrato comum e schemas especializados | Fase 1 | template comum, cinco templates fundamentais e quatro geográficos concluídos; sem conteúdo real |
 | `docs/world/CONTENT_SCHEMA.md` | contrato comum | Definir regras compartilhadas de formato, IDs, referências e revisão. | contrato editorial documental | Markdown | GDD | Fase 1 | criado e concluído |
-| `docs/world/schemas/` | schemas especializados | Definir contratos editoriais por conjunto de entidades. | contratos editoriais documentais | Markdown | GDD e contrato comum | Fase 1 | `FOUNDATIONAL_ENTITIES.md` concluído; schemas geográficos não iniciados |
+| `docs/world/schemas/` | schemas especializados | Definir contratos editoriais por conjunto de entidades. | contratos editoriais documentais | Markdown | GDD e contrato comum | Fase 1 | `FOUNDATIONAL_ENTITIES.md` e `GEOGRAPHY_ENTITIES.md` concluídos |
 | `content/worlds/eldrath/calendars/` | calendários | Representar calendário, eras e datas do mundo. | dados temporais e explicações | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/languages/` | idiomas | Registrar idiomas relevantes de Eldrath. | dados linguísticos e lore | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/cultures/` | culturas | Registrar culturas, valores, normas e contexto social. | dados culturais e lore | Markdown estruturado e/ou YAML, a definir | identidade, calendário e idiomas | Fase 2 | não iniciado |
-| `content/worlds/eldrath/regions/` | regiões | Descrever as divisões territoriais e suas propriedades. | dados geográficos, ambientais e sociais | Markdown estruturado e/ou YAML, a definir | reino, culturas e contratos editoriais | Fase 3 | não iniciado |
-| `content/worlds/eldrath/settlements/` | assentamentos | Representar capital, cidades e vilas. | dados urbanos, governança e vida material | Markdown estruturado e/ou YAML, a definir | regiões, reino, recursos e rotas | Fase 3 | não iniciado |
-| `content/worlds/eldrath/locations/` | locais | Registrar locais especiais, naturais, urbanos e ocultos. | dados espaciais, acesso, perigos e lore | Markdown estruturado e/ou YAML, a definir | regiões e assentamentos | Fase 3 | não iniciado |
-| `content/worlds/eldrath/routes/` | rotas | Conectar lugares no grafo sistêmico do mundo. | origem, destino, distância, custo e riscos | Markdown estruturado e/ou YAML, a definir | regiões, assentamentos e locais | Fase 3 | não iniciado |
+| `content/worlds/eldrath/regions/` | regiões | Descrever as divisões territoriais e suas propriedades. | dados geográficos, ambientais e sociais | Markdown com front matter YAML | reino, culturas e contratos editoriais | Fase 3 | schema e template concluídos; pasta real vazia |
+| `content/worlds/eldrath/settlements/` | assentamentos | Representar capital, cidades e vilas. | dados urbanos, governança e vida material | Markdown com front matter YAML | regiões, reino, recursos e rotas | Fase 3 | schema e template concluídos; pasta real vazia |
+| `content/worlds/eldrath/locations/` | locais | Registrar locais especiais, naturais, urbanos e ocultos. | dados espaciais, acesso, perigos e lore | Markdown com front matter YAML | regiões e assentamentos | Fase 3 | schema e template concluídos; pasta real vazia |
+| `content/worlds/eldrath/routes/` | rotas | Conectar lugares no grafo sistêmico do mundo. | origem, destino, distância, custo e riscos | Markdown com front matter YAML | regiões, assentamentos e locais | Fase 3 | schema e template concluídos; pasta real vazia |
 | `content/worlds/eldrath/npcs/` | NPCs | Reunir NPCs-semente e suas relações iniciais. | fichas, objetivos, crenças, memórias e lore | Markdown com front matter YAML, a definir | todo o contexto macro, social e mágico | Fase 5 | não iniciado |
 | `content/worlds/eldrath/families/` | famílias e casas | Registrar parentesco, casas, heranças e memória coletiva. | dados familiares, dinásticos e lore | Markdown estruturado e/ou YAML, a definir | culturas, reino, assentamentos e facções | Fase 4 | não iniciado |
 | `content/worlds/eldrath/factions/` | facções e instituições | Registrar grupos, instituições, poder e objetivos coletivos. | dados institucionais, políticos e lore | Markdown com front matter YAML, a definir | reino, culturas, religiões e economia | Fase 4 | não iniciado |
@@ -39,7 +39,7 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0, o c
 
 - Markdown será usado para lore, contexto e explicações legíveis por pessoas.
 - YAML ou front matter YAML será usado para dados estruturados que precisem ser lidos e validados futuramente.
-- O contrato comum, o manifesto, o template genérico, o schema de entidades fundamentais e cinco templates especializados foram criados na Fase 1.
+- O schema geográfico e quatro templates de região, assentamento, local e rota foram criados na Fase 1; as quatro pastas reais continuam vazias.
 - `world.yaml` e `kingdom.yaml` ainda não foram criados; conteúdo real permanece inexistente.
-- A próxima etapa é criar schemas e templates geográficos para região, assentamento, local e rota.
+- A próxima etapa documental é criar schemas de recursos, profissões, economia e conteúdo material.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

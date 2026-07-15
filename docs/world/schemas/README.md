@@ -9,6 +9,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | Documento | Entidades cobertas | Dependência editorial | Estado |
 |---|---|---|---|
 | [FOUNDATIONAL_ENTITIES.md](FOUNDATIONAL_ENTITIES.md) | `world`, `calendar`, `language`, `culture`, `kingdom` | contrato comum | concluído |
+| [GEOGRAPHY_ENTITIES.md](GEOGRAPHY_ENTITIES.md) | `region`, `settlement`, `location`, `route` | contrato comum e entidades fundamentais | concluído |
 
 ## Ordem de dependência
 
@@ -17,7 +18,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 3. geografia (região, assentamento, local e rota);
 4. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum e as entidades fundamentais estão concluídos. Geografia, sociedade, magia, NPCs, narrativa, economia, saúde e leis detalhadas ainda não foram iniciados.
+O contrato comum, as entidades fundamentais e as entidades geográficas estão concluídos. A próxima categoria é recursos, profissões, economia e conteúdo material; sociedade, magia, NPCs, narrativa, saúde e leis detalhadas ainda não foram iniciados.
 
 ## Regras de manutenção
 

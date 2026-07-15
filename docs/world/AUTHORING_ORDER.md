@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas fundamentais e os templates fundamentais da Fase 1 foram concluídos. A Fase 1 continua em andamento; a próxima atividade é criar os schemas de região, assentamento, local e rota. Nenhuma etapa de construção do mundo foi iniciada. Ela registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais e os schemas e templates geográficos da Fase 1 foram concluídos. A Fase 1 continua em andamento; a próxima atividade é criar schemas de recursos, profissões e economia. Nenhuma etapa de construção do mundo foi iniciada. Ela registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;

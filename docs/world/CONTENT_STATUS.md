@@ -1,15 +1,15 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas fundamentais e os templates fundamentais foram concluídos. As quantidades existentes contam entidades materializadas nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais e os schemas e templates geográficos foram concluídos. As quantidades existentes contam entidades materializadas nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma região, assentamento, local, rota ou outra entidade do mundo foi criada nesta tarefa.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
 | Reino | 1 | 0 | não iniciado | identidade, calendário, culturas e contratos editoriais | Fase 2 | `content/worlds/eldrath/kingdom.yaml` (futuro) | O arquivo não deve ser criado nesta fase. | 2026-07-15 |
-| Regiões | 4 | 0 | não iniciado | reino, culturas, geografia e contratos editoriais | Fase 3 | `content/worlds/eldrath/regions/` | Nenhuma região deve ser inventada na fundação. | 2026-07-15 |
-| Capital | 1 | 0 | não iniciado | reino e região correspondente | Fase 3 | `content/worlds/eldrath/settlements/` | Representação definitiva será definida na Fase 1. | 2026-07-15 |
-| Cidades | 3 | 0 | não iniciado | regiões, rotas, recursos e economia | Fase 3 | `content/worlds/eldrath/settlements/` | Não inclui a capital na contagem canônica apresentada pelo GDD. | 2026-07-15 |
-| Vilas | 4 | 0 | não iniciado | regiões, rotas, recursos e economia | Fase 3 | `content/worlds/eldrath/settlements/` | Nenhuma vila foi criada. | 2026-07-15 |
-| Locais especiais | 12 | 0 | não iniciado | regiões e assentamentos | Fase 3 | `content/worlds/eldrath/locations/` | Tipos e distribuição ainda serão definidos. | 2026-07-15 |
+| Regiões | 4 | 0 | não iniciado | reino, culturas, geografia e contratos editoriais | Fase 3 | `content/worlds/eldrath/regions/` | Schema e template concluídos; nenhuma região foi criada. | 2026-07-15 |
+| Capital | 1 | 0 | não iniciado | reino e região correspondente | Fase 3 | `content/worlds/eldrath/settlements/` | É papel administrativo de assentamento; nenhuma capital foi criada. | 2026-07-15 |
+| Cidades | 3 | 0 | não iniciado | regiões, rotas, recursos e economia | Fase 3 | `content/worlds/eldrath/settlements/` | Schema e template concluídos; não inclui a capital na contagem canônica. | 2026-07-15 |
+| Vilas | 4 | 0 | não iniciado | regiões, rotas, recursos e economia | Fase 3 | `content/worlds/eldrath/settlements/` | Schema e template concluídos; nenhuma vila foi criada. | 2026-07-15 |
+| Locais especiais | 12 | 0 | não iniciado | regiões e assentamentos | Fase 3 | `content/worlds/eldrath/locations/` | Schema e template concluídos; nenhum local foi criado. | 2026-07-15 |
 | Facções principais | 8 | 0 | não iniciado | reino, religiões, economia e culturas | Fase 4 | `content/worlds/eldrath/factions/` | Instituições e demais grupos não alteram esta meta sem revisão do GDD. | 2026-07-15 |
 | Famílias relevantes | 6 | 0 | não iniciado | culturas, assentamentos, facções e leis | Fase 4 | `content/worlds/eldrath/families/` | Nenhuma família ou casa foi criada. | 2026-07-15 |
 | Tradições religiosas | 3 | 0 | não iniciado | cosmologia necessária e culturas | Fases 2 e 4 | `content/worlds/eldrath/religions/` | Cultos derivados não possuem quantidade definida. | 2026-07-15 |
@@ -25,7 +25,7 @@ Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto 
 | Calendários | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/calendars/` | Inclui calendário e eras conforme escopo futuro. | 2026-07-15 |
 | Idiomas | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/languages/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Culturas | a definir | 0 | não iniciado | identidade, calendário e idiomas | Fase 2 | `content/worlds/eldrath/cultures/` | O GDD não fixa quantidade. | 2026-07-15 |
-| Rotas | a definir | 0 | não iniciado | regiões, assentamentos e locais | Fase 3 | `content/worlds/eldrath/routes/` | O GDD não fixa quantidade. | 2026-07-15 |
+| Rotas | a definir | 0 | não iniciado | regiões, assentamentos e locais | Fase 3 | `content/worlds/eldrath/routes/` | Schema e template concluídos; nenhuma rota foi criada. | 2026-07-15 |
 | Recursos | a definir | 0 | não iniciado | regiões, clima e economia | Fase 3 | `content/worlds/eldrath/resources/` | A lista conceitual do GDD não é uma contagem de arquivos aprovados. | 2026-07-15 |
 | Itens | a definir | 0 | não iniciado | recursos, profissões, economia e magia | Fase 4 | `content/worlds/eldrath/items/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Escolas mágicas | a definir | 0 | não iniciado | princípios mágicos, instituições e leis | Fase 4 | `content/worlds/eldrath/magic/schools/` | A lista de escolas iniciais do GDD não é tratada aqui como meta numérica de arquivos. | 2026-07-15 |

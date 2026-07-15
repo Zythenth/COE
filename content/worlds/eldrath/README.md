@@ -14,14 +14,14 @@ O estado produzido pela simulação registrará acontecimentos e mutações de u
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico e cinco templates fundamentais disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais e quatro templates geográficos disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
-| `regions/` | Regiões, biomas, clima, fronteiras e propriedades territoriais. | não iniciado |
-| `settlements/` | Capital, cidades, vilas e suas estruturas sociais e materiais. | não iniciado |
-| `locations/` | Locais especiais, naturais, urbanos, ocultos e sistêmicos. | não iniciado |
-| `routes/` | Conexões entre lugares, deslocamento, custos e riscos. | não iniciado |
+| `regions/` | Regiões, biomas, clima, fronteiras e propriedades territoriais. | schema e template disponíveis; pasta real vazia |
+| `settlements/` | Capital, cidades, vilas e suas estruturas sociais e materiais. | schema e template disponíveis; pasta real vazia |
+| `locations/` | Locais especiais, naturais, urbanos, ocultos e sistêmicos. | schema e template disponíveis; pasta real vazia |
+| `routes/` | Conexões entre lugares, deslocamento, custos e riscos. | schema e template disponíveis; pasta real vazia |
 | `npcs/` | Fichas dos NPCs-semente e suas condições iniciais. | não iniciado |
 | `families/` | Famílias, casas, parentesco, herança e memória coletiva. | não iniciado |
 | `factions/` | Facções, instituições, cargos, recursos e objetivos coletivos. | não iniciado |
@@ -55,7 +55,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas fundamentais estão no [índice de schemas](../../../docs/world/schemas/README.md); os próximos schemas da Fase 1 cobrirão geografia.
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados conhecidos pelo sistema, enquanto o corpo Markdown registra lore e explicações. Os schemas fundamentais e geográficos estão no [índice de schemas](../../../docs/world/schemas/README.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -80,4 +80,4 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais e seus templates foram concluídos. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais e geográficos e seus templates foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias.
