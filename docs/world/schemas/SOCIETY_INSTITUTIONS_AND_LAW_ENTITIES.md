@@ -106,7 +106,12 @@ Todos os campos especializados abaixo aparecem no template. Estruturas opcionais
 | `funerary_practices` | práticas funerárias por chave |
 | `afterlife_conceptions` | concepções de morte e pós-vida por chave |
 | `magic_position` | posição geral sobre magia |
-| `magic_school_positions` | posições futuras direcionadas a `school.*` |
+| `magic_school_positions` | posições direcionadas a `magic_school.*` |
+| `magic_practice_positions` | posições sobre categorias ou tags de práticas mágicas |
+| `magic_ritual_positions` | posições direcionadas a `ritual.*` ou tags rituais |
+| `magic_artifact_positions` | posições direcionadas a `artifact.*` ou tags de artefato |
+| `learning_form_positions` | posições sobre formas de aprendizagem mágica |
+| `corruption_position` | doutrina sobre fontes, sintomas, tratamento e riscos de corrupção |
 | `participation_rules` | regras conceituais de participação; não listam participantes |
 | `conceptual_organization` | papéis, modelos e tradições organizacionais sem membros, cargos ocupados ou tesouro |
 | `internal_diversity` | fontes e eixos de diversidade interna |
@@ -186,7 +191,7 @@ Essas chaves não são lore nem entidades.
 | `religion_ids` | direção canônica para tradições religiosas |
 | `dynastic_family_id` | direção canônica para `family.*` quando for casa política |
 | `profession_ids` | profissões associadas; não cargos |
-| `magic_school_ids` | referências futuras a `school.*` |
+| `magic_program` | relações com `magic_school.*`, ensino, pesquisa, segredo, acesso, licenciamento e categorias controladas |
 | `power_sources` | fontes estáveis de poder |
 | `capabilities` | capacidades institucionais definidas |
 | `restrictions` | limites estruturais e legais |
@@ -251,7 +256,9 @@ Relações direcionais ficam no arquivo da facção de origem. Se `symmetric: tr
 
 ### 5.6 Instituições mágicas
 
-Toda instituição mágica é `faction.*` com tipo e classificação adequados. Pode futuramente referenciar escolas, magias, rituais, artefatos, políticas de ensino e restrições de acesso, sem duplicar esses contratos.
+Toda instituição mágica é `faction.*` com tipo e classificação adequados. `magic_program.school_relations` pode declarar foco de estudo, autorização de ensino, especialização, pesquisa e proibição interna para IDs `magic_school.*`. O mesmo mapa registra políticas de ensino, pesquisa e segredo, requisitos de acesso, capacidade institucional de licenciamento e categorias ou tags mágicas controladas.
+
+Fontes iniciais de aprendizagem pertencem a `spell.*` e `ritual.*`. A lista de magias ou rituais ensinados por uma facção é derivada dessas referências; `faction.*` não mantém lista completa concorrente de ensinamentos. Professores, pesquisadores e alunos atuais pertencem aos futuros NPCs e ao save.
 
 `scope_classification` preserva separadamente as metas de oito facções principais e cinco instituições mágicas. O GDD não determina se as cinco instituições estão incluídas nas oito facções principais; essa sobreposição permanece decisão editorial adiada. Nenhuma contagem é alterada por templates.
 
@@ -377,8 +384,8 @@ Doutrina religiosa, tradição familiar e regra interna de facção não são le
 | `effective_date` | início de vigência |
 | `end_date` | término inicial conhecido ou `null` |
 | `initial_legal_status` | situação jurídica inicial, distinta de `content_status` |
-| `regulated_behavior` | sujeito, ação, objeto e contexto regulados |
-| `subject_rules`, `object_rules` | sujeitos e objetos alcançados |
+| `regulated_behavior` | sujeito, ação, objeto, IDs mágicos, tags mágicas e contexto regulados |
+| `subject_rules`, `object_rules` | sujeitos e objetos alcançados; objetos podem usar categorias, IDs e tags mágicas |
 | `conditions` | condições editoriais por `condition_key` |
 | `normative_rules` | obrigação, permissão, proibição ou restrição por `rule_key` |
 | `exceptions` | exceções por `exception_key` |
@@ -393,6 +400,8 @@ Doutrina religiosa, tradição familiar e regra interna de facção não são le
 | `deferred_decisions` | decisões específicas adiadas |
 
 `content_status` descreve revisão do arquivo: `draft`, `in_review`, `approved` ou `deprecated`. `initial_legal_status` descreve a situação jurídica inicial da lei. Os dois campos nunca se substituem.
+
+`regulated_behavior.object_entity_ids` e `object_rules[].entity_ids` podem referenciar entidades específicas, inclusive `magic_school.*`, `spell.*`, `ritual.*` e `artifact.*`. `magic_tag_keys` permite alcance por classificação mágica controlada. Uma regra usa a menor direção suficiente e não duplica simultaneamente todos os IDs e uma tag equivalente sem necessidade. A presença desses campos não cria legalidade global na entidade mágica.
 
 ### 8.3 Jurisdição
 
@@ -506,6 +515,10 @@ São exclusivos do save: estado jurídico atual depois do início, aplicação c
 
 Difusão religiosa inicial é propriedade de `religion.initial_state.diffusion`. Dominância é uma consulta agregada futura. Tolerância e proibição jurídicas são derivadas de `law.*` aplicável, não listas manuais no reino.
 
+### Religião e magia
+
+Posturas doutrinárias sobre escolas, práticas, rituais, artefatos, aprendizagem e corrupção pertencem a `religion.*` e usam IDs ou tags mágicas. Elas não constituem lei automaticamente e não transformam a tradição em organização.
+
 ### Facção e geografia
 
 Presença, influência, atuação e controle institucionais iniciais pertencem a `faction.initial_state.territorial_presence`. Região, assentamento, local e rota não mantêm a direção inversa. A hierarquia espacial continua pertencendo às entidades geográficas.
@@ -519,6 +532,10 @@ Em uma rota, `initial_state.toll.collector_id` é a fonte canônica da cobrança
 ### Facção e lei
 
 `faction.policies` e regras internas pertencem à facção. `law.*` é usado somente para força jurídica reconhecida. Autoridades legisladoras, fiscalizadoras e julgadoras podem apontar para `faction.*`.
+
+### Facção e magia
+
+Escola é taxonomia `magic_school.*`; academia, ordem, círculo, guilda ou instituição de pesquisa é `faction.*`. Relações de estudo e políticas institucionais ficam em `faction.magic_program`, enquanto as fontes iniciais de aprendizagem ficam em `spell.*` e `ritual.*`. Nenhum lado duplica a lista inversa completa.
 
 ### Família e facção
 
@@ -535,6 +552,9 @@ Antes de aprovar conteúdo futuro:
 - confirmar ausência de listas inversas manuais;
 - confirmar que religião não possui lista de organizações ou seguidores;
 - confirmar que facção não possui lista completa de membros ou ocupantes;
+- confirmar que escola mágica não foi modelada como facção e que instituição mágica não foi modelada como escola;
+- conferir posturas religiosas sobre magia sem convertê-las automaticamente em lei;
+- conferir `faction.magic_program` sem lista inversa completa de ensinamentos;
 - confirmar que família não possui árvore genealógica ou membros completos;
 - confirmar que lei não possui crime, processo, evidência ou julgamento;
 - conferir cargos, quantidade permitida, ocupação, sucessão e participação decisória;
@@ -563,4 +583,4 @@ Permanecem deliberadamente adiados:
 - linguagem ou arquitetura executável de condições legais;
 - estado persistente, validação automatizada, banco de dados, API e implementação;
 - quantidade de leis, que continua `a definir`;
-- contratos de escolas de magia, magias, rituais, efeitos e artefatos, que formam a próxima atividade documental.
+- contratos de criaturas, doenças, saúde e condições relacionadas, que formam a próxima atividade documental.

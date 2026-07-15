@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material e de sociedade, instituições e lei, além do contrato conceitual de intervenção, percepção e conhecimento, foram concluídos. Os templates de `religion`, `faction`, `family` e `law` estão disponíveis sem materializar conteúdo; intervenções pertencem ao estado futuro da campanha e não possuem template nem quantidade inicial planejada. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, além do contrato conceitual de intervenção, percepção e conhecimento, foram concluídos. Os cinco templates mágicos estão disponíveis sem materializar conteúdo; intervenções e instâncias de efeito pertencem ao estado futuro da campanha e não possuem template nem quantidade inicial planejada. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -8,7 +8,10 @@ Estado das subetapas recentes da Fase 1:
 - contrato de intervenção, percepção e conhecimento: concluído;
 - contratos e templates de religião, facção, família e lei: concluídos;
 - entidades reais de religião, facção, família e lei: não iniciadas;
-- escolas de magia, magias, rituais, efeitos e artefatos: próxima atividade documental;
+- contratos de escolas mágicas, magias, rituais, efeitos e artefatos: concluídos;
+- templates de escola mágica, magia, ritual, efeito mágico e artefato: concluídos;
+- entidades reais do sistema mágico: não iniciadas;
+- criaturas, doenças, saúde e condições relacionadas: próxima atividade documental;
 - Fase 1: em andamento.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
@@ -22,11 +25,11 @@ Estado das subetapas recentes da Fase 1:
 | Facções principais | 8 | 0 | não iniciado | reino, religiões, economia e culturas | Fase 4 | `content/worlds/eldrath/factions/` | Schema e template concluídos; instituições usam `faction.*`; nenhuma facção foi criada. | 2026-07-15 |
 | Famílias relevantes | 6 | 0 | não iniciado | culturas, assentamentos, facções e leis | Fase 4 | `content/worlds/eldrath/families/` | Schema e template concluídos; nenhuma família ou casa foi criada. | 2026-07-15 |
 | Tradições religiosas | 3 | 0 | não iniciado | cosmologia necessária e culturas | Fases 2 e 4 | `content/worlds/eldrath/religions/` | Schema e template concluídos; culto como organização usa `faction.*`; nenhuma tradição foi criada. | 2026-07-15 |
-| Instituições mágicas | 5 | 0 | não iniciado | reino, leis, facções e sistema mágico | Fase 4 | `content/worlds/eldrath/factions/` | Instituições mágicas são facções; o GDD não resolve se as cinco integram as oito facções principais, e a sobreposição continua adiada. | 2026-07-15 |
+| Instituições mágicas | 5 | 0 | não iniciado | reino, leis, facções e sistema mágico | Fase 4 | `content/worlds/eldrath/factions/` | Instituições mágicas são facções, não escolas; o GDD não resolve se as cinco integram as oito facções principais, e a sobreposição continua adiada. | 2026-07-15 |
 | NPCs-semente | 30 | 0 | não iniciado | mundo macro, sociedade, magia e planejamento de NPCs | Fase 5 | `content/worlds/eldrath/npcs/` | O GDD contém âncoras canônicas, mas ainda não há fichas de conteúdo. | 2026-07-15 |
 | NPCs persistentes | até 150 | 0 | não iniciado | NPCs-semente e futura simulação | Fases 5 e 12 | `content/worlds/eldrath/npcs/` | Meta máxima do mundo-semente; estado simulado será responsabilidade futura. | 2026-07-15 |
-| Magias | 60 | 0 | não iniciado | escolas, efeitos, instituições e leis mágicas | Fase 4 | `content/worlds/eldrath/magic/spells/` | Nenhum arquivo de magia foi criado. | 2026-07-15 |
-| Artefatos | 12 | 0 | não iniciado | escolas, efeitos, itens e história | Fase 4 | `content/worlds/eldrath/magic/artifacts/` | Nenhum artefato foi criado. | 2026-07-15 |
+| Magias | 60 | 0 | não iniciado | escolas, efeitos, instituições e leis mágicas | Fase 4 | `content/worlds/eldrath/magic/spells/` | Schema e template concluídos; nenhuma magia foi criada. | 2026-07-15 |
+| Artefatos | 12 | 0 | não iniciado | escolas, efeitos, itens e história | Fase 4 | `content/worlds/eldrath/magic/artifacts/` | Schema e template concluídos; nenhum artefato foi criado. | 2026-07-15 |
 | Profissões | 20 | 0 | não iniciado | produção, comércio, instituições e assentamentos | Fase 3 | `content/worlds/eldrath/professions/` | Schema e template concluídos; a meta continua em 20 e a quantidade existente continua zero. | 2026-07-15 |
 | Eventos-base | 40 | 0 | não iniciado | entidades do mundo, causalidade e cronologia | Fase 5 | `content/worlds/eldrath/events/` | Eventos históricos e eventos-base serão distinguidos pelos contratos editoriais. | 2026-07-15 |
 | Rumores iniciais ou gatilhos | 20 | 0 | não iniciado | eventos, NPCs, facções e lugares | Fase 5 | `content/worlds/eldrath/rumors/` | Nenhum rumor ou gatilho foi criado. | 2026-07-15 |
@@ -37,9 +40,9 @@ Estado das subetapas recentes da Fase 1:
 | Rotas | a definir | 0 | não iniciado | regiões, assentamentos e locais | Fase 3 | `content/worlds/eldrath/routes/` | Schema e template concluídos; nenhuma rota foi criada. | 2026-07-15 |
 | Recursos | a definir | 0 | não iniciado | regiões, clima e economia | Fase 3 | `content/worlds/eldrath/resources/` | Schema e template concluídos; a lista conceitual do GDD não é uma contagem de arquivos aprovados. | 2026-07-15 |
 | Itens | a definir | 0 | não iniciado | recursos, profissões, economia e magia | Fase 4 | `content/worlds/eldrath/items/` | Schema e template concluídos; o GDD não fixa quantidade e nenhum item foi criado. | 2026-07-15 |
-| Escolas mágicas | a definir | 0 | não iniciado | princípios mágicos, instituições e leis | Fase 4 | `content/worlds/eldrath/magic/schools/` | A lista de escolas iniciais do GDD não é tratada aqui como meta numérica de arquivos. | 2026-07-15 |
-| Rituais | a definir | 0 | não iniciado | escolas, magias, efeitos e instituições | Fase 4 | `content/worlds/eldrath/magic/rituals/` | O GDD não fixa quantidade. | 2026-07-15 |
-| Efeitos mágicos | a definir | 0 | não iniciado | contratos editoriais e regras de magia | Fase 4 | `content/worlds/eldrath/magic/effects/` | O GDD não fixa quantidade. | 2026-07-15 |
+| Escolas mágicas | 15 | 0 | não iniciado | princípios mágicos, instituições e leis | Fase 4 | `content/worlds/eldrath/magic/schools/` | Schema e template concluídos; escolas e subescolas usam `magic_school.*`; nenhuma escola foi criada. | 2026-07-15 |
+| Rituais | a definir | 0 | não iniciado | escolas, magias, efeitos e instituições | Fase 4 | `content/worlds/eldrath/magic/rituals/` | Schema e template concluídos; o GDD não fixa quantidade e nenhum ritual foi criado. | 2026-07-15 |
+| Efeitos mágicos | a definir | 0 | não iniciado | contratos editoriais e regras de magia | Fase 4 | `content/worlds/eldrath/magic/effects/` | Schema e template concluídos; o GDD não fixa quantidade e nenhuma definição de efeito foi criada. | 2026-07-15 |
 | Criaturas | a definir | 0 | não iniciado | geografia, ecologia e magia | Fase 4 | `content/worlds/eldrath/creatures/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Doenças | a definir | 0 | não iniciado | ambiente, saúde, recursos e magia | Fase 4 | `content/worlds/eldrath/diseases/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |

@@ -42,7 +42,17 @@ Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo 
 | [`family.template.md`](family.template.md) | família, linhagem ou casa dinástica | Markdown com front matter YAML | `../families/{slug}.md` | contrato comum, culturas, geografia, facções e leis | concluído |
 | [`law.template.md`](law.template.md) | lei pública reconhecida | Markdown com front matter YAML | `../laws/{slug}.md` | contrato comum, geografia, facções, economia e contrato transversal | concluído |
 
-Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
+## Catálogo do sistema mágico
+
+| Template | Entidade | Formato | Destino futuro | Dependências | Estado |
+|---|---|---|---|---|---|
+| [`magic_school.template.md`](magic_school.template.md) | escola ou subescola mágica | Markdown com front matter YAML | `../magic/schools/{slug}.md` | contrato comum, sociedade, lei e sistema mágico | concluído |
+| [`spell.template.md`](spell.template.md) | magia | Markdown com front matter YAML | `../magic/spells/{slug}.md` | escolas, efeitos, economia, instituições, percepção e leis | concluído |
+| [`ritual.template.md`](ritual.template.md) | ritual | Markdown com front matter YAML | `../magic/rituals/{slug}.md` | escolas, magias, efeitos, itens, artefatos e instituições | concluído |
+| [`magic_effect.template.md`](magic_effect.template.md) | definição reutilizável de efeito mágico | Markdown com front matter YAML | `../magic/effects/{slug}.md` | contrato comum, quantidade, percepção e regras mágicas | concluído |
+| [`artifact.template.md`](artifact.template.md) | artefato | Markdown com front matter YAML | `../magic/artifacts/{slug}.md` | efeitos, itens, recursos, história, percepção e leis | concluído |
+
+Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Escolas, magias, rituais, efeitos e artefatos devem conservar as estruturas do [contrato do sistema mágico](../../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), inclusive legalidade contextual, custos verificáveis, referências a efeitos e separação do estado da campanha. Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
 
 ## Ordem recomendada
 
@@ -61,6 +71,11 @@ Copie somente o template da entidade que será autorizada para o destino indicad
 13. `religion.template.md`;
 14. `faction.template.md`;
 15. `family.template.md`;
-16. `law.template.md`.
+16. `law.template.md`;
+17. `magic_school.template.md`;
+18. `spell.template.md`;
+19. `ritual.template.md`;
+20. `magic_effect.template.md`;
+21. `artifact.template.md`.
 
 Quando o contrato comum ou um schema especializado mudar de forma aprovada, os templates afetados deverão ser revisados antes de novos arquivos serem aprovados. O ciclo de revisão de um template é o mesmo do conteúdo: elaboração, revisão, aprovação explícita e eventual depreciação documentada.

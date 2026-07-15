@@ -29,6 +29,8 @@ regulated_behavior:
   action_key: "{{regulated_action_key}}"
   object_keys:
     - "{{regulated_object_key}}"
+  object_entity_ids: []
+  magic_tag_keys: []
   context_keys: []
 subject_rules:
   - subject_key: "{{subject_rule_key}}"
@@ -37,6 +39,8 @@ subject_rules:
 object_rules:
   - object_key: "{{object_rule_key}}"
     entity_category_keys: []
+    entity_ids: []
+    magic_tag_keys: []
     condition_keys: []
 conditions:
   - condition_key: "{{legal_condition_key}}"

@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais, geográficos, de economia material e de sociedade, instituições e lei, além do contrato conceitual de intervenção, percepção e conhecimento da Fase 1, foram concluídos. Os contratos de religião, facção, família e lei estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade documental cobre escolas de magia, magias, rituais, efeitos e artefatos. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, o contrato comum, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, além do contrato conceitual de intervenção, percepção e conhecimento da Fase 1, foram concluídos. Os contratos mágicos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade documental cobre criaturas, doenças, saúde e condições relacionadas. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -32,57 +32,58 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 28. facções e instituições — contrato e template concluídos; entidades não iniciadas;
 29. famílias e casas — contrato e template concluídos; entidades não iniciadas;
 30. contrato e template de leis — concluídos; entidades não iniciadas;
-31. escolas de magia;
-32. magias;
-33. rituais;
-34. efeitos mágicos;
-35. artefatos;
-36. itens;
-37. criaturas;
+31. escolas de magia — contrato e template concluídos; entidades não iniciadas;
+32. magias — contrato e template concluídos; entidades não iniciadas;
+33. rituais — contrato e template concluídos; entidades não iniciadas;
+34. efeitos mágicos — contrato e template concluídos; entidades não iniciadas;
+35. artefatos — contrato e template concluídos; entidades não iniciadas;
+36. itens — contrato e template concluídos; entidades não iniciadas;
+37. criaturas — próxima atividade documental;
 38. doenças;
-39. leis detalhadas;
-40. planejamento dos NPCs-semente;
-41. criação dos NPCs-semente;
-42. relações iniciais;
-43. objetivos, medos e segredos;
-44. crenças, conhecimentos e memórias;
-45. eventos históricos;
-46. rumores iniciais;
-47. conflitos latentes;
-48. referências cruzadas;
-49. auditoria cronológica;
-50. auditoria geográfica;
-51. auditoria econômica;
-52. auditoria social;
-53. auditoria mágica;
-54. correções;
-55. congelamento da primeira versão do mundo;
-56. `PROJECT_SPECIFICATION.md`;
-57. `DATA_MODEL.md`;
-58. `MVP.md`;
-59. `APP_AND_UI_SPECIFICATION.md`;
-60. `SITE_MAP.md`;
-61. `USER_FLOWS.md`;
-62. `COMPONENT_INVENTORY.md`;
-63. `ARCHITECTURE.md` em nível conceitual;
-64. `ROADMAP.md`;
-65. pesquisa e criação do `ANTI_AI_DESIGN_GUIDE.md`;
-66. criação do `DESIGN_SYSTEM.md`;
-67. criação do `STITCH_WORKFLOW.md`;
-68. briefings das telas;
-69. dados reais para as maquetes;
-70. referências visuais documentadas;
-71. prompts para o Google Stitch;
-72. geração das telas no Stitch;
-73. auditoria Anti-AI das telas;
-74. correções no Stitch;
-75. exportação e versionamento;
-76. conexão pelo MCP oficial;
-77. transferência ao Codex;
-78. arquitetura técnica;
-79. programação do vertical slice;
-80. MVP;
-81. versão 1.0.
+39. saúde e condições relacionadas;
+40. leis detalhadas;
+41. planejamento dos NPCs-semente;
+42. criação dos NPCs-semente;
+43. relações iniciais;
+44. objetivos, medos e segredos;
+45. crenças, conhecimentos e memórias;
+46. eventos históricos;
+47. rumores iniciais;
+48. conflitos latentes;
+49. referências cruzadas;
+50. auditoria cronológica;
+51. auditoria geográfica;
+52. auditoria econômica;
+53. auditoria social;
+54. auditoria mágica;
+55. correções;
+56. congelamento da primeira versão do mundo;
+57. `PROJECT_SPECIFICATION.md`;
+58. `DATA_MODEL.md`;
+59. `MVP.md`;
+60. `APP_AND_UI_SPECIFICATION.md`;
+61. `SITE_MAP.md`;
+62. `USER_FLOWS.md`;
+63. `COMPONENT_INVENTORY.md`;
+64. `ARCHITECTURE.md` em nível conceitual;
+65. `ROADMAP.md`;
+66. pesquisa e criação do `ANTI_AI_DESIGN_GUIDE.md`;
+67. criação do `DESIGN_SYSTEM.md`;
+68. criação do `STITCH_WORKFLOW.md`;
+69. briefings das telas;
+70. dados reais para as maquetes;
+71. referências visuais documentadas;
+72. prompts para o Google Stitch;
+73. geração das telas no Stitch;
+74. auditoria Anti-AI das telas;
+75. correções no Stitch;
+76. exportação e versionamento;
+77. conexão pelo MCP oficial;
+78. transferência ao Codex;
+79. arquitetura técnica;
+80. programação do vertical slice;
+81. MVP;
+82. versão 1.0.
 
 ## Dependência entre os grupos
 
@@ -93,12 +94,12 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 | 6–15 | Fundamentos do mundo | Dependem dos contratos para registrar a identidade macro, o tempo, a sociedade e o reino sem formatos incompatíveis. |
 | 16–25 | Geografia e vida material | Dependem do contexto macro para localizar territórios, assentamentos, circulação, recursos e economia coerentemente. |
 | 26 | Contrato transversal de intervenção | Depende da economia material e estabelece causalidade, percepção e conhecimento antes dos contratos sociais. |
-| 27–39 | Sociedade, instituições e magia | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
-| 40–47 | NPCs e história inicial | Dependem de todos os sistemas sociais, geográficos e mágicos anteriores para criar pessoas e conflitos conectados ao mundo. |
-| 48–55 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
-| 56–64 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |
-| 65–67 | Governança visual | Depende das especificações para estabelecer critérios Anti-AI, sistema de design e fluxo do Stitch adequados ao produto. |
-| 68–77 | Preparação, uso e transferência do Stitch | Dependem da governança visual para produzir, auditar, corrigir e transferir referências rastreáveis sem tratá-las como código aprovado. |
-| 78–81 | Implementação e versões | Dependem do mundo, das especificações e das referências visuais aprovadas; a programação começa somente na Fase 11. |
+| 27–40 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
+| 41–48 | NPCs e história inicial | Dependem de todos os sistemas sociais, geográficos, mágicos e de saúde anteriores para criar pessoas e conflitos conectados ao mundo. |
+| 49–56 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
+| 57–65 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |
+| 66–68 | Governança visual | Depende das especificações para estabelecer critérios Anti-AI, sistema de design e fluxo do Stitch adequados ao produto. |
+| 69–78 | Preparação, uso e transferência do Stitch | Dependem da governança visual para produzir, auditar, corrigir e transferir referências rastreáveis sem tratá-las como código aprovado. |
+| 79–82 | Implementação e versões | Dependem do mundo, das especificações e das referências visuais aprovadas; a programação começa somente na Fase 11. |
 
 Avançar um grupo não autoriza pular a revisão e a aprovação do grupo anterior. Os nomes de documentos das etapas futuras são apenas referências de planejamento; esses arquivos não são criados na Fase 0.

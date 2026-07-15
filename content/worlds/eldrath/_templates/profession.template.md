@@ -79,8 +79,9 @@ legal_requirements:
     notes: null
 magical_requirements:
   - requirement_key: "{{magical_requirement_key}}"
-    required_school_ids: []
+    required_magic_school_ids: []
     required_spell_ids: []
+    required_ritual_ids: []
     required_affinity_keys: []
     applicable_rank_keys: []
     condition_keys: []
@@ -113,7 +114,7 @@ income_model:
   notes: null
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são exclusivos de `_templates/` e são proibidos em conteúdo `approved`. `rank_keys` usa somente estágios aplicáveis entre `apprentice`, `worker`, `specialist`, `master`, `leader` e `retired`.
+> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são exclusivos de `_templates/` e são proibidos em conteúdo `approved`. `rank_keys` usa somente estágios aplicáveis entre `apprentice`, `worker`, `specialist`, `master`, `leader` e `retired`; requisitos mágicos não concedem conhecimento, domínio, licença ou filiação automaticamente.
 
 # Visão geral
 

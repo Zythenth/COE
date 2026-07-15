@@ -1,6 +1,6 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material e de sociedade, instituições e lei, além do contrato conceitual de intervenção, percepção e conhecimento; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, além do contrato conceitual de intervenção, percepção e conhecimento; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
@@ -18,7 +18,7 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material e quatro de sociedade, instituições e lei disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei e cinco do sistema mágico disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -38,11 +38,11 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 | `diseases/` | Doenças, transmissão, sintomas, gravidade e tratamentos. | não iniciado |
 | `events/` | Eventos históricos e eventos-base que compõem o estado inicial. | não iniciado |
 | `rumors/` | Rumores iniciais ou gatilhos, origens e referências causais. | não iniciado |
-| `magic/schools/` | Escolas mágicas, relações, acesso e status. | não iniciado |
-| `magic/spells/` | Magias com requisitos, custos, efeitos, riscos e lore complementar. | não iniciado |
-| `magic/rituals/` | Rituais e suas regras estruturadas. | não iniciado |
-| `magic/artifacts/` | Artefatos, efeitos, proveniência e história. | não iniciado |
-| `magic/effects/` | Efeitos mágicos estruturados e referenciáveis. | não iniciado |
+| `magic/schools/` | Escolas e subescolas mágicas, princípios, taxonomia e relações. | schema e template disponíveis; pasta real vazia; zero escolas |
+| `magic/spells/` | Magias com requisitos, custos, efeitos, riscos e lore complementar. | schema e template disponíveis; pasta real vazia; zero magias |
+| `magic/rituals/` | Rituais, papéis, etapas, interrupções e resultados estruturados. | schema e template disponíveis; pasta real vazia; zero rituais |
+| `magic/artifacts/` | Artefatos, efeitos, estado inicial, proveniência e história. | schema e template disponíveis; pasta real vazia; zero artefatos |
+| `magic/effects/` | Definições de efeitos mágicos estruturadas e referenciáveis. | schema e template disponíveis; pasta real vazia; zero efeitos |
 
 `_templates/` contém o template genérico [`base_entity.md`](_templates/base_entity.md), que reúne apenas os campos comuns. Um template especializado futuro parte dele e adiciona somente os campos documentados para uma categoria. A pasta nunca é conteúdo real e deve ser excluída pelo futuro carregador. Quando uma pasta-folha recebe conteúdo real, seu `.gitkeep` deve ser removido; por isso `_templates/.gitkeep` foi removido ao receber seus arquivos reais de template.
 
@@ -59,7 +59,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material e de sociedade, instituições e lei e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md) e o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md).
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md), o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md) e o contrato mágico em [`MAGIC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -74,7 +74,7 @@ Assets são complementares: nenhuma entidade ou regra depende de imagem, e a aus
 
 - **Recurso** é fungível, mensurável e tratado economicamente por quantidade.
 - **Item** é a definição de um tipo de objeto discreto, possivelmente agregável ou durável; seu arquivo não representa cada cópia.
-- **Artefato** será uma entidade do sistema mágico para objeto relevante, único ou historicamente importante, com origem, poderes, riscos e história próprios; poderá referenciar um item-base sem ser reduzido a item comum.
+- **Artefato** é uma entidade do sistema mágico para objeto único, nomeado, singular, historicamente significativo ou persistentemente relevante, com origem, poderes, riscos e história próprios; pode referenciar um item-base sem ser reduzido a item comum.
 - **Instância de item** será uma cópia pertencente ao estado da simulação e poderá guardar proprietário, localização, quantidade, condição, durabilidade, proveniência e modificadores.
 
 Os templates [`resource.template.md`](_templates/resource.template.md), [`profession.template.md`](_templates/profession.template.md) e [`item.template.md`](_templates/item.template.md) materializam somente os contratos de autoria. As pastas `resources/`, `professions/` e `items/` continuam contendo apenas seus arquivos `.gitkeep`.
@@ -88,6 +88,17 @@ Os templates [`resource.template.md`](_templates/resource.template.md), [`profes
 - **Profissão** permanece atividade econômica; **cargo** é uma chave estável dentro de `faction.roles`.
 
 Os templates [`religion.template.md`](_templates/religion.template.md), [`faction.template.md`](_templates/faction.template.md), [`family.template.md`](_templates/family.template.md) e [`law.template.md`](_templates/law.template.md) não são entidades e não alteram as quantidades existentes, que permanecem em zero.
+
+## Escola, instituição, magia, ritual, efeito e artefato
+
+- **Escola mágica** usa `magic_school.*` e define princípios, domínio, métodos e taxonomia; uma subescola usa a mesma entidade com `parent_school_id`.
+- **Instituição mágica** é `faction.*` e define membros, cargos, ensino, pesquisa, segredo, licenciamento e poder social. Escola nunca possui membros, líder, professores atuais ou tesouro.
+- **Magia** é técnica individual reproduzível; **ritual** é procedimento com preparação, papéis, etapas, condições e interrupções. Tempo longo sozinho não transforma magia em ritual.
+- **Efeito mágico** `magic_effect.*` é definição reutilizável; sua aplicação atual pertence ao save e não possui template de conteúdo.
+- **Artefato** tem identidade singular e pode apontar `base_item_id`; o item-base não mantém lista inversa e o mesmo objeto único não recebe `item_instance` concorrente.
+- Custos, alcance, duração, alvos, riscos, falhas, corrupção, sinais e evidências usam estruturas verificáveis. Legalidade efetiva é derivada de leis por jurisdição e estado, nunca de um campo global simples.
+
+Os templates [`magic_school.template.md`](_templates/magic_school.template.md), [`spell.template.md`](_templates/spell.template.md), [`ritual.template.md`](_templates/ritual.template.md), [`magic_effect.template.md`](_templates/magic_effect.template.md) e [`artifact.template.md`](_templates/artifact.template.md) não são entidades. As metas permanecem 15 escolas, 60 magias, 12 artefatos e 5 instituições mágicas; rituais e efeitos continuam `a definir`, e todas as quantidades existentes continuam em zero.
 
 ## Ordem de leitura
 
@@ -103,4 +114,4 @@ Os templates [`religion.template.md`](_templates/religion.template.md), [`factio
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material e de sociedade, instituições e lei, seus templates e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição e difusão religiosa parte de `religion.*`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre escolas de magia, magias, rituais, efeitos e artefatos.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei e do sistema mágico, seus templates e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*` e taxonomia mágica parte de `magic_school.*`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre criaturas, doenças, saúde e condições relacionadas.

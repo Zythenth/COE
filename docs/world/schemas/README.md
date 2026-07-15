@@ -13,6 +13,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | [MATERIAL_ECONOMY_ENTITIES.md](MATERIAL_ECONOMY_ENTITIES.md) | `resource`, `profession`, `item` e contratos econômicos compartilhados | contrato comum, entidades fundamentais e geografia | concluído |
 | [INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md](INTERVENTION_PERCEPTION_AND_KNOWLEDGE.md) | contrato transversal de estado de campanha; não cria entidades | GDD, contrato comum e economia material | concluído |
 | [SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md) | `religion`, `faction`, `family` e `law` | contrato comum, entidades fundamentais, geografia, economia material e contrato transversal | concluído |
+| [MAGIC_SYSTEM_ENTITIES.md](MAGIC_SYSTEM_ENTITIES.md) | `magic_school`, `spell`, `ritual`, `magic_effect` e `artifact` | contratos anteriores, especialmente economia material, intervenção, sociedade e lei | concluído |
 
 ## Ordem de dependência
 
@@ -22,9 +23,10 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 4. economia material (recursos, profissões, itens e estruturas compartilhadas);
 5. intervenção, percepção, conhecimento e causalidade;
 6. sociedade, instituições, famílias e lei;
-7. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+7. sistema mágico;
+8. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção e os contratos de religião, facção, família e lei estão concluídos. A próxima categoria documental é escolas de magia, magias, rituais, efeitos e artefatos; NPCs, narrativa e saúde ainda não foram iniciados.
+O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei e o sistema mágico estão concluídos. A próxima categoria documental cobre criaturas, doenças, saúde e condições relacionadas; NPCs e narrativa ainda não foram iniciados.
 
 ## Regras de manutenção
 

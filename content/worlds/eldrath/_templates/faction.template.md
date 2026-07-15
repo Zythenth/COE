@@ -117,7 +117,48 @@ culture_ids: []
 religion_ids: []
 dynastic_family_id: null
 profession_ids: []
-magic_school_ids: []
+magic_program:
+  school_relations:
+    - magic_school_id: "magic_school.{{magic_school_slug}}"
+      focus_keys: []
+      teaching_authorization_key: null
+      specialization_keys: []
+      research_keys: []
+      internal_prohibition_keys: []
+      notes: null
+  teaching_policy:
+    policy_key: "{{magic_teaching_policy_key}}"
+    access_condition_keys: []
+    authorization_keys: []
+    restriction_keys: []
+    notes: null
+  research_policy:
+    policy_key: "{{magic_research_policy_key}}"
+    priority_keys: []
+    authorization_keys: []
+    restriction_keys: []
+    notes: null
+  secrecy_policy:
+    policy_key: "{{magic_secrecy_policy_key}}"
+    classification_keys: []
+    disclosure_condition_keys: []
+    notes: null
+  access_requirements:
+    - requirement_key: "{{magic_access_requirement_key}}"
+      condition_keys: []
+      required_profession_ids: []
+      required_religion_ids: []
+      required_law_ids: []
+      notes: null
+  licensing_capacity:
+    enabled: null
+    license_category_keys: []
+    jurisdiction_ids: []
+    authorization_law_ids: []
+    limitation_keys: []
+    notes: null
+  controlled_magic_category_keys: []
+  controlled_magic_tag_keys: []
 power_sources:
   - source_key: "{{power_source_key}}"
     category_key: "{{power_source_category_key}}"
@@ -170,7 +211,7 @@ deferred_decisions:
   - "{{deferred_decision}}"
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Ele segue o [contrato de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Placeholders são proibidos em conteúdo `approved`; membros e ocupantes atuais não pertencem a este arquivo.
+> **Aviso de template:** este arquivo não é conteúdo real. Ele segue o [contrato de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Placeholders são proibidos em conteúdo `approved`; membros, ocupantes, professores e alunos atuais não pertencem a este arquivo, e escolas mágicas são entidades `magic_school.*` separadas.
 
 # Visão geral
 

@@ -238,7 +238,7 @@ Cada `training_paths` usa `path_id`, `path_type_key`, `entry_requirement_keys`, 
 
 Cada `production_profiles` usa `profile_id`, `applicable_rank_keys`, `production_flows`, `consumption_flows`, `condition_keys`, `modifiers` e `notes`; fluxos e modificadores seguem os contratos compartilhados. As listas resumidas `consumed_resource_ids`, `produced_resource_ids` e `produced_item_ids` declaram capacidades da definição e precisam concordar com os perfis quando ambos forem usados.
 
-`legal_requirements` permite `requirement_key`, `jurisdiction_id`, `law_id`, `license_key`, `issuing_authority_id`, `applicable_rank_keys`, `condition_keys` e `notes`. `magical_requirements` permite `requirement_key`, `required_school_ids`, `required_spell_ids`, `required_affinity_keys`, `applicable_rank_keys`, `condition_keys` e `notes`. Cada entrada de `risks` usa `risk_key`, `applicable_rank_keys`, `condition_keys` e `notes`. `social_status` usa `status_key`, `variation_keys`, `condition_keys` e `notes`; descreve classificação e variação social estáveis, não a reputação de um NPC.
+`legal_requirements` permite `requirement_key`, `jurisdiction_id`, `law_id`, `license_key`, `issuing_authority_id`, `applicable_rank_keys`, `condition_keys` e `notes`. `magical_requirements` permite `requirement_key`, `required_magic_school_ids` (`magic_school.*`), `required_spell_ids` (`spell.*`), `required_ritual_ids` (`ritual.*`), `required_affinity_keys`, `applicable_rank_keys`, `condition_keys` e `notes`. Esses requisitos não concedem conhecimento, domínio, licença ou filiação automaticamente. Cada entrada de `risks` usa `risk_key`, `applicable_rank_keys`, `condition_keys` e `notes`. `social_status` usa `status_key`, `variation_keys`, `condition_keys` e `notes`; descreve classificação e variação social estáveis, não a reputação de um NPC.
 
 `income_model` permite `model_keys`, `payment_basis_key`, `reference_compensation` pelo contrato de preço, `condition_keys` e `notes`. A referência é editorial; salário atual, renda efetiva, riqueza e contratos de trabalho pertencem ao estado da simulação.
 
@@ -259,7 +259,7 @@ Associações institucionais gerais são derivadas de `faction.profession_ids`, 
 | Prefixo e arquivo | `item.{slug}`; arquivo `{slug}.md` |
 | Dependências | contrato comum; unidades, recursos, profissões, economia, leis e magia quando existirem |
 
-**Campos.** Além dos campos comuns: `item_category_key`, `stackable`, `unique_definition`, `provenance_mode`, `base_unit_key`, `default_stack_limit`, `durability`, `quality_keys`, `resource_composition`, `production_methods`, `required_profession_ids`, `usage_keys`, `legal_status_key`, `magical`, `artifact_id`, `reference_value`, `storage_requirements` e `references`.
+**Campos.** Além dos campos comuns: `item_category_key`, `stackable`, `unique_definition`, `provenance_mode`, `base_unit_key`, `default_stack_limit`, `durability`, `quality_keys`, `resource_composition`, `production_methods`, `required_profession_ids`, `usage_keys`, `legal_status_key`, `magical`, `magical_properties`, `reference_value`, `storage_requirements` e `references`.
 
 `provenance_mode` aceita somente `none`, `optional` ou `required`. Itens comuns podem não registrar proveniência; definições únicas ou historicamente relevantes podem exigi-la. `base_unit_key` aponta para unidade compatível do mundo. `default_stack_limit` usa quantidade e só se aplica a itens agregáveis. `unique_definition: true` exige `stackable: false` e ausência de limite de pilha; a proveniência pode ser `optional` ou `required` conforme a relevância documentada.
 
@@ -267,9 +267,11 @@ Associações institucionais gerais são derivadas de `faction.profession_ids`, 
 
 Cada entrada de `resource_composition` usa `resource_id`, `quantity`, `quality_key`, `condition_keys` e `notes`. `production_methods` usa a mesma estrutura de método definida para recurso, com entradas e saídas por fluxo. `storage_requirements` segue o contrato de recurso. `reference_value` segue o contrato de preço e não é preço atual.
 
-`artifact_id` é opcional e só aparece quando existe relação explícita com uma futura entidade `artifact.*`. Item mágico comum pode usar `magical: true`; um objeto mágico relevante, único ou historicamente importante usa uma entidade de artefato e não duplica no item sua origem, poderes, riscos ou história detalhados.
+`magical_properties` é `null` quando não se aplica. Para item encantado comum ou reproduzível com `magical: true`, o mapa registra `magic_school_ids`, `effect_applications`, `activation_rules`, `regulation_tag_keys` e `notes`, conforme o [contrato do sistema mágico](MAGIC_SYSTEM_ENTITIES.md). Cada aplicação referencia `magic_effect.*`; cada ativação possui chave local, gatilhos, condições, custos estruturados e as chaves das aplicações que dispara. Efeito mecânico não pode existir somente na prosa.
 
-**Corpo Markdown.** `Visão geral`, `Função`, `Materiais`, `Produção`, `Uso`, `Durabilidade`, `Reparo`, `Qualidade`, `Armazenamento`, `Legalidade`, `Propriedades mágicas`, `Relação com artefatos`, `História` e `Observações editoriais`.
+Um objeto único, nomeado, mecanicamente singular, historicamente significativo ou persistentemente relevante usa `artifact.*`. A direção canônica é `artifact.base_item_id` para a forma material opcional; o item não mantém `artifact_id` nem lista inversa. Origem, poderes, riscos, segredos e história singular não são duplicados no item.
+
+**Corpo Markdown.** `Visão geral`, `Função`, `Materiais`, `Produção`, `Uso`, `Durabilidade`, `Reparo`, `Qualidade`, `Armazenamento`, `Legalidade`, `Propriedades mágicas`, `Relação derivada com artefatos`, `História` e `Observações editoriais`.
 
 **Agregação e persistência.** `stackable: true` permite agregar somente cópias compatíveis em item, qualidade, condição, proveniência e modificadores. A agregação não transforma o item em recurso nem elimina futuras instâncias. Itens não agregáveis, definições únicas e cópias cuja proveniência seja obrigatória exigirão instâncias persistentes no estado.
 
@@ -299,11 +301,11 @@ O tesouro inicial usa `money`. Nome e símbolo podem mudar sem alterar `key`. Re
 
 `base_unit_key` aponta para uma entrada compatível do mesmo sistema e do mesmo `quantity_type`. A unidade-base usa `base_unit_key: null` e `conversion_factor: null`; unidades derivadas apontam diretamente para a unidade-base e usam fator numérico positivo quando conhecido. Ciclos são proibidos. Um fator de conversão não é taxa econômica. Recursos, itens, rotas e assentamentos usam somente `unit_key` e não repetem definições completas. `period_key` é vocabulário temporal de recorrência e não substitui uma unidade de tempo.
 
-## 19. Relação futura com `artifact`
+## 19. Relação com `artifact`
 
-Artefato pertence ao sistema mágico e representa um objeto mágico relevante, único ou historicamente importante, com origem, poderes, riscos e história próprios. Ele poderá referenciar uma definição `item.*` como base. A relação não reduz o artefato a item comum e não transfere seus poderes detalhados para o item.
+Artefato pertence ao sistema mágico e representa um objeto mágico único, nomeado, singular, historicamente significativo ou persistentemente relevante, com origem, poderes, riscos e história próprios. Ele pode referenciar uma definição `item.*` por `artifact.base_item_id`. A relação não reduz o artefato a item comum e não transfere seus poderes detalhados para o item.
 
-O schema completo de `artifact` permanece adiado. Até sua criação, `artifact_id` em item fica `null` e nenhuma referência inexistente pode chegar a conteúdo `approved`.
+A direção inversa é derivada consultando artefatos com o mesmo `base_item_id`; `item.*` não registra `artifact_id`. Um artefato não recebe simultaneamente uma `item_instance` concorrente para o mesmo objeto único. O contrato completo está em [MAGIC_SYSTEM_ENTITIES.md](MAGIC_SYSTEM_ENTITIES.md).
 
 ## 20. Invariantes
 
@@ -315,7 +317,8 @@ O schema completo de `artifact` permanece adiado. Até sua criação, `artifact_
 - Quantidade física e estoque não são negativos; reserva não excede total conhecido.
 - `minimum` não supera `maximum`; `quantity_basis` conhecida é positiva.
 - Preço atual, estoque atual, produção atual, consumo atual, salário atual, riqueza atual e tráfego atual nunca ficam em conteúdo estático.
-- Recurso é fungível e quantitativo; item é uma definição discreta; artefato é entidade mágica relevante; instância pertence ao estado.
+- Recurso é fungível e quantitativo; item é uma definição discreta; artefato é entidade mágica singular; instância de item pertence ao estado.
+- Item encantado comum referencia `magic_effect.*` por aplicações estruturadas; a direção item–artefato parte de `artifact.base_item_id`.
 - Moeda não é recurso, item ou entidade independente nesta versão.
 - Definição de item não tem proprietário nem localização atual; profissão não tem titulares atuais.
 - Intervenção material usa `item_instance` ou quantidade atual de recurso no estado; nunca move nem reescreve a definição estática.
@@ -337,11 +340,11 @@ Antes de encaminhar um arquivo para revisão, conferir:
 - ausência de intervenções concretas, percepções ou histórico de campanha em conteúdo estático;
 - uso de `item_instance`, e não da definição `item`, como futuro alvo de movimentação;
 - coerência entre listas resumidas e fluxos detalhados;
-- regras de agregação, unicidade, proveniência, durabilidade e relação com artefato;
+- regras de agregação, unicidade, proveniência, durabilidade, efeitos mágicos e relação derivada com artefato;
 - corpo Markdown completo e coerente;
 - ausência de placeholders em conteúdo `approved`;
 - ausência de entidades, moedas, unidades, receitas, preços, salários ou quantidades inventadas apenas para preencher campos.
 
 ## 22. Decisões adiadas
 
-Permanecem para fases posteriores: moedas e unidades reais de Eldrath; vocabulários de categorias, períodos, qualidade, legalidade, risco, perigo, condições, tarefas, métodos, status e renda; valores, quantidades, preços, salários, estoques e produção reais; fórmulas de preço; conversões e câmbio atuais; impostos, inflação, dívida e contratos; regras de arredondamento; receitas; simulação econômica; schema de instância de item; schema completo de artefato; validação executável, banco de dados e código.
+Permanecem para fases posteriores: moedas e unidades reais de Eldrath; vocabulários de categorias, períodos, qualidade, legalidade, risco, perigo, condições, tarefas, métodos, status e renda; valores, quantidades, preços, salários, estoques e produção reais; fórmulas de preço; conversões e câmbio atuais; impostos, inflação, dívida e contratos; regras de arredondamento; receitas; simulação econômica; schema de instância de item; estado persistente de artefato; validação executável, banco de dados e código.

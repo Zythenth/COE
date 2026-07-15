@@ -66,7 +66,47 @@ required_profession_ids: []
 usage_keys: []
 legal_status_key: null
 magical: null
-artifact_id: null
+magical_properties:
+  magic_school_ids: []
+  effect_applications:
+    - application_key: "{{item_effect_application_key}}"
+      magic_effect_id: "magic_effect.{{item_magic_effect_slug}}"
+      target_binding_key: "{{item_effect_target_binding_key}}"
+      parameters:
+        - parameter_key: "{{item_effect_parameter_key}}"
+          number_value: null
+          boolean_value: null
+          key_value: null
+          entity_id: null
+          quantity:
+            value: null
+            unit_key: null
+      condition_keys: []
+      trigger_keys: []
+  activation_rules:
+    - activation_key: "{{item_activation_key}}"
+      trigger_keys: []
+      condition_keys: []
+      costs:
+        - cost_key: "{{item_activation_cost_key}}"
+          category_key: "{{item_activation_cost_category_key}}"
+          bearer_key: "{{item_activation_cost_bearer_key}}"
+          timing_key: "{{item_activation_cost_timing_key}}"
+          resource_id: null
+          item_id: null
+          quantity:
+            value: null
+            unit_key: null
+          condition_key: null
+          mechanical_state_key: null
+          consumption_mode_key: "{{item_activation_cost_consumption_mode_key}}"
+          deferred_trigger_key: null
+          condition_keys: []
+          notes: null
+      effect_application_keys: []
+      notes: null
+  regulation_tag_keys: []
+  notes: null
 reference_value:
   money:
     amount: null
@@ -93,7 +133,7 @@ storage_requirements:
     notes: null
 ---
 
-> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são exclusivos de `_templates/` e são proibidos em conteúdo `approved`. A definição nunca registra proprietário, localização ou quantidade atual de uma instância.
+> **Aviso de template:** este arquivo não é conteúdo real. Placeholders são exclusivos de `_templates/` e são proibidos em conteúdo `approved`. A definição nunca registra proprietário, localização ou quantidade atual de uma instância; artefatos apontam para o item-base e a relação inversa é derivada.
 
 # Visão geral
 
@@ -139,7 +179,7 @@ storage_requirements:
 
 {{magical_properties}}
 
-## Relação com artefatos
+## Relação derivada com artefatos
 
 {{artifact_relation}}
 

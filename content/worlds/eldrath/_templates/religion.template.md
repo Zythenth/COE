@@ -93,9 +93,35 @@ magic_position:
   principle_keys: []
   restriction_keys: []
 magic_school_positions:
-  - school_id: "{{school_id}}"
+  - magic_school_id: "magic_school.{{magic_school_slug}}"
     position_key: "{{school_position_key}}"
     basis_doctrine_keys: []
+magic_practice_positions:
+  - practice_category_key: "{{magic_practice_category_key}}"
+    magic_tag_keys: []
+    position_key: "{{magic_practice_position_key}}"
+    basis_doctrine_keys: []
+magic_ritual_positions:
+  - ritual_id: null
+    magic_tag_keys: []
+    position_key: "{{magic_ritual_position_key}}"
+    basis_doctrine_keys: []
+magic_artifact_positions:
+  - artifact_id: null
+    magic_tag_keys: []
+    position_key: "{{magic_artifact_position_key}}"
+    basis_doctrine_keys: []
+learning_form_positions:
+  - learning_form_key: "{{magic_learning_form_key}}"
+    position_key: "{{magic_learning_position_key}}"
+    basis_doctrine_keys: []
+corruption_position:
+  position_key: "{{corruption_position_key}}"
+  source_keys: []
+  symptom_keys: []
+  treatment_keys: []
+  basis_doctrine_keys: []
+  notes: null
 participation_rules:
   - participation_rule_key: "{{participation_rule_key}}"
     subject_key: "{{participation_subject_key}}"

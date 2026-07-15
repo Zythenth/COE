@@ -38,6 +38,20 @@ Manifestos, índices, READMEs e arquivos em `_templates/` são exceções explí
 
 Uma mudança cosmética de nome visível nunca autoriza renomear o ID ou o arquivo. Se uma mudança de ID for legitimamente necessária, ela exigirá migração documentada futura. Conteúdo `deprecated` mantém seu ID reservado; removê-lo do uso ativo não permite reciclá-lo.
 
+## Prefixos do sistema mágico
+
+O contrato especializado do sistema mágico finaliza os prefixos abaixo. Escolas e subescolas usam a mesma entidade; efeitos aplicados pertencem ao save e não recebem prefixo de conteúdo próprio.
+
+| Entidade | Prefixo | Caminho de entidade |
+|---|---|---|
+| escola ou subescola mágica | `magic_school.` | `magic/schools/{slug}.md` |
+| magia | `spell.` | `magic/spells/{slug}.md` |
+| ritual | `ritual.` | `magic/rituals/{slug}.md` |
+| definição reutilizável de efeito mágico | `magic_effect.` | `magic/effects/{slug}.md` |
+| artefato | `artifact.` | `magic/artifacts/{slug}.md` |
+
+`parent_school_id` referencia outro `magic_school.*`; não existe `magic_subschool.*`. Uma aplicação usa `magic_effect_id` para referenciar `magic_effect.*`; não existe arquivo `effect_instance`. As regras completas estão em [`MAGIC_SYSTEM_ENTITIES.md`](schemas/MAGIC_SYSTEM_ENTITIES.md).
+
 ## Exemplos válidos
 
 | ID | Motivo |
@@ -46,6 +60,10 @@ Uma mudança cosmética de nome visível nunca autoriza renomear o ID ou o arqui
 | `faction.order_of_dawn_healers` | Identifica de forma estável uma facção sem depender do nome visível. |
 | `settlement.aurenfall` | Possui tipo explícito e nome estável previsível. |
 | `spell.purifying_light` | Permite que magias sejam referenciadas pelo ID mesmo se o título mudar. |
+| `magic_school.example_school` | Exemplo exclusivamente estrutural de escola ou subescola. |
+| `ritual.example_ritual` | Exemplo exclusivamente estrutural de procedimento ritual. |
+| `magic_effect.example_effect` | Exemplo exclusivamente estrutural de definição reutilizável. |
+| `artifact.example_artifact` | Exemplo exclusivamente estrutural de artefato. |
 | `event.seed.plague_of_white_ash` | Usa segmentos de tipo para identificar um evento-semente e mantém o nome estável em minúsculas. |
 
 ## Exemplos inválidos
