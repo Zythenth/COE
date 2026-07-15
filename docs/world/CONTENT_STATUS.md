@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: os contratos editoriais e templates previstos, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, foram concluídos. Os contratos de NPCs já estavam concluídos no HEAD. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
+Fase 0 concluída. Fase 1 em andamento: os contratos editoriais e templates previstos, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, foram concluídos. O contrato conceitual de geração opcional por projetos públicos do GitHub, com snapshot, cálculo, regiões, assentamentos, rotas, mapa, checkpoint inicial, reinício e velocidade, também foi concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -21,6 +21,8 @@ Estado das subetapas recentes da Fase 1:
 - contratos de eventos, rumores, história, cadeias causais, arcos e gatilhos: concluídos;
 - templates de evento, rumor e conflito: concluídos;
 - contrato de ameaças monstruosas, grupos, hordas, ataques e incursões: concluído;
+- contrato de geração opcional derivada do GitHub, mapa conceitual, funcionamento offline, saves, checkpoints, ramificações, reinício e velocidade: concluído;
+- consulta a perfil, snapshot real, mapa visual e implementação: não iniciados e proibidos nesta fase;
 - conteúdo real de eventos, rumores, conflitos, criaturas e ameaças: não iniciado;
 - Fase 1: em andamento; aguarda auditoria editorial final.
 
@@ -57,4 +59,4 @@ Estado das subetapas recentes da Fase 1:
 | Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. O contrato GitHub não cria categoria contável, não altera o manifesto de Eldrath e não substitui o cenário canônico. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.

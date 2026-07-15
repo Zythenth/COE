@@ -6,9 +6,11 @@ Além de observar a evolução do reino, o usuário poderá realizar intervenç�
 
 O núcleo planejado será determinístico, local-first, predominantemente single-player e completo sem IA generativa. IA poderá futuramente atuar apenas como acabamento opcional de apresentação, nunca como fundamento lógico da simulação.
 
+Também está prevista a geração opcional de mundos a partir de projetos públicos do GitHub, com mapa leve e funcionamento local depois da geração.
+
 ## Estado atual
 
-O projeto está na **Fase 1 — Contratos editoriais e templates**. A fundação editorial, os contratos fundamentais, geográficos, de economia material e o contrato conceitual de intervenção, percepção e conhecimento foram concluídos; a fase continua em andamento. A construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
+O projeto está na **Fase 1 — Contratos editoriais e templates**. Os contratos editoriais e conceituais previstos para a fase foram concluídos; a auditoria editorial final, a consolidação e o encerramento explícito permanecem pendentes. A construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
 
 Eldrath será construído, auditado e congelado antes das especificações de produto e interface, da preparação visual e da programação.
 

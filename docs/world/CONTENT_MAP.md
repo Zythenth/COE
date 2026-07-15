@@ -1,6 +1,6 @@
 # Mapa de conteúdo de Eldrath
 
-Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os contratos e templates previstos nesta subetapa da Fase 1, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, estão concluídos; as pastas de categorias continuam vazias e nenhum conteúdo real ou lore do mundo foi criado. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
+Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os contratos e templates previstos nesta subetapa da Fase 1, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, estão concluídos. O contrato conceitual de geração opcional por projetos públicos do GitHub, mapa, reinício e velocidade também foi concluído sem criar entidades, templates ou conteúdo real. As pastas de categorias continuam vazias e a Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
 
 | Caminho | Categoria | Finalidade | Tipo de conteúdo futuro | Formato planejado | Dependências | Fase responsável | Estado atual |
 |---|---|---|---|---|---|---|---|
@@ -16,6 +16,7 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os
 | `docs/world/schemas/NPC_SYSTEM_ENTITIES.md` | contrato de NPCs | Definir identidade, personalidade, estado inicial, percepção limitada, objetivos, memória, relações, inventário, magia e demais subregistros de NPCs persistentes. | contrato editorial documental | Markdown | todos os contratos especializados anteriores | Fase 1 | concluído; template de NPC disponível; zero NPCs; entidades reais não iniciadas |
 | `docs/world/schemas/EVENT_RUMOR_HISTORY_AND_CONFLICT_ENTITIES.md` | contrato histórico e de conflitos | Distinguir evento de conteúdo e evento de campanha e definir rumores, causalidade, gatilhos, arcos, história e conflitos latentes. | contrato editorial e conceitual documental | Markdown | todos os contratos especializados anteriores | Fase 1 | concluído; templates de evento, rumor e conflito disponíveis; entidades reais não iniciadas |
 | `docs/world/schemas/MONSTROUS_THREATS_AND_INCURSIONS.md` | contrato de ameaças | Definir escalas agregadas, ameaças, ataques, incursões, defesas, consequências e integração com monstros e demônios. | contrato conceitual documental | Markdown | criaturas, geografia, economia, sociedade, magia, NPCs, eventos e conflitos | Fase 1 | concluído; não cria entidade, pasta ou template adicional |
+| `docs/world/schemas/GITHUB_DERIVED_WORLD_GENERATION.md` | contrato de geração de mundo | Definir modos de criação, fonte pública opcional, snapshot, cálculo, agrupamento, mapa, saves, checkpoint inicial, reinício e velocidade. | contrato conceitual documental | Markdown | todos os contratos anteriores e GDD 1.4 | Fase 1 | concluído; não executável; não cria entidade, template, perfil real ou conteúdo de Eldrath |
 | `content/worlds/eldrath/calendars/` | calendários | Representar calendário, eras e datas do mundo. | dados temporais e explicações | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/languages/` | idiomas | Registrar idiomas relevantes de Eldrath. | dados linguísticos e lore | Markdown estruturado e/ou YAML, a definir | identidade geral e contratos editoriais | Fase 2 | não iniciado |
 | `content/worlds/eldrath/cultures/` | culturas | Registrar culturas, valores, normas e contexto social. | dados culturais e lore | Markdown estruturado e/ou YAML, a definir | identidade, calendário e idiomas | Fase 2 | não iniciado |
@@ -57,5 +58,7 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os
 - Rumores usam `rumor.*`; crenças e memórias permanecem subregistros individuais, e lendas são projeções culturais derivadas.
 - Conflitos latentes usam `conflict.*`; estado atual, ataques, incursões e resultados pertencem ao save.
 - Classificações monstruosas e demoníacas usam `creature.*`; indivíduos persistentes usam `npc.*`; grupos e hordas atuais são agregados no save.
+- A geração por GitHub é um modo opcional futuro que produz outro pacote inicial revisado; não altera Eldrath, não muda contagens e funciona offline depois da confirmação.
+- Snapshot de origem, fórmula, mapa-base, checkpoint inicial, reinício e velocidade pertencem aos contratos de produto e campanha, não a novas categorias de entidade.
 - A próxima atividade é a auditoria editorial final, consolidação e encerramento explícito da Fase 1.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

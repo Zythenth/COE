@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial e os contratos e templates previstos nesta subetapa da Fase 1 foram concluídos, incluindo NPCs, eventos, rumores, história, cadeias causais, conflitos latentes, ameaças monstruosas e incursões. Os contratos estão documentados, mas suas entidades reais não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade é a auditoria editorial final, consolidação e encerramento explícito da fase. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial e os contratos e templates previstos nesta subetapa da Fase 1 foram concluídos, incluindo NPCs, eventos, rumores, história, cadeias causais, conflitos latentes, ameaças monstruosas e incursões. O contrato conceitual de geração opcional por projetos públicos do GitHub, mapa, checkpoint inicial, reinício e velocidade também foi concluído. Os contratos estão documentados, mas suas entidades reais e sua implementação não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade é a auditoria editorial final, consolidação e encerramento explícito da fase. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -42,49 +42,50 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 38. doenças — contrato e template concluídos; entidades não iniciadas;
 39. saúde e condições relacionadas — contrato conceitual concluído; sem entidade, pasta, prefixo ou template próprios;
 40. contratos e template de NPCs, personalidade, valores, necessidades, emoções, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico — concluídos; entidades não iniciadas;
-41. contratos e templates de eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos, além do contrato de ameaças monstruosas e incursões — concluídos; a auditoria editorial final e a consolidação da Fase 1 são a próxima atividade;
-42. planejamento dos NPCs-semente;
-43. criação dos NPCs-semente;
-44. relações iniciais;
-45. objetivos, medos e segredos;
-46. crenças, conhecimentos e memórias;
-47. eventos históricos;
-48. rumores iniciais;
-49. conflitos latentes;
-50. referências cruzadas;
-51. auditoria cronológica;
-52. auditoria geográfica;
-53. auditoria econômica;
-54. auditoria social;
-55. auditoria mágica;
-56. correções;
-57. congelamento da primeira versão do mundo;
-58. `PROJECT_SPECIFICATION.md`;
-59. `DATA_MODEL.md`;
-60. `MVP.md`;
-61. `APP_AND_UI_SPECIFICATION.md`;
-62. `SITE_MAP.md`;
-63. `USER_FLOWS.md`;
-64. `COMPONENT_INVENTORY.md`;
-65. `ARCHITECTURE.md` em nível conceitual;
-66. `ROADMAP.md`;
-67. pesquisa e criação do `ANTI_AI_DESIGN_GUIDE.md`;
-68. criação do `DESIGN_SYSTEM.md`;
-69. criação do `STITCH_WORKFLOW.md`;
-70. briefings das telas;
-71. dados reais para as maquetes;
-72. referências visuais documentadas;
-73. prompts para o Google Stitch;
-74. geração das telas no Stitch;
-75. auditoria Anti-AI das telas;
-76. correções no Stitch;
-77. exportação e versionamento;
-78. conexão pelo MCP oficial;
-79. transferência ao Codex;
-80. arquitetura técnica;
-81. programação do vertical slice;
-82. MVP;
-83. versão 1.0.
+41. contratos e templates de eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos, além do contrato de ameaças monstruosas e incursões — concluídos;
+42. contrato conceitual de geração opcional por projetos públicos do GitHub, cálculo, regiões, assentamentos, rotas, mapa, saves, checkpoint inicial, ramificações, reinício e velocidade — concluído; a auditoria editorial final e a consolidação da Fase 1 são a próxima atividade;
+43. planejamento dos NPCs-semente;
+44. criação dos NPCs-semente;
+45. relações iniciais;
+46. objetivos, medos e segredos;
+47. crenças, conhecimentos e memórias;
+48. eventos históricos;
+49. rumores iniciais;
+50. conflitos latentes;
+51. referências cruzadas;
+52. auditoria cronológica;
+53. auditoria geográfica;
+54. auditoria econômica;
+55. auditoria social;
+56. auditoria mágica;
+57. correções;
+58. congelamento da primeira versão do mundo;
+59. `PROJECT_SPECIFICATION.md`;
+60. `DATA_MODEL.md`;
+61. `MVP.md`;
+62. `APP_AND_UI_SPECIFICATION.md`;
+63. `SITE_MAP.md`;
+64. `USER_FLOWS.md`;
+65. `COMPONENT_INVENTORY.md`;
+66. `ARCHITECTURE.md` em nível conceitual;
+67. `ROADMAP.md`;
+68. pesquisa e criação do `ANTI_AI_DESIGN_GUIDE.md`;
+69. criação do `DESIGN_SYSTEM.md`;
+70. criação do `STITCH_WORKFLOW.md`;
+71. briefings das telas;
+72. dados reais para as maquetes;
+73. referências visuais documentadas;
+74. prompts para o Google Stitch;
+75. geração das telas no Stitch;
+76. auditoria Anti-AI das telas;
+77. correções no Stitch;
+78. exportação e versionamento;
+79. conexão pelo MCP oficial;
+80. transferência ao Codex;
+81. arquitetura técnica;
+82. programação do vertical slice;
+83. MVP;
+84. versão 1.0.
 
 ## Dependência entre os grupos
 
@@ -96,12 +97,12 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 | 16–25 | Geografia e vida material | Dependem do contexto macro para localizar territórios, assentamentos, circulação, recursos e economia coerentemente. |
 | 26 | Contrato transversal de intervenção | Depende da economia material e estabelece causalidade, percepção e conhecimento antes dos contratos sociais. |
 | 27–39 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
-| 40–41 | Contratos de NPCs, história inicial e ameaças | Dependem dos contratos sociais, geográficos, econômicos, mágicos e de saúde para separar pessoa, espécie, estado agregado, conhecimento, inventário, causalidade, rumor, conflito e narrativa sem metaconhecimento. A subetapa termina com auditoria editorial final antes da autoria do mundo. |
-| 42–49 | NPCs e história inicial | Dependem de todos os contratos anteriores para criar pessoas e conflitos conectados ao mundo. |
-| 50–57 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
-| 58–66 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |
-| 67–69 | Governança visual | Depende das especificações para estabelecer critérios Anti-AI, sistema de design e fluxo do Stitch adequados ao produto. |
-| 70–79 | Preparação, uso e transferência do Stitch | Dependem da governança visual para produzir, auditar, corrigir e transferir referências rastreáveis sem tratá-las como código aprovado. |
-| 80–83 | Implementação e versões | Dependem do mundo, das especificações e das referências visuais aprovadas; a programação começa somente na Fase 11. |
+| 40–42 | Contratos de NPCs, história, ameaças e geração de mundo | Dependem dos contratos anteriores para separar pessoa, espécie, estado agregado, conhecimento, inventário, causalidade, rumor, conflito, geração opcional, snapshot e campanha. A subetapa termina com auditoria editorial final antes da autoria do mundo. |
+| 43–50 | NPCs e história inicial | Dependem de todos os contratos anteriores para criar pessoas e conflitos conectados ao mundo. |
+| 51–58 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
+| 59–67 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |
+| 68–70 | Governança visual | Depende das especificações para estabelecer critérios Anti-AI, sistema de design e fluxo do Stitch adequados ao produto. |
+| 71–80 | Preparação, uso e transferência do Stitch | Dependem da governança visual para produzir, auditar, corrigir e transferir referências rastreáveis sem tratá-las como código aprovado. |
+| 81–84 | Implementação e versões | Dependem do mundo, das especificações e das referências visuais aprovadas; a programação começa somente na Fase 11. |
 
-Avançar um grupo não autoriza pular a revisão e a aprovação do grupo anterior. Os nomes de documentos das etapas futuras são apenas referências de planejamento; esses arquivos não são criados na Fase 0.
+Avançar um grupo não autoriza pular a revisão e a aprovação do grupo anterior. Os nomes de documentos das etapas futuras são apenas referências de planejamento; esses arquivos não são criados antecipadamente na Fase 1.
