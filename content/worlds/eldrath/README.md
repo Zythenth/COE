@@ -1,6 +1,6 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas e doenças, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. Na Fase 1 ela contém o manifesto editorial e a estrutura vazia das categorias, apoiados pelo contrato comum, pelos contratos especializados fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições; nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). As regras compartilhadas de formato, IDs, referências, valores ausentes e revisão estão em [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md).
 
@@ -18,7 +18,7 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
-| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico e dois de criaturas e doenças disponíveis; não são conteúdo real |
+| `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico, dois de criaturas e doenças e um de NPC disponíveis; não são conteúdo real |
 | `calendars/` | Calendário, eras e representação de datas. | não iniciado |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
@@ -26,7 +26,7 @@ Na economia, os arquivos autorais poderão registrar propriedades estáveis, val
 | `settlements/` | Capital, cidades, vilas e suas estruturas sociais e materiais. | schema e template disponíveis; pasta real vazia |
 | `locations/` | Locais especiais, naturais, urbanos, ocultos e sistêmicos. | schema e template disponíveis; pasta real vazia |
 | `routes/` | Conexões entre lugares, deslocamento, custos e riscos. | schema e template disponíveis; pasta real vazia |
-| `npcs/` | Fichas dos NPCs-semente e suas condições iniciais. | não iniciado |
+| `npcs/` | Fichas dos NPCs-semente, perfil, condições iniciais e subregistros incorporados. | schema e template disponíveis; contém somente `.gitkeep`; zero NPCs |
 | `families/` | Famílias, linhagens, casas dinásticas, herança familiar e legado. | schema e template disponíveis; pasta real vazia; zero famílias |
 | `factions/` | Facções, instituições, cargos, autoridade, presença inicial e objetivos coletivos. | schema e template disponíveis; pasta real vazia; zero facções |
 | `religions/` | Tradições religiosas, cultos como crença, doutrinas, práticas e diversidade. | schema e template disponíveis; pasta real vazia; zero religiões |
@@ -59,7 +59,7 @@ As regras organizadas estão em [`docs/world/ID_CONVENTIONS.md`](../../../docs/w
 
 ## Dados estruturados e lore
 
-Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas, saúde e doenças e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md), o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md), o contrato mágico em [`MAGIC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md) e o contrato de saúde em [`CREATURE_HEALTH_AND_DISEASE_ENTITIES.md`](../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md).
+Entidades com lore usarão Markdown com front matter YAML; YAML puro é reservado a manifestos, índices e estruturas sem corpo narrativo. O front matter armazena dados estruturados do conteúdo, enquanto o corpo Markdown registra lore e explicações; isso não significa que todo campo estruturado seja conhecimento de um NPC. Os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas, saúde e doenças e de NPCs e o contrato transversal de intervenção estão no [índice de schemas](../../../docs/world/schemas/README.md); o contrato econômico compartilhado está em [`MATERIAL_ECONOMY_ENTITIES.md`](../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md), o contrato social e jurídico em [`SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md`](../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md), o contrato mágico em [`MAGIC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), o contrato de saúde em [`CREATURE_HEALTH_AND_DISEASE_ENTITIES.md`](../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) e o contrato de NPCs em [`NPC_SYSTEM_ENTITIES.md`](../../../docs/world/schemas/NPC_SYSTEM_ENTITIES.md).
 
 Dados mecânicos e lore devem permanecer distinguíveis:
 
@@ -112,6 +112,17 @@ Os templates [`magic_school.template.md`](_templates/magic_school.template.md), 
 
 Os templates [`creature.template.md`](_templates/creature.template.md) e [`disease.template.md`](_templates/disease.template.md) materializam somente as definições estáticas. Não existe `conditions/`, template de condição ou prefixo para ocorrências de saúde. Criaturas e doenças continuam com quantidade planejada `a definir` e quantidade existente zero.
 
+## NPC, perfil, estado inicial e campanha
+
+- **Perfil do NPC** registra identidade, nascimento, origem, aparência-base, personalidade, valores, capacidades e sensibilidades.
+- **Estado inicial** fica inteiramente sob `initial_state` e pode semear localização, afiliações, necessidades, emoções, saúde, inventário, magia, objetivos, conhecimento, memória, relações e rotina.
+- **Estado da campanha** possui os valores atuais e todas as mudanças posteriores; o arquivo autoral não é reescrito a cada tick.
+- Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam IDs incorporados `goal.*`, `fear.*`, `secret.*`, `memory.*`, `belief.*`, `knowledge.*` e `relationship.*`; não criam pastas.
+- Família não mantém membros, facção não mantém ocupantes, profissão não é cargo nem competência e biografia não concede conhecimento.
+- Inventário inicial materializa `item_instance` no save; artefatos preservam identidade única; domínio mágico sempre registra fonte.
+
+O template [`npc.template.md`](_templates/npc.template.md) materializa o [contrato de NPCs](../../../docs/world/schemas/NPC_SYSTEM_ENTITIES.md), não é entidade e não altera as metas de 30 NPCs-semente e até 150 persistentes. A pasta `npcs/` continua contendo somente `.gitkeep`.
+
 ## Ordem de leitura
 
 1. [`Base/GDD.md`](../../../Base/GDD.md), fonte canônica atual;
@@ -126,4 +137,4 @@ Os templates [`creature.template.md`](_templates/creature.template.md) e [`disea
 
 ## Fase e estado atuais
 
-A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas e doenças, seus templates e os contratos conceituais de intervenção, percepção, conhecimento, saúde e condições foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*`, taxonomia mágica parte de `magic_school.*`, habitat e distribuição inicial partem de `creature.*` e relações epidemiológicas específicas partem de `disease.*`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico.
+A Fase 0 está concluída e a **Fase 1 — Contratos editoriais e templates** está em andamento. O contrato comum, o manifesto editorial, os schemas fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, seus templates e os contratos conceituais de intervenção, percepção, conhecimento, saúde e condições foram concluídos. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*`, taxonomia mágica parte de `magic_school.*`, habitat e distribuição inicial partem de `creature.*`, relações epidemiológicas específicas partem de `disease.*` e estado inicial individual parte de `npc.initial_state`. O mundo definirá unidades e o reino definirá moedas internas, sem unidades ou moedas reais nesta etapa. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. A próxima etapa documental cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais.

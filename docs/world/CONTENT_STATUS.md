@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico e de criaturas e doenças, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições, foram concluídos. Os templates de criatura e doença estão disponíveis sem materializar conteúdo; condições, instâncias de doença, diagnósticos, ferimentos e demais estados atuais pertencem ao save e não possuem pasta, prefixo ou template de conteúdo. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
+Fase 0 concluída. Fase 1 em andamento: o contrato editorial comum, o manifesto editorial, os schemas e templates fundamentais, geográficos, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs, além dos contratos conceituais de intervenção, percepção, conhecimento, saúde e condições, foram concluídos. O template de NPC está disponível sem materializar conteúdo; objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados e não possuem pastas próprias. Condições, instâncias de doença, diagnósticos, ferimentos e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -15,7 +15,10 @@ Estado das subetapas recentes da Fase 1:
 - templates de criatura e doença: concluídos;
 - contrato conceitual de saúde e condições relacionadas: concluído;
 - entidades reais de criatura e doença: não iniciadas;
-- NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico: próxima atividade documental;
+- contrato de NPCs, personalidade, valores, necessidades, emoções, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico: concluído;
+- template de NPC persistente: concluído;
+- entidades reais de NPC: não iniciadas;
+- eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais: próxima atividade documental;
 - Fase 1: em andamento.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
@@ -30,8 +33,8 @@ Estado das subetapas recentes da Fase 1:
 | Famílias relevantes | 6 | 0 | não iniciado | culturas, assentamentos, facções e leis | Fase 4 | `content/worlds/eldrath/families/` | Schema e template concluídos; nenhuma família ou casa foi criada. | 2026-07-15 |
 | Tradições religiosas | 3 | 0 | não iniciado | cosmologia necessária e culturas | Fases 2 e 4 | `content/worlds/eldrath/religions/` | Schema e template concluídos; culto como organização usa `faction.*`; nenhuma tradição foi criada. | 2026-07-15 |
 | Instituições mágicas | 5 | 0 | não iniciado | reino, leis, facções e sistema mágico | Fase 4 | `content/worlds/eldrath/factions/` | Instituições mágicas são facções, não escolas; o GDD não resolve se as cinco integram as oito facções principais, e a sobreposição continua adiada. | 2026-07-15 |
-| NPCs-semente | 30 | 0 | não iniciado | mundo macro, sociedade, magia e planejamento de NPCs | Fase 5 | `content/worlds/eldrath/npcs/` | O GDD contém âncoras canônicas, mas ainda não há fichas de conteúdo. | 2026-07-15 |
-| NPCs persistentes | até 150 | 0 | não iniciado | NPCs-semente e futura simulação | Fases 5 e 12 | `content/worlds/eldrath/npcs/` | Meta máxima do mundo-semente; estado simulado será responsabilidade futura. | 2026-07-15 |
+| NPCs-semente | 30 | 0 | não iniciado | mundo macro, sociedade, magia e planejamento de NPCs | Fase 5 | `content/worlds/eldrath/npcs/` | Schema e template concluídos; o GDD contém âncoras canônicas, mas ainda não há fichas de conteúdo. | 2026-07-15 |
+| NPCs persistentes | até 150 | 0 | não iniciado | NPCs-semente e futura simulação | Fases 5 e 12 | `content/worlds/eldrath/npcs/` | Schema e template concluídos; a pasta contém somente `.gitkeep`; estado simulado será responsabilidade futura. | 2026-07-15 |
 | Magias | 60 | 0 | não iniciado | escolas, efeitos, instituições e leis mágicas | Fase 4 | `content/worlds/eldrath/magic/spells/` | Schema e template concluídos; nenhuma magia foi criada. | 2026-07-15 |
 | Artefatos | 12 | 0 | não iniciado | escolas, efeitos, itens e história | Fase 4 | `content/worlds/eldrath/magic/artifacts/` | Schema e template concluídos; nenhum artefato foi criado. | 2026-07-15 |
 | Profissões | 20 | 0 | não iniciado | produção, comércio, instituições e assentamentos | Fase 3 | `content/worlds/eldrath/professions/` | Schema e template concluídos; a meta continua em 20 e a quantidade existente continua zero. | 2026-07-15 |
@@ -51,4 +54,4 @@ Estado das subetapas recentes da Fase 1:
 | Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas e doenças, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas, não categorias contáveis de conteúdo. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças e NPCs, não alteram essas quantidades. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados, não categorias contáveis de conteúdo. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.

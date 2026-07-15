@@ -15,6 +15,7 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 | [SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md](SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md) | `religion`, `faction`, `family` e `law` | contrato comum, entidades fundamentais, geografia, economia material e contrato transversal | concluído |
 | [MAGIC_SYSTEM_ENTITIES.md](MAGIC_SYSTEM_ENTITIES.md) | `magic_school`, `spell`, `ritual`, `magic_effect` e `artifact` | contratos anteriores, especialmente economia material, intervenção, sociedade e lei | concluído |
 | [CREATURE_HEALTH_AND_DISEASE_ENTITIES.md](CREATURE_HEALTH_AND_DISEASE_ENTITIES.md) | `creature`, `disease` e estruturas conceituais de saúde e condições; não cria entidades de condição | contratos anteriores, especialmente geografia, economia, intervenção, sociedade, lei e magia | concluído |
+| [NPC_SYSTEM_ENTITIES.md](NPC_SYSTEM_ENTITIES.md) | `npc` e subregistros incorporados de objetivos, medos, segredos, memória, conhecimento, crenças, relações e estado inicial | todos os contratos anteriores | concluído |
 
 ## Ordem de dependência
 
@@ -26,9 +27,10 @@ O contrato compartilhado vigente é a versão [`1.0.0`](../CONTENT_SCHEMA.md). O
 6. sociedade, instituições, famílias e lei;
 7. sistema mágico;
 8. criaturas, doenças, saúde e condições relacionadas;
-9. demais conjuntos especializados, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
+9. NPCs persistentes e seus subregistros incorporados;
+10. eventos, rumores, história, causalidade e conflitos, respeitando a [ordem de autoria](../AUTHORING_ORDER.md).
 
-O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei, o sistema mágico e os contratos de criaturas, doenças, saúde e condições relacionadas estão concluídos. A próxima categoria documental cobre NPCs, personalidade, necessidades, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico; NPCs e narrativa ainda não foram iniciados.
+O contrato comum, as entidades fundamentais, as entidades geográficas, a economia material, o contrato conceitual de intervenção, os contratos de religião, facção, família e lei, o sistema mágico, os contratos de criaturas, doenças, saúde e condições relacionadas e o contrato completo de NPCs estão concluídos. O template de NPC está disponível, mas nenhuma entidade real foi criada. A próxima categoria documental cobre eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos iniciais.
 
 ## Regras de manutenção
 

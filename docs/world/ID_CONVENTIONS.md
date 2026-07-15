@@ -63,6 +63,35 @@ O contrato especializado de criaturas, saúde e doenças finaliza os dois prefix
 
 Um indivíduo persistente usa futuramente `npc.*` e referencia `creature.*`. Uma instância de doença referencia `disease.*` no save. Não existem nesta fase os prefixos `condition.`, `injury.`, `symptom.`, `poison.`, `infection.` ou `health.`. As regras completas estão em [`CREATURE_HEALTH_AND_DISEASE_ENTITIES.md`](schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md).
 
+## Prefixo de NPC e subregistros incorporados
+
+O contrato especializado de NPCs finaliza o prefixo do arquivo principal e os prefixos de subregistros identificáveis. Somente `npc.*` representa uma entidade com arquivo próprio neste conjunto.
+
+| Registro | Prefixo | Persistência editorial |
+|---|---|---|
+| NPC persistente | `npc.` | `npcs/{slug}.md` |
+| objetivo individual | `goal.` | subregistro incorporado ao NPC ou ao save |
+| medo individual | `fear.` | subregistro incorporado ao NPC ou ao save |
+| segredo pessoal | `secret.` | subregistro incorporado ao NPC ou ao save |
+| memória individual | `memory.` | subregistro incorporado ao NPC ou ao save |
+| crença ou suspeita | `belief.` | subregistro incorporado ao NPC ou ao save |
+| conhecimento individual | `knowledge.` | subregistro incorporado ao NPC ou ao save |
+| relação direcionada | `relationship.` | subregistro incorporado ao NPC ou ao save |
+
+Formas previsíveis:
+
+```text
+goal.npc_slug.stable_goal
+fear.npc_slug.stable_fear
+secret.npc_slug.stable_secret
+memory.npc_slug.stable_memory
+belief.npc_slug.stable_belief
+knowledge.npc_slug.stable_knowledge
+relationship.source_slug.target_slug
+```
+
+`belief.*` usa um campo estruturado para distinguir crença de suspeita; não existe prefixo `suspicion.`. Não existem arquivos ou pastas independentes para objetivos, medos, segredos, memórias, crenças, conhecimento, relações, reputações, emoções ou necessidades. O ID do NPC e os IDs incorporados permanecem estáveis quando nomes, títulos, família, profissão, residência ou condição histórica mudarem. As regras completas estão em [`NPC_SYSTEM_ENTITIES.md`](schemas/NPC_SYSTEM_ENTITIES.md).
+
 ## Exemplos válidos
 
 | ID | Motivo |
@@ -77,6 +106,8 @@ Um indivíduo persistente usa futuramente `npc.*` e referencia `creature.*`. Uma
 | `artifact.example_artifact` | Exemplo exclusivamente estrutural de artefato. |
 | `creature.example_creature` | Exemplo exclusivamente estrutural de espécie ou tipo de criatura. |
 | `disease.example_disease` | Exemplo exclusivamente estrutural de definição de doença. |
+| `goal.npc_slug.stable_goal` | Exemplo estrutural de objetivo incorporado, previsível e associado ao slug estável do NPC. |
+| `relationship.source_slug.target_slug` | Exemplo estrutural de relação direcionada; a ordem identifica origem e alvo. |
 | `event.seed.plague_of_white_ash` | Usa segmentos de tipo para identificar um evento-semente e mantém o nome estável em minúsculas. |
 
 ## Exemplos inválidos

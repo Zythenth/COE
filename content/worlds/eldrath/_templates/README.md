@@ -2,7 +2,7 @@
 
 Esta pasta contém modelos para autoria consistente; ela não contém conteúdo real e deverá ser obrigatoriamente excluída pelo futuro carregador de conteúdo.
 
-Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo `base_entity.md` e, quando autorizados, `npc.md` ou `spell.md`. Placeholders usam a forma explícita `{{nome_do_valor}}`. Eles orientam a cópia para um arquivo de trabalho, mas nunca são dados e não podem chegar a um arquivo com `content_status: approved`.
+Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo `base_entity.md`, `npc.template.md` e `spell.template.md`. Placeholders usam a forma explícita `{{nome_do_valor}}`. Eles orientam a cópia para um arquivo de trabalho, mas nunca são dados e não podem chegar a um arquivo com `content_status: approved`.
 
 [`base_entity.md`](base_entity.md) continua sendo a origem conceitual dos campos comuns definidos no [contrato editorial](../../../../docs/world/CONTENT_SCHEMA.md). Os templates especializados acrescentam somente os campos do [schema correspondente](../../../../docs/world/schemas/README.md); eles não são conteúdo real e não definem schemas por si só.
 
@@ -59,7 +59,13 @@ Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo 
 | [`creature.template.md`](creature.template.md) | espécie, tipo ou arquétipo de criatura | Markdown com front matter YAML | `../creatures/{slug}.md` | geografia, economia, ecologia, magia, percepção e saúde | concluído |
 | [`disease.template.md`](disease.template.md) | definição estática de doença | Markdown com front matter YAML | `../diseases/{slug}.md` | criaturas, ambiente, economia, profissões, magia, leis e percepção | concluído |
 
-Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Escolas, magias, rituais, efeitos e artefatos devem conservar as estruturas do [contrato do sistema mágico](../../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), inclusive legalidade contextual, custos verificáveis, referências a efeitos e separação do estado da campanha. Criaturas e doenças devem conservar as fronteiras do [contrato de criaturas, saúde e doenças](../../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md): espécie não é indivíduo, doença não é instância e condição atual pertence ao save. Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml`, pasta `conditions/` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
+## Catálogo de NPCs
+
+| Template | Entidade | Formato | Destino futuro | Dependências | Estado |
+|---|---|---|---|---|---|
+| [`npc.template.md`](npc.template.md) | NPC persistente | Markdown com front matter YAML | `../npcs/{slug}.md` | todos os contratos fundamentais, geográficos, econômicos, sociais, mágicos, de saúde e percepção | concluído |
+
+Copie somente o template da entidade que será autorizada para o destino indicado, preserve `schema_version: "1.0.0"` e `content_status: draft`, substitua todos os placeholders antes da revisão e mantenha `null` e listas vazias conforme o contrato. Quantidade, dinheiro, taxa, preço e faixa devem conservar as estruturas documentadas no [schema de economia material](../../../../docs/world/schemas/MATERIAL_ECONOMY_ENTITIES.md). Religião, facção, família e lei devem conservar as direções canônicas e fronteiras do [schema de sociedade, instituições e lei](../../../../docs/world/schemas/SOCIETY_INSTITUTIONS_AND_LAW_ENTITIES.md). Escolas, magias, rituais, efeitos e artefatos devem conservar as estruturas do [contrato do sistema mágico](../../../../docs/world/schemas/MAGIC_SYSTEM_ENTITIES.md), inclusive legalidade contextual, custos verificáveis, referências a efeitos e separação do estado da campanha. Criaturas e doenças devem conservar as fronteiras do [contrato de criaturas, saúde e doenças](../../../../docs/world/schemas/CREATURE_HEALTH_AND_DISEASE_ENTITIES.md): espécie não é indivíduo, doença não é instância e condição atual pertence ao save. NPCs devem conservar perfil separado de `initial_state`, relações direcionais, conhecimento limitado, fontes de memória e magia e a propriedade canônica definida no [contrato de NPCs](../../../../docs/world/schemas/NPC_SYSTEM_ENTITIES.md). Nenhum desses arquivos cria ou representa `world.yaml`, `kingdom.yaml`, pasta `conditions/` ou uma entidade real. Placeholders são exclusivos desta pasta e são proibidos em conteúdo `approved`.
 
 ## Ordem recomendada
 
@@ -85,6 +91,7 @@ Copie somente o template da entidade que será autorizada para o destino indicad
 20. `magic_effect.template.md`;
 21. `artifact.template.md`;
 22. `creature.template.md`;
-23. `disease.template.md`.
+23. `disease.template.md`;
+24. `npc.template.md`.
 
 Quando o contrato comum ou um schema especializado mudar de forma aprovada, os templates afetados deverão ser revisados antes de novos arquivos serem aprovados. O ciclo de revisão de um template é o mesmo do conteúdo: elaboração, revisão, aprovação explícita e eventual depreciação documentada.
