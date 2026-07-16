@@ -1,10 +1,10 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. A Fase 1 foi concluída após auditoria e consolidação do manifesto, dos contratos e dos templates. A Fase 2 foi iniciada com [`world.yaml`](world.yaml), primeira entidade real do pacote, identificada como `world.eldrath` e atualmente `in_review`. As demais categorias continuam vazias; calendário, idiomas, culturas, reino e geografia ainda não foram iniciados.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. A Fase 1 foi concluída após auditoria e consolidação do manifesto, dos contratos e dos templates. A Fase 2 está em andamento: [`world.yaml`](world.yaml), primeira entidade real do pacote, foi aprovado como `world.eldrath`; [`calendars/marco.md`](calendars/marco.md), segunda entidade real, foi criado como `calendar.marco` e está `in_review`. As demais categorias continuam vazias; idiomas, culturas, reino e geografia ainda não foram iniciados.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). Para autoria, leia nesta ordem o [checklist de validação manual](../../../docs/world/MANUAL_VALIDATION_CHECKLIST.md), o [contrato comum](../../../docs/world/CONTENT_SCHEMA.md), o [registro de vocabulários](../../../docs/world/CONTROLLED_VOCABULARY.md), o schema especializado aplicável e o template correspondente.
 
-`world.eldrath` define somente a identidade geral: mundo vivo, causalidade, conhecimento limitado, magia sistêmica, instituições relevantes, vida cotidiana, conflito consequente, transformação histórica, variedade de trajetórias e ausência de protagonista obrigatório. Os campos de calendário, data inicial, era, idiomas, culturas e reino permanecem sem referências porque suas entidades ainda não existem. Nenhuma unidade concreta foi definida nesta atividade.
+`world.eldrath` define somente a identidade geral: mundo vivo, causalidade, conhecimento limitado, magia sistêmica, instituições relevantes, vida cotidiana, conflito consequente, transformação histórica, variedade de trajetórias e ausência de protagonista obrigatório. O campo de calendário principal referencia `calendar.marco`; data inicial, era inicial, idiomas, culturas e reino permanecem sem referências porque essas decisões ou entidades ainda não existem. Nenhuma unidade concreta foi definida nesta atividade.
 
 ## Conteúdo inicial e estado simulado
 
@@ -27,7 +27,7 @@ O modo derivado reutiliza os contratos editoriais, mas produz outro pacote inici
 | Pasta | Responsabilidade futura | Estado atual |
 |---|---|---|
 | `_templates/` | Modelos editoriais aprovados para autoria consistente. | template genérico, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico, dois de criaturas e doenças, um de NPC e três de eventos, rumores e conflitos disponíveis; não são conteúdo real |
-| `calendars/` | Calendário, eras e representação de datas. | não iniciado |
+| `calendars/` | Calendário, eras e representação de datas. | 1 entidade real, `calendar.marco`, em revisão |
 | `languages/` | Idiomas relevantes do mundo. | não iniciado |
 | `cultures/` | Culturas, normas, valores e contextos sociais. | não iniciado |
 | `regions/` | Regiões, biomas, clima, fronteiras e propriedades territoriais. | schema e template disponíveis; pasta real vazia |
@@ -155,4 +155,4 @@ Os templates [`event.template.md`](_templates/event.template.md), [`rumor.templa
 
 ## Fase e estado atuais
 
-A Fase 0 e a **Fase 1 — Contratos editoriais e templates** estão concluídas. A auditoria editorial final aprovou e consolidou o contrato comum, o manifesto, os schemas especializados, os templates e os contratos conceituais transversais. A **Fase 2 — Fundamentos do mundo** foi iniciada. `world.yaml` existe como `world.eldrath`, está `in_review` e é a única entidade real do pacote. O reino definirá moedas internas; nenhuma unidade concreta foi criada nesta atividade. `kingdom.yaml` continua inexistente, e todas as categorias de entidade em subpastas permanecem vazias. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. O contrato GitHub não altera o pacote nem suas contagens. A próxima atividade é revisar a identidade geral e, após sua aprovação, criar o calendário.
+A Fase 0 e a **Fase 1 — Contratos editoriais e templates** estão concluídas. A auditoria editorial final aprovou e consolidou o contrato comum, o manifesto, os schemas especializados, os templates e os contratos conceituais transversais. A **Fase 2 — Fundamentos do mundo** está em andamento. `world.yaml` existe como `world.eldrath` e está `approved`; `calendars/marco.md` existe como `calendar.marco` e está `in_review`. São as duas únicas entidades reais do pacote. O reino definirá moedas internas; nenhuma unidade concreta foi criada nesta atividade. `kingdom.yaml` continua inexistente, e todas as demais categorias de entidade em subpastas permanecem vazias. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. O contrato GitHub não altera o pacote nem suas contagens. A próxima atividade é aprovar o calendário e criar os idiomas.

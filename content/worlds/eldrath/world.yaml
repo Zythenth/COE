@@ -1,7 +1,7 @@
 schema_version: "1.0.0"
 id: "world.eldrath"
 name: "Eldrath"
-content_status: in_review
+content_status: approved
 tags: []
 aliases: []
 summary: >-
@@ -49,7 +49,7 @@ notes: |-
   conflitos concretos não integram esta definição.
 identity:
   world_name: "Eldrath"
-primary_calendar_id: null
+primary_calendar_id: "calendar.marco"
 initial_date: null
 initial_era_id: null
 language_ids: []
@@ -60,5 +60,5 @@ unit_system:
   name: "Unidades de Eldrath"
   notes: >-
     O sistema de unidades é referenciável, mas nenhuma unidade concreta integra
-    o escopo da identidade geral em revisão.
+    o escopo da identidade geral.
 unit_definitions: []

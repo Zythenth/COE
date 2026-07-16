@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 concluída e encerrada após auditoria editorial final aprovada. A Fase 2 foi iniciada com a criação da identidade geral de Eldrath: existe 1 mundo planejado e 1 mundo real, `world.eldrath`, atualmente `in_review`. O contrato conceitual de geração opcional por projetos públicos do GitHub permanece concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas as demais categorias continuam com quantidade existente igual a zero; o calendário ainda não foi iniciado. A próxima atividade é revisar a identidade e, depois de sua aprovação, criar o calendário.
+Fase 0 concluída. Fase 1 concluída e encerrada após auditoria editorial final aprovada. A Fase 2 está em andamento: existe 1 mundo planejado e 1 mundo real, `world.eldrath`, agora `approved`; existe também 1 calendário real, `calendar.marco`, atualmente `in_review`. O contrato conceitual de geração opcional por projetos públicos do GitHub permanece concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas as outras categorias continuam com quantidade existente igual a zero. A próxima atividade é aprovar o calendário e criar os idiomas.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -26,13 +26,13 @@ Estado das subetapas recentes da Fase 1:
 - conteúdo real de eventos, rumores, conflitos, criaturas e ameaças: não iniciado;
 - auditoria editorial final e consolidação: concluídas;
 - Fase 1: concluída e encerrada;
-- identidade geral de Eldrath: criada como `world.eldrath` e em revisão;
-- calendários: não iniciados;
-- Fase 2: iniciada; próxima atividade é a revisão da identidade e, após aprovação, o calendário.
+- identidade geral de Eldrath: `world.eldrath` aprovado;
+- calendários: `calendar.marco` criado e em revisão; quantidade existente igual a 1;
+- Fase 2: em andamento; próxima atividade é a aprovação do calendário e a criação dos idiomas.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
-| Mundo | 1 | 1 | em revisão | contratos editoriais fundamentais | Fase 2 | `content/worlds/eldrath/world.yaml` | `world.eldrath` contém somente a identidade geral; calendário, idiomas, culturas, reino e geografia permanecem fora do escopo. | 2026-07-15 |
+| Mundo | 1 | 1 | aprovado | contratos editoriais fundamentais | Fase 2 | `content/worlds/eldrath/world.yaml` | `world.eldrath` preserva a identidade geral e referencia `calendar.marco`; data inicial, era inicial, idiomas, culturas, reino e geografia permanecem fora do escopo atual. | 2026-07-16 |
 | Reino | 1 | 0 | não iniciado | identidade, calendário, culturas e contratos editoriais | Fase 2 | `content/worlds/eldrath/kingdom.yaml` (futuro) | O arquivo não deve ser criado nesta atividade. | 2026-07-15 |
 | Regiões | 4 | 0 | não iniciado | reino, culturas, geografia e contratos editoriais | Fase 3 | `content/worlds/eldrath/regions/` | Schema e template concluídos; nenhuma região foi criada. | 2026-07-15 |
 | Capital | 1 | 0 | não iniciado | reino e região correspondente | Fase 3 | `content/worlds/eldrath/settlements/` | É papel administrativo de assentamento; nenhuma capital foi criada. | 2026-07-15 |
@@ -51,7 +51,7 @@ Estado das subetapas recentes da Fase 1:
 | Eventos-base | 40 | 0 | não iniciado | entidades do mundo, causalidade e cronologia | Fase 5 | `content/worlds/eldrath/events/` | Contrato e template concluídos; `event.*` é conteúdo estático e evento concreto de campanha usa identidade técnica separada; a pasta contém somente `.gitkeep`. | 2026-07-15 |
 | Rumores iniciais ou gatilhos | 20 | 0 | não iniciado | eventos, NPCs, facções e lugares | Fase 5 | `content/worlds/eldrath/rumors/` | Contrato e template concluídos; a pasta contém somente `.gitkeep`; nenhum rumor ou gatilho foi criado. | 2026-07-15 |
 | Conflitos latentes | 8 | 0 | não iniciado | NPCs, facções, eventos, rumores, relações e ameaças | Fase 5 | `content/worlds/eldrath/conflicts/` | Contrato e template concluídos; a pasta contém somente `.gitkeep`; estado atual e resultado pertencem ao save. | 2026-07-15 |
-| Calendários | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/calendars/` | Inclui calendário e eras conforme escopo futuro. | 2026-07-15 |
+| Calendários | a definir | 1 | em revisão | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/calendars/` | `calendar.marco` define duas eras, dez períodos, seis dias semanais, cinco estações e ano fixo de 360 dias; não foi aprovado nesta tarefa. | 2026-07-16 |
 | Idiomas | a definir | 0 | não iniciado | identidade geral e contratos editoriais | Fase 2 | `content/worlds/eldrath/languages/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Culturas | a definir | 0 | não iniciado | identidade, calendário e idiomas | Fase 2 | `content/worlds/eldrath/cultures/` | O GDD não fixa quantidade. | 2026-07-15 |
 | Rotas | a definir | 0 | não iniciado | regiões, assentamentos e locais | Fase 3 | `content/worlds/eldrath/routes/` | Schema e template concluídos; nenhuma rota foi criada. | 2026-07-15 |
@@ -64,4 +64,4 @@ Estado das subetapas recentes da Fase 1:
 | Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. A única entidade real existente é `world.eldrath`; todas as demais metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. O contrato GitHub não cria categoria contável, não altera as contagens de Eldrath e não substitui o cenário canônico. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações posteriores devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Existem duas entidades reais: `world.eldrath`, aprovado, e `calendar.marco`, em revisão; todas as outras metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. O contrato GitHub não cria categoria contável, não altera as contagens de Eldrath e não substitui o cenário canônico. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações posteriores devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
