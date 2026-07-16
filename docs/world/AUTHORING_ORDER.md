@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem iniciar implementação. A Fase 1 está encerrada e a Fase 2 está em andamento: a identidade geral de Eldrath foi aprovada no item 6, e `calendar.marco` foi criado no item 7 e permanece em revisão. A próxima atividade é aprovar o calendário e avançar ao item 8, idiomas. Toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem iniciar implementação. A Fase 1 está encerrada e a Fase 2 está em andamento: a identidade geral de Eldrath foi aprovada no item 6, `calendar.marco` foi aprovado no item 7 e três idiomas foram criados em revisão no item 8. A próxima atividade é aprovar os idiomas e avançar ao item 9, culturas. Toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -8,9 +8,9 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 4. templates de conteúdo fundamentais — concluído;
 5. regras de referências cruzadas;
 6. identidade geral de Eldrath — `world.eldrath` aprovado;
-7. calendário e eras — `calendar.marco` criado; `in_review`;
-8. idiomas — não iniciado; aguarda aprovação do item 7;
-9. culturas;
+7. calendário e eras — `calendar.marco` aprovado;
+8. idiomas — `language.valdren`, `language.ardren` e `language.senkar` criados; `in_review`;
+9. culturas — não iniciado; aguarda aprovação do item 8;
 10. cosmologia necessária;
 11. reino;
 12. sistema político;

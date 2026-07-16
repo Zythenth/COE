@@ -52,7 +52,10 @@ identity:
 primary_calendar_id: "calendar.marco"
 initial_date: null
 initial_era_id: null
-language_ids: []
+language_ids:
+  - "language.valdren"
+  - "language.ardren"
+  - "language.senkar"
 culture_ids: []
 initial_kingdom_id: null
 unit_system:

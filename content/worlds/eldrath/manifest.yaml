@@ -36,7 +36,6 @@ templates_directory: "_templates"
 assets_directory: "../../../assets"
 design_directory: "../../../design"
 empty_categories:
-  - "languages"
   - "cultures"
   - "regions"
   - "settlements"
@@ -62,6 +61,9 @@ empty_categories:
   - "magic/effects"
 pending_content_files:
   world_yaml: "approved"
-  calendar_marco_md: "in_review"
+  calendar_marco_md: "approved"
+  language_valdren_md: "in_review"
+  language_ardren_md: "in_review"
+  language_senkar_md: "in_review"
   kingdom_yaml: "not_created"
 implementation_status: "not_started"
