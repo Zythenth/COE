@@ -2,7 +2,7 @@
 schema_version: "1.0.0"
 id: "culture.tessari"
 name: "Tessari"
-content_status: in_review
+content_status: approved
 tags: []
 aliases:
   - "Tessares"

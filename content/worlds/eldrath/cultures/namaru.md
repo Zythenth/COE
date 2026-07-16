@@ -2,7 +2,7 @@
 schema_version: "1.0.0"
 id: "culture.namaru"
 name: "Namaru"
-content_status: in_review
+content_status: approved
 tags: []
 aliases:
   - "Gentes Namaru"

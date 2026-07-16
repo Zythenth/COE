@@ -1,7 +1,7 @@
 schema_version: "1.0.0"
 id: "world.eldrath"
 name: "Eldrath"
-content_status: approved
+content_status: in_review
 tags: []
 aliases: []
 summary: >-
@@ -44,9 +44,135 @@ notes: |-
 
   Limites desta identidade:
   O tom não é automaticamente sombrio, idealizado, infantil, cômico ou dependente
-  de combate. Calendário, eras, idiomas, culturas, cosmologia, religiões, reino,
+  de combate. Calendário, eras, idiomas, culturas, religiões concretas, reino,
   política específica, moeda, leis, geografia, entidades, acontecimentos e
-  conflitos concretos não integram esta definição.
+  conflitos concretos não integram esta definição. A identidade geral aprovada
+  permanece preservada; somente a nova camada cosmológica mínima e os princípios
+  religiosos gerais abaixo aguardam revisão.
+
+  Camadas epistemológicas da cosmologia:
+  - Verdade confirmada do mundo: fatos sustentados pelo conteúdo canônico ou pelo
+    estado verdadeiro do motor, independentemente de serem conhecidos por alguém.
+  - Fenômeno observável: acontecimento, efeito ou vestígio real que pode ser
+    percebido ou investigado sem que sua causa completa esteja estabelecida.
+  - Interpretação: explicação proposta por uma pessoa, cultura ou instituição a
+    partir das evidências e informações a que teve acesso.
+  - Crença: afirmação aceita com confiança variável, verdadeira ou falsa, sempre
+    ligada a fontes, evidências, confirmações e contradições.
+  - Doutrina futura: sistema organizado de crenças, valores e explicações cuja
+    propriedade pertencerá exclusivamente à futura entidade `religion.*`.
+  - Mistério aberto: pergunta que o conteúdo inicial não resolve e que não pode
+    ser preenchida por suposição editorial.
+  Interpretação, crença, confiança, autoridade ou consenso não promovem uma
+  afirmação automaticamente a verdade histórica ou metafísica.
+
+  Verdades confirmadas do mundo:
+  - Magia existe objetivamente e produz efeitos observáveis. Pode ser estudada,
+    ensinada, regulamentada e interpretada religiosamente, mas poder mágico,
+    desconhecimento de uma causa ou linguagem sagrada não comprovam divindade,
+    milagre, autoridade moral ou explicação divina. Fenômeno mágico e milagre
+    percebido são conceitos diferentes.
+  - Morte é uma mudança factual do estado de vida. O corpo e seus vestígios
+    materiais permanecem sujeitos a transformação, cuidado, exame e efeitos
+    definidos; memórias de outras pessoas, registros, obras, relações e
+    consequências podem preservar uma identidade histórica sem comprovar
+    continuidade metafísica da pessoa.
+  - Efeitos mágicos relacionados a corpo, memória, vestígios ou percepção só
+    afirmam o resultado que suas regras e evidências sustentam. Não comprovam
+    alma, pós-vida ou comunicação verdadeira com pessoas mortas.
+  - O Calendário do Marco é uma convenção histórica e civil. O Marco, as eras AM
+    e PM e a estrutura do calendário não comprovam criação do mundo, ordem
+    cósmica, astronomia ou doutrina religiosa.
+  - Criaturas de grande poder continuam sendo entidades do mundo, não divindades
+    por definição. Definições concretas futuras usam `creature.*` para espécie ou
+    tipo, `npc.*` para indivíduo persistente, `faction.*` para organização,
+    `religion.*` para doutrina e `location.*` para local persistente. A palavra
+    “demoníaco” pode registrar classificação cultural, histórica, mágica ou
+    taxonômica; não prova maldade absoluta, inferno, plano demoníaco ou guerra
+    cósmica.
+  - O Arquiteto permanece extradiegético: não é divindade obrigatória, não é
+    conhecido automaticamente por NPCs e sua causa real fica restrita às visões
+    administrativas autorizadas.
+
+  Fenômenos observáveis:
+  - Manifestações mágicas podem deixar efeitos, sinais e evidências reais, ainda
+    que observadores discordem sobre origem, intenção ou classificação.
+  - Morte permite observar cessação de vida, condição e transformação do corpo,
+    efeitos materiais, ausência da pessoa em interações posteriores e registros
+    ou memórias deixados por ela e por outras pessoas.
+  - Memórias, documentos e relatos podem persistir, divergir, degradar-se ou ser
+    corrigidos sem alterar retroativamente o fato ocorrido.
+  - Um acontecimento chamado de milagre continua sendo, para investigação, um
+    evento com efeitos, evidências, percepções e interpretações separadas.
+  - O poder, o comportamento e os efeitos produzidos por entidades superiores em
+    capacidade podem ser observados sem resolver sua natureza metafísica.
+
+  Interpretações, crenças e mistérios abertos:
+  Pessoas, culturas e instituições podem atribuir fenômenos a magia, acaso,
+  natureza, criatura, divindade, conspiração, intervenção ou outras causas
+  internas. Relatos de origem do mundo, sentidos do Marco, concepções da morte e
+  alegações de milagre podem coexistir e disputar confiança. Permanecem abertos a
+  origem completa do mundo, a existência ou inexistência de divindades, a
+  existência de alma, julgamento após a morte, reencarnação, paraíso, inferno e
+  comunicação verdadeira com pessoas mortas. O passado documentável pode ser
+  reconstruído por fontes; mito cosmogônico permanece interpretação ou doutrina.
+  Nenhuma narrativa de criação completa é confirmada nesta camada.
+
+  Princípios religiosos gerais:
+  - Três tradições religiosas canônicas serão criadas futuramente. Nenhuma será
+    totalmente boa ou má, automaticamente verdadeira ou falsa, e todas poderão
+    cooperar, disputar, fragmentar-se e reformar-se.
+  - Cultura e religião não possuem correspondência obrigatória. Uma religião
+    poderá atravessar culturas, uma cultura poderá conter várias religiões e
+    pessoas de culturas distintas poderão compartilhar a mesma tradição.
+  - Religião usa `religion.*`; organização religiosa concreta, inclusive ordem,
+    culto organizado ou templo institucional, usa `faction.*`; crenças pessoais
+    pertencem aos futuros NPCs e ao save.
+  - Pertença institucional e crença pessoal são distintas. Prática social ou
+    ritual poderá existir sem concordância doutrinária e não concede adesão,
+    conhecimento, caráter ou autoridade por si só.
+  - Textos religiosos futuros deverão preservar autoria, idioma, cópias, acesso,
+    proveniência e confiabilidade. Autoridade religiosa é social e institucional,
+    não verdade automática; antiguidade ou difusão também não transformam o
+    conteúdo de um texto em fato.
+  - Milagres alegados exigem evento, evidência, percepção e interpretação. Magia
+    religiosa continuará sujeita aos contratos de custo, efeito, risco,
+    evidência, conhecimento, lei e causalidade do sistema mágico.
+  - Religião poderá influenciar política, educação, economia, cuidado, lei,
+    reputação e conflitos, mas influência nunca garante uma decisão ou ação.
+  - Nenhuma crença concede informação sem fonte. Correção não apaga
+    instantaneamente crenças anteriores, e rumores religiosos seguem as regras
+    normais de origem, transmissão, mutação e genealogia.
+  - Revelações futuras poderão ser verdadeiras, equivocadas, fabricadas,
+    mágicas, incompletas ou não verificáveis; cada classificação dependerá de
+    fatos, fontes e evidências, não da convicção declarada.
+
+  Liberdade individual de crença:
+  NPCs futuros poderão possuir crença pessoal, não possuir religião, participar
+  socialmente sem acreditar, mudar de posição, discordar de autoridades,
+  interpretar experiências de modo diferente, ocultar crenças, praticar mais de
+  uma tradição, separar identidade cultural de religião e formar relações entre
+  crenças distintas. Conversão, dúvida, abandono, combinação e recusa serão
+  possibilidades individuais; religião influencia decisões sem determinar
+  personalidade, moralidade, profissão, política, magia, relação ou destino.
+
+  Limites da verdade religiosa:
+  A simulação conhece os fatos ocorridos e pode manter causas metafísicas não
+  resolvidas. A visão administrativa pode distinguir fato, causa restrita,
+  evidência e interpretação; a visão pública não revela verdades restritas.
+  Cronistas trabalham com fontes, e NPCs recebem somente evidências e
+  comunicações acessíveis. Confiança não transforma crença em fato; consenso
+  social não transforma doutrina em verdade; ausência de prova não comprova
+  falsidade; e poderes mágicos não comprovam autoridade moral. Efeitos de uma
+  Intervenção do Arquiteto podem receber interpretação religiosa sem confirmar
+  essa interpretação ou revelar o Arquiteto.
+
+  Integração cultural:
+  Dorven, Namaru, Tessari e Ostelar poderão interpretar o sagrado de formas
+  diferentes. Diferenças culturais podem influenciar prática, linguagem e
+  memória, mas não determinam doutrina. Pessoas da mesma cultura poderão seguir
+  tradições diferentes, e pessoas de culturas diferentes poderão compartilhar
+  uma religião. Nenhuma tradição concreta é atribuída a uma cultura nesta etapa.
 identity:
   world_name: "Eldrath"
 primary_calendar_id: "calendar.marco"
