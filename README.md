@@ -10,7 +10,7 @@ Também está prevista a geração opcional de mundos a partir de projetos públ
 
 ## Estado atual
 
-O projeto está na **Fase 1 — Contratos editoriais e templates**. Os contratos editoriais e conceituais previstos para a fase foram concluídos; a auditoria editorial final, a consolidação e o encerramento explícito permanecem pendentes. A construção do mundo precede a programação. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte.
+Os contratos editoriais e templates foram concluídos, auditados e consolidados. O projeto está pronto para iniciar a construção de Eldrath por sua identidade geral e seus fundamentos do mundo. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte; a construção do mundo continua precedendo a programação.
 
 Eldrath será construído, auditado e congelado antes das especificações de produto e interface, da preparação visual e da programação.
 

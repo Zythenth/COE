@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 em andamento: os contratos editoriais e templates previstos, incluindo eventos, rumores, história, conflitos, ameaças monstruosas e incursões, foram concluídos. O contrato conceitual de geração opcional por projetos públicos do GitHub, com snapshot, cálculo, regiões, assentamentos, rotas, mapa, checkpoint inicial, reinício e velocidade, também foi concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas continuam em zero: nenhuma entidade do mundo foi criada nesta tarefa. A Fase 1 aguarda auditoria editorial final, consolidação e encerramento explícito.
+Fase 0 concluída. Fase 1 concluída e encerrada após auditoria editorial final aprovada: contratos editoriais concluídos, 28 templates concluídos e consolidados e entidades reais existentes iguais a zero. O contrato conceitual de geração opcional por projetos públicos do GitHub também está concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. A Fase 2 é a próxima fase e ainda não foi iniciada.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -22,9 +22,11 @@ Estado das subetapas recentes da Fase 1:
 - templates de evento, rumor e conflito: concluídos;
 - contrato de ameaças monstruosas, grupos, hordas, ataques e incursões: concluído;
 - contrato de geração opcional derivada do GitHub, mapa conceitual, funcionamento offline, saves, checkpoints, ramificações, reinício e velocidade: concluído;
-- consulta a perfil, snapshot real, mapa visual e implementação: não iniciados e proibidos nesta fase;
+- consulta a perfil, snapshot real, mapa visual e implementação: não iniciados; implementação continua proibida;
 - conteúdo real de eventos, rumores, conflitos, criaturas e ameaças: não iniciado;
-- Fase 1: em andamento; aguarda auditoria editorial final.
+- auditoria editorial final e consolidação: concluídas;
+- Fase 1: concluída e encerrada;
+- Fase 2: não iniciada; próxima atividade será a identidade geral de Eldrath.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|

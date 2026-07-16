@@ -8,7 +8,7 @@
 
 Este documento define como espécies e tipos de criatura podem originar ameaças vivas ou sobrenaturais e como a futura campanha representará populações, grupos, hordas, ataques e incursões. Não é entidade, template de horda, schema executável, JSON Schema, DSL, código, save, monstro real, demônio real, ataque histórico ou lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.5`, permanece a fonte canônica.
 
 ## 1. Objetivo
 

@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para espécies e tipos de criaturas, definições de doenças e estruturas compartilhadas de saúde. Ele define representação autoral, propriedade canônica, referências, separação entre conteúdo e campanha e validação manual. Não é schema executável, JSON Schema, DSL, código, conteúdo real, diagnóstico médico nem lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica. O núcleo futuro deve permanecer completo, determinístico e utilizável sem IA generativa.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.5`, permanece a fonte canônica. O núcleo futuro deve permanecer completo, determinístico e utilizável sem IA generativa.
 
 ## 1. Objetivo
 

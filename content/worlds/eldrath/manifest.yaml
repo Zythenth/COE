@@ -3,7 +3,7 @@ package_id: "package.eldrath"
 package_name: "Eldrath"
 package_version: "0.1.0"
 primary_language: "pt-BR"
-editorial_status: "in_review"
+editorial_status: "approved"
 gdd_path: "../../../Base/GDD.md"
 content_schema_path: "../../../docs/world/CONTENT_SCHEMA.md"
 content_directories:

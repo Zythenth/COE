@@ -1,6 +1,6 @@
 # Intervenção, percepção e conhecimento — contrato conceitual
 
-Este documento especializa conceitualmente o GDD 1.3 para Intervenções do Arquiteto e para a cadeia que liga alteração, evidência, percepção, interpretação, crença, memória, rumor e consequência. Ele não é schema executável, JSON Schema, tipo de programação, arquivo de save, template de conteúdo nem entidade de Eldrath.
+Este documento especializa conceitualmente o GDD 1.5 para Intervenções do Arquiteto e para a cadeia que liga alteração, evidência, percepção, interpretação, crença, memória, rumor e consequência. Ele não é schema executável, JSON Schema, tipo de programação, arquivo de save, template de conteúdo nem entidade de Eldrath.
 
 ## 1. Objetivo
 

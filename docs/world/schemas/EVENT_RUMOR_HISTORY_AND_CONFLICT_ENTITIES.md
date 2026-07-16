@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para eventos de conteúdo, rumores iniciais e conflitos latentes. Também define os contratos conceituais de eventos de campanha, cadeias causais, gatilhos, arcos, timeline, crônicas, resumos, eras e lendas. Não é schema executável, JSON Schema, DSL, código, save, evento ocorrido, rumor real, conflito real ou lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.5`, permanece a fonte canônica.
 
 ## 1. Objetivo
 

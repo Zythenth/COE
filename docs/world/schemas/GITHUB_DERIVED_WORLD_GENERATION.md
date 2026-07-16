@@ -149,7 +149,7 @@ rank_norm(x) = (posto_medio_ascendente(x) - 1) / (n - 1)
 count_norm(x) = 0,60 * log_norm(x) + 0,40 * rank_norm(x)
 ~~~
 
-Quando há um único valor, rank_norm é 0,5. Quando todos os valores de uma submétrica são iguais, essa submétrica recebe 0,5 para todos e não cria diferença artificial. Zero conhecido continua sendo zero; dado indisponível não é convertido em zero.
+Quando há um único valor, `rank_norm` é 0,5. Quando todos os valores de uma submétrica são iguais, essa submétrica recebe 0,5 para todos e não cria diferença artificial. Essas regras especiais são aplicadas antes das fórmulas e evitam divisão por zero, inclusive quando o único valor ou todos os valores constantes são zero. Zero conhecido continua sendo zero como dado bruto; dado indisponível não é convertido em zero.
 
 Recência combina decaimento limitado de 730 dias com posição relativa da data de atualização:
 
@@ -206,6 +206,8 @@ pontuacao = 100 * soma(peso_i * componente_i disponível)
 ~~~
 
 Uma submétrica ausente é removida e os pesos internos do componente são renormalizados. Se todo um componente estiver indisponível, seu peso é redistribuído proporcionalmente entre os componentes disponíveis e a interface mostra os pesos efetivos. Ausência não recebe punição silenciosa.
+
+Se todos os componentes estiverem indisponíveis, a pontuação é `null`: o projeto permanece listado com a resposta incompleta explicada, não recebe ordenação automática e pode ser excluído, completado por nova consulta ou incluído manualmente antes da confirmação. Criação manual e Eldrath canônico continuam disponíveis. O sistema nunca divide por zero nem transforma ausência total em pontuação zero.
 
 O cálculo não avalia inteligência, competência, moralidade, empregabilidade, valor humano, sucesso profissional ou qualidade pessoal. Ele apenas ordena projetos para distribuir referências em um mundo fictício.
 

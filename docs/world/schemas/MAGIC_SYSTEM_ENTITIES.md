@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para o sistema mágico. Ele define representação autoral, propriedade canônica, estruturas mecânicas, referências e validação manual. Não é schema executável, JSON Schema, DSL, código, conteúdo real ou lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.2`, permanece a fonte canônica. O sistema precisa funcionar de forma completa, determinística e validável sem IA generativa.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.5`, permanece a fonte canônica. O sistema precisa funcionar de forma completa, determinística e validável sem IA generativa.
 
 ## 1. Objetivo
 

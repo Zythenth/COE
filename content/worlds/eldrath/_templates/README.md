@@ -1,10 +1,10 @@
 # Templates editoriais de Eldrath
 
-Esta pasta contém modelos para autoria consistente; ela não contém conteúdo real e deverá ser obrigatoriamente excluída pelo futuro carregador de conteúdo.
+Esta pasta contém 28 modelos editoriais concluídos, auditados e consolidados na Fase 1; ela não contém conteúdo real e deverá ser obrigatoriamente excluída pelo futuro carregador de conteúdo.
 
 Os templates usam nomes em `snake_case` e descrevem sua finalidade, por exemplo `base_entity.md`, `npc.template.md` e `spell.template.md`. Placeholders usam a forma explícita `{{nome_do_valor}}`. Eles orientam a cópia para um arquivo de trabalho, mas nunca são dados e não podem chegar a um arquivo com `content_status: approved`.
 
-[`base_entity.md`](base_entity.md) continua sendo a origem conceitual dos campos comuns definidos no [contrato editorial](../../../../docs/world/CONTENT_SCHEMA.md). Os templates especializados acrescentam somente os campos do [schema correspondente](../../../../docs/world/schemas/README.md); eles não são conteúdo real e não definem schemas por si só.
+Antes de usar um modelo, leia o [checklist de validação manual](../../../../docs/world/MANUAL_VALIDATION_CHECKLIST.md), o [contrato editorial](../../../../docs/world/CONTENT_SCHEMA.md), o [registro de vocabulários](../../../../docs/world/CONTROLLED_VOCABULARY.md) e o [schema correspondente](../../../../docs/world/schemas/README.md). [`base_entity.md`](base_entity.md) continua sendo a origem conceitual dos campos comuns; os templates especializados acrescentam somente campos contratados, não são conteúdo real e não definem schemas por si só.
 
 ## Catálogo fundamental
 

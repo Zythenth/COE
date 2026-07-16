@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial e os contratos e templates previstos nesta subetapa da Fase 1 foram concluídos, incluindo NPCs, eventos, rumores, história, cadeias causais, conflitos latentes, ameaças monstruosas e incursões. O contrato conceitual de geração opcional por projetos públicos do GitHub, mapa, checkpoint inicial, reinício e velocidade também foi concluído. Os contratos estão documentados, mas suas entidades reais e sua implementação não foram iniciadas. A Fase 1 continua em andamento; a próxima atividade é a auditoria editorial final, consolidação e encerramento explícito da fase. Nenhuma etapa de construção do mundo foi iniciada. Esta ordem registra dependências editoriais e de produção, sem desenvolver o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem criar entidades reais ou iniciar implementação. A Fase 1 está encerrada e a Fase 2 ainda não foi iniciada. A próxima atividade é retomar a sequência no item 6, identidade geral de Eldrath; toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -43,7 +43,7 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 39. saúde e condições relacionadas — contrato conceitual concluído; sem entidade, pasta, prefixo ou template próprios;
 40. contratos e template de NPCs, personalidade, valores, necessidades, emoções, objetivos, relações, memória, conhecimento, reputação, inventário, afinidade e domínio mágico — concluídos; entidades não iniciadas;
 41. contratos e templates de eventos, rumores, história, cadeias causais, conflitos latentes e gatilhos, além do contrato de ameaças monstruosas e incursões — concluídos;
-42. contrato conceitual de geração opcional por projetos públicos do GitHub, cálculo, regiões, assentamentos, rotas, mapa, saves, checkpoint inicial, ramificações, reinício e velocidade — concluído; a auditoria editorial final e a consolidação da Fase 1 são a próxima atividade;
+42. contrato conceitual de geração opcional por projetos públicos do GitHub, cálculo, regiões, assentamentos, rotas, mapa, saves, checkpoint inicial, ramificações, reinício e velocidade — concluído; auditoria editorial final e consolidação concluídas; Fase 1 encerrada;
 43. planejamento dos NPCs-semente;
 44. criação dos NPCs-semente;
 45. relações iniciais;
@@ -97,7 +97,7 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 | 16–25 | Geografia e vida material | Dependem do contexto macro para localizar territórios, assentamentos, circulação, recursos e economia coerentemente. |
 | 26 | Contrato transversal de intervenção | Depende da economia material e estabelece causalidade, percepção e conhecimento antes dos contratos sociais. |
 | 27–39 | Sociedade, instituições, magia e saúde | Dependem do território, da vida material e do contrato transversal para que poder, fé, famílias, magia, saúde e leis tenham contexto e consequências. |
-| 40–42 | Contratos de NPCs, história, ameaças e geração de mundo | Dependem dos contratos anteriores para separar pessoa, espécie, estado agregado, conhecimento, inventário, causalidade, rumor, conflito, geração opcional, snapshot e campanha. A subetapa termina com auditoria editorial final antes da autoria do mundo. |
+| 40–42 | Contratos de NPCs, história, ameaças e geração de mundo | Dependem dos contratos anteriores para separar pessoa, espécie, estado agregado, conhecimento, inventário, causalidade, rumor, conflito, geração opcional, snapshot e campanha. A subetapa e sua auditoria editorial final estão concluídas. |
 | 43–50 | NPCs e história inicial | Dependem de todos os contratos anteriores para criar pessoas e conflitos conectados ao mundo. |
 | 51–58 | Integração, auditoria e congelamento | Dependem do pacote de conteúdo completo para resolver referências, contradições e incoerências antes de fixar a primeira versão. |
 | 59–67 | Especificações do produto | Dependem do mundo aprovado para especificar dados, tarefas, interface e limites com conteúdo real em vez de suposições. |

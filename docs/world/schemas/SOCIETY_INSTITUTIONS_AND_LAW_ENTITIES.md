@@ -8,7 +8,7 @@
 
 Este documento especializa o contrato editorial comum para tradições religiosas, organizações institucionais, grupos familiares e regras jurídicas. Ele define representação autoral, propriedade canônica, referências e validação manual. Não é schema executável, JSON Schema, linguagem de regras, código, conteúdo real ou lore de Eldrath.
 
-Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.3`, permanece a fonte canônica. Este contrato integra o GDD sem modificá-lo.
+Em caso de conflito, [`Base/GDD.md`](../../../Base/GDD.md), versão `1.5`, permanece a fonte canônica. Este contrato integra o GDD sem modificá-lo.
 
 ## 1. Escopo e regras compartilhadas
 
@@ -577,10 +577,10 @@ Permanecem deliberadamente adiados:
 - datas, religiões, facções, famílias, leis, valores, símbolos, textos, locais e eventos reais;
 - sobreposição exata entre as oito facções principais e as cinco instituições mágicas;
 - modelagem de lares, caso se prove necessária;
-- schemas de NPC, parentesco concreto, títulos ocupados, contratos individuais, eventos, crimes, processos, evidências e rumores;
+- registros persistentes de parentesco concreto, títulos ocupados, contratos individuais, crimes, processos e evidências; entidades reais de NPC, eventos e rumores;
 - catálogo e valores reais de sanções, multas, restituições, licenças e exceções;
 - motor de sucessão e resolução de conflitos entre família, cultura, religião, lei, contratos e poder;
 - linguagem ou arquitetura executável de condições legais;
 - estado persistente, validação automatizada, banco de dados, API e implementação;
 - quantidade de leis, que continua `a definir`;
-- contratos de criaturas, doenças, saúde e condições relacionadas, que formam a próxima atividade documental.
+- entidades reais de criaturas e doenças, instâncias de saúde e condições e suas regras executáveis, reservadas às fases responsáveis.

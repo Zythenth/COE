@@ -1,7 +1,7 @@
 # Contrato editorial comum de conteúdo
 
 **Versão do contrato:** `1.0.0`  
-**Estado:** contrato comum e contratos especializados previstos até eventos, rumores, conflitos e ameaças monstruosas concluídos; Fase 1 em andamento e aguardando auditoria editorial final.
+**Estado:** contrato comum e contratos especializados da Fase 1 concluídos e aprovados pela auditoria editorial final; Fase 1 encerrada.
 
 ## Objetivo
 
@@ -204,11 +204,11 @@ O fluxo é `draft → in_review → approved → deprecated`.
 | `events/` | `event` | Markdown com front matter YAML | sim | entidades envolvidas, causalidade e cronologia | vazia |
 | `rumors/` | `rumor` | Markdown com front matter YAML | sim | fontes, eventos, NPCs, lugares e facções | vazia |
 | `conflicts/` | `conflict` | Markdown com front matter YAML | sim | lados, interesses, pressões, eventos e gatilhos | vazia |
-| `magic/schools/` | `school` | Markdown com front matter YAML | sim | princípios mágicos, instituições e leis | vazia |
+| `magic/schools/` | `magic_school` | Markdown com front matter YAML | sim | princípios mágicos, instituições e leis | vazia |
 | `magic/spells/` | `spell` | Markdown com front matter YAML | sim | escolas, efeitos, leis e instituições | vazia |
 | `magic/rituals/` | `ritual` | Markdown com front matter YAML | sim | escolas, magias, efeitos e instituições | vazia |
 | `magic/artifacts/` | `artifact` | Markdown com front matter YAML | sim | escolas, efeitos, itens e história | vazia |
-| `magic/effects/` | `effect` | Markdown com front matter YAML | sim | contrato comum e regras de magia | vazia |
+| `magic/effects/` | `magic_effect` | Markdown com front matter YAML | sim | contrato comum e regras de magia | vazia |
 
 Esta tabela estabelece somente os prefixos e formatos-base. Ela não define os campos específicos dessas categorias.
 
