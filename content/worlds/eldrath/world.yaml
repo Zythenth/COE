@@ -1,0 +1,64 @@
+schema_version: "1.0.0"
+id: "world.eldrath"
+name: "Eldrath"
+content_status: in_review
+tags: []
+aliases: []
+summary: >-
+  Eldrath é um mundo de fantasia mágica vivo no qual a história emerge do
+  encontro entre aspirações pessoais, necessidades cotidianas, instituições e
+  forças extraordinárias. Pessoas comuns e poderosas compartilham a capacidade
+  de produzir mudanças: trabalho, escassez, afeto, rivalidade, fé, decisão
+  política, descoberta e magia podem alterar relações e atravessar gerações.
+  Nada relevante acontece sem causas, e nada termina sem deixar vestígios. O
+  passado é preservado, mas permanece parcialmente conhecido e sujeito a
+  memória, interesse e interpretação. A magia oferece possibilidades reais
+  condicionadas por conhecimento, acesso, custo, risco e consequência, sem
+  tornar profissões, recursos ou escolhas comuns irrelevantes. Ameaças naturais,
+  monstruosas, demoníacas ou arcanas podem agir de forma sistêmica, mas não
+  substituem economia, política, religião ou vida social. Eldrath comporta
+  ascensão e decadência, guerra e reconstrução, amor e rivalidade, migração,
+  descoberta, esperança e lenda sem exigir herói, profecia ou mal absoluto.
+references: []
+art: []
+notes: |-
+  Direção editorial:
+  Eldrath combina fantasia, crônica histórica, mistério, vida cotidiana, drama
+  social, política, descoberta, perigo, esperança e transformação. A violência
+  possui causas e consequências; o extraordinário convive com trabalho,
+  recursos, vínculos, deveres e escolhas comuns. O mundo deve permanecer
+  compreensível por seus dados e textos, sem depender de imagem ou geração
+  narrativa.
+
+  Pilares de autoria:
+  - Mundo vivo: pessoas, grupos, recursos e ameaças continuam produzindo história.
+  - Causalidade: mudanças relevantes possuem origem, agentes, condições e efeitos.
+  - Conhecimento limitado: verdade, percepção, crença, memória e rumor não se confundem.
+  - Magia sistêmica: conhecimento, acesso, custo, risco e consequência limitam o poder.
+  - Instituições: autoridade, fé, economia, lei e organização social condicionam escolhas.
+  - Vida cotidiana: trabalho, cuidado, escassez, afeto e pertencimento têm peso histórico.
+  - Conflito consequente: violência e disputa transformam pessoas, lugares e instituições.
+  - Transformação histórica: decisões e acontecimentos deixam continuidades e rupturas.
+  - Trajetórias variadas: ascensão, queda, amor, rivalidade, migração, fé e descoberta coexistem.
+  - Protagonismo aberto: nenhuma pessoa, linhagem ou profecia é o centro obrigatório da história.
+
+  Limites desta identidade:
+  O tom não é automaticamente sombrio, idealizado, infantil, cômico ou dependente
+  de combate. Calendário, eras, idiomas, culturas, cosmologia, religiões, reino,
+  política específica, moeda, leis, geografia, entidades, acontecimentos e
+  conflitos concretos não integram esta definição.
+identity:
+  world_name: "Eldrath"
+primary_calendar_id: null
+initial_date: null
+initial_era_id: null
+language_ids: []
+culture_ids: []
+initial_kingdom_id: null
+unit_system:
+  system_key: "eldrath_units"
+  name: "Unidades de Eldrath"
+  notes: >-
+    O sistema de unidades é referenciável, mas nenhuma unidade concreta integra
+    o escopo da identidade geral em revisão.
+unit_definitions: []

@@ -1,11 +1,12 @@
 # Mapa de conteúdo de Eldrath
 
-Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os contratos e templates da Fase 1, incluindo eventos, rumores, história, conflitos, ameaças monstruosas, incursões e geração opcional por projetos públicos do GitHub, estão concluídos, auditados e consolidados. As pastas de categorias continuam vazias, a Fase 1 foi encerrada e a Fase 2 ainda não foi iniciada.
+Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os contratos e templates da Fase 1 estão concluídos, auditados e consolidados. A Fase 2 foi iniciada com `world.eldrath`, a primeira entidade real do pacote, atualmente em revisão. As pastas das demais categorias continuam vazias; calendário, idiomas, culturas, reino e geografia ainda não foram iniciados.
 
 | Caminho | Categoria | Finalidade | Tipo de conteúdo futuro | Formato planejado | Dependências | Fase responsável | Estado atual |
 |---|---|---|---|---|---|---|---|
-| `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML | GDD e contrato editorial comum | Fases 1–6 | manifesto criado; sem entidades |
+| `content/worlds/eldrath/` | pacote do mundo | Reunir o estado inicial autoral de Eldrath. | manifesto, dados e lore do mundo | Markdown estruturado e YAML | GDD e contrato editorial comum | Fases 1–6 | manifesto criado; 1 entidade real em revisão |
 | `content/worlds/eldrath/manifest.yaml` | manifesto editorial | Identificar o pacote, seus caminhos e categorias reconhecidas. | metadados do pacote, sem lore | YAML | GDD e contrato editorial comum | Fase 1 | criado |
+| `content/worlds/eldrath/world.yaml` | identidade do mundo | Definir a identidade geral canônica e o ponto de entrada autoral de Eldrath. | identidade, princípios editoriais e referências fundamentais | YAML | contrato comum e entidades fundamentais | Fase 2 | `world.eldrath` criado; `in_review` |
 | `content/worlds/eldrath/_templates/` | templates | Padronizar a autoria de cada tipo de entidade. | modelos editoriais | YAML puro e Markdown com front matter YAML | contrato comum e schemas especializados | Fase 1 | template comum, cinco templates fundamentais, quatro geográficos, três de economia material, quatro de sociedade, instituições e lei, cinco do sistema mágico, dois de criaturas e doenças, um de NPC e três de evento, rumor e conflito concluídos; sem conteúdo real |
 | `docs/world/CONTENT_SCHEMA.md` | contrato comum | Definir regras compartilhadas de formato, IDs, referências e revisão. | contrato editorial documental | Markdown | GDD | Fase 1 | criado e concluído |
 | `docs/world/PHASE_1_AUDIT.md` | auditoria editorial | Registrar escopo, evidências, inconsistências, correções, validações e encerramento da Fase 1. | relatório editorial documental | Markdown | todos os contratos, templates, manifesto e documentos de acompanhamento | Fase 1 | criado; auditoria aprovada sem bloqueios |
@@ -54,7 +55,8 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os
 - Os schemas geográfico, de economia material, de sociedade, instituições e lei, do sistema mágico, de criaturas e doenças e de NPCs e os templates correspondentes foram criados na Fase 1; todas as pastas reais correspondentes continuam vazias.
 - O contrato conceitual de intervenção, percepção e conhecimento foi concluído sem criar template, pasta de conteúdo, entidade ou quantidade planejada de intervenções iniciais.
 - O contrato conceitual de saúde e condições foi concluído sem criar pasta `conditions/`, template, entidade ou prefixo de condição; registros atuais pertencem ao save.
-- `world.yaml` e `kingdom.yaml` ainda não foram criados; conteúdo real permanece inexistente.
+- `world.yaml` foi criado como `world.eldrath` e está em revisão; `kingdom.yaml` continua inexistente.
+- A identidade geral não define calendário, eras, idiomas, culturas, reino, geografia, unidades concretas ou outras entidades.
 - Religião e organização religiosa, família e casa política, profissão e cargo, regra interna e lei pública possuem fronteiras explícitas e direções canônicas sem listas inversas.
 - O contrato de NPCs separa perfil estático, `initial_state` e estado da campanha; objetivos, medos, segredos, memórias, crenças, conhecimento e relações são subregistros incorporados, não novas pastas.
 - Eventos de conteúdo usam `event.*`; eventos concretos de campanha terão IDs técnicos separados e imutáveis.
@@ -63,5 +65,6 @@ Este mapa registra a estrutura editorial de Eldrath. A fundação da Fase 0 e os
 - Classificações monstruosas e demoníacas usam `creature.*`; indivíduos persistentes usam `npc.*`; grupos e hordas atuais são agregados no save.
 - A geração por GitHub é um modo opcional futuro que produz outro pacote inicial revisado; não altera Eldrath, não muda contagens e funciona offline depois da confirmação.
 - Snapshot de origem, fórmula, mapa-base, checkpoint inicial, reinício e velocidade pertencem aos contratos de produto e campanha, não a novas categorias de entidade.
-- A auditoria editorial final, a consolidação e o encerramento explícito da Fase 1 foram concluídos; a próxima atividade é a identidade geral de Eldrath na Fase 2.
+- A auditoria editorial final, a consolidação e o encerramento explícito da Fase 1 foram concluídos; a Fase 2 foi iniciada.
+- A próxima atividade é revisar a identidade geral e, somente depois de aprovada, criar o calendário.
 - Os arquivos de conteúdo representarão o estado inicial do mundo. O estado produzido pela simulação será tratado futuramente pela programação e não substituirá silenciosamente o conteúdo autoral.

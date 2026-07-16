@@ -1,8 +1,10 @@
 # Conteúdo do mundo de Eldrath
 
-Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. A Fase 1 foi concluída após auditoria e consolidação do manifesto, dos contratos e dos templates; as categorias continuam vazias e nenhuma entidade, lore nova, `world.yaml` ou `kingdom.yaml` foi criada. A Fase 2 ainda não foi iniciada e sua primeira atividade será a identidade geral de Eldrath em tarefa específica.
+Esta pasta reúne o pacote autoral que definirá as condições iniciais de Eldrath. A Fase 1 foi concluída após auditoria e consolidação do manifesto, dos contratos e dos templates. A Fase 2 foi iniciada com [`world.yaml`](world.yaml), primeira entidade real do pacote, identificada como `world.eldrath` e atualmente `in_review`. As demais categorias continuam vazias; calendário, idiomas, culturas, reino e geografia ainda não foram iniciados.
 
 O pacote é identificado por [`manifest.yaml`](manifest.yaml). Para autoria, leia nesta ordem o [checklist de validação manual](../../../docs/world/MANUAL_VALIDATION_CHECKLIST.md), o [contrato comum](../../../docs/world/CONTENT_SCHEMA.md), o [registro de vocabulários](../../../docs/world/CONTROLLED_VOCABULARY.md), o schema especializado aplicável e o template correspondente.
+
+`world.eldrath` define somente a identidade geral: mundo vivo, causalidade, conhecimento limitado, magia sistêmica, instituições relevantes, vida cotidiana, conflito consequente, transformação histórica, variedade de trajetórias e ausência de protagonista obrigatório. Os campos de calendário, data inicial, era, idiomas, culturas e reino permanecem sem referências porque suas entidades ainda não existem. Nenhuma unidade concreta foi definida nesta atividade.
 
 ## Conteúdo inicial e estado simulado
 
@@ -143,16 +145,14 @@ Os templates [`event.template.md`](_templates/event.template.md), [`rumor.templa
 
 ## Ordem de leitura
 
-1. [`Base/GDD.md`](../../../Base/GDD.md), fonte canônica atual;
-2. instruções locais não versionadas, regras persistentes e limites da fase;
-3. [`docs/world/AUTHORING_ORDER.md`](../../../docs/world/AUTHORING_ORDER.md), sequência obrigatória de construção;
-4. [`docs/world/ID_CONVENTIONS.md`](../../../docs/world/ID_CONVENTIONS.md), convenções iniciais de IDs;
-5. [`docs/world/CONTENT_MAP.md`](../../../docs/world/CONTENT_MAP.md), finalidade e dependências das categorias;
-6. [`docs/world/CONTENT_STATUS.md`](../../../docs/world/CONTENT_STATUS.md), metas e progresso real;
-7. este README, para as regras locais do pacote de Eldrath;
-8. [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md), contrato comum da Fase 1;
-9. [`manifest.yaml`](manifest.yaml) e os templates, conforme a categoria.
+1. [`docs/world/AUTHORING_ORDER.md`](../../../docs/world/AUTHORING_ORDER.md), sequência obrigatória de construção;
+2. [`docs/world/ID_CONVENTIONS.md`](../../../docs/world/ID_CONVENTIONS.md), convenções iniciais de IDs;
+3. [`docs/world/CONTENT_MAP.md`](../../../docs/world/CONTENT_MAP.md), finalidade e dependências das categorias;
+4. [`docs/world/CONTENT_STATUS.md`](../../../docs/world/CONTENT_STATUS.md), metas e progresso real;
+5. este README, para as regras locais do pacote de Eldrath;
+6. [`docs/world/CONTENT_SCHEMA.md`](../../../docs/world/CONTENT_SCHEMA.md), contrato comum da Fase 1;
+7. [`manifest.yaml`](manifest.yaml) e os templates, conforme a categoria.
 
 ## Fase e estado atuais
 
-A Fase 0 e a **Fase 1 — Contratos editoriais e templates** estão concluídas. A auditoria editorial final aprovou e consolidou o contrato comum, o manifesto, os schemas especializados, os templates e os contratos conceituais transversais. A hierarquia geográfica canônica é reino → região → assentamento/local, com local regional opcional; rotas apontam aos dois extremos e relações inversas serão derivadas por consulta. Presença institucional inicial parte de `faction.*`, leis partem de sua jurisdição, difusão religiosa parte de `religion.*`, taxonomia mágica parte de `magic_school.*`, habitat e capacidades de ameaça partem de `creature.*`, relações epidemiológicas específicas partem de `disease.*`, estado inicial individual parte de `npc.initial_state` e eventos, rumores e conflitos autorais partem de `event.*`, `rumor.*` e `conflict.*`. O mundo definirá unidades e o reino definirá moedas internas. `world.yaml` e `kingdom.yaml` continuam inexistentes. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. Todas as categorias de entidade permanecem vazias. O contrato GitHub não altera o pacote nem suas contagens. A Fase 2 não foi iniciada; a próxima atividade é a identidade geral de Eldrath.
+A Fase 0 e a **Fase 1 — Contratos editoriais e templates** estão concluídas. A auditoria editorial final aprovou e consolidou o contrato comum, o manifesto, os schemas especializados, os templates e os contratos conceituais transversais. A **Fase 2 — Fundamentos do mundo** foi iniciada. `world.yaml` existe como `world.eldrath`, está `in_review` e é a única entidade real do pacote. O reino definirá moedas internas; nenhuma unidade concreta foi criada nesta atividade. `kingdom.yaml` continua inexistente, e todas as categorias de entidade em subpastas permanecem vazias. Templates definem estruturas de autoria e não são conteúdo aprovado; o ciclo editorial é `draft → in_review → approved → deprecated`, e `approved` exige revisão explícita, referências resolvidas e ausência de placeholders. O contrato GitHub não altera o pacote nem suas contagens. A próxima atividade é revisar a identidade geral e, após sua aprovação, criar o calendário.

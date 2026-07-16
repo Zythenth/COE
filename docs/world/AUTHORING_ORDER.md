@@ -1,14 +1,14 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem criar entidades reais ou iniciar implementação. A Fase 1 está encerrada e a Fase 2 ainda não foi iniciada. A próxima atividade é retomar a sequência no item 6, identidade geral de Eldrath; toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem iniciar implementação. A Fase 1 está encerrada e a Fase 2 foi iniciada no item 6: a identidade geral de Eldrath foi criada e está em revisão. A próxima atividade é concluir essa revisão e, somente após a aprovação, avançar ao item 7, calendário e eras. Toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
 3. schemas editoriais fundamentais — concluído;
 4. templates de conteúdo fundamentais — concluído;
 5. regras de referências cruzadas;
-6. identidade geral de Eldrath;
-7. calendário e eras;
+6. identidade geral de Eldrath — criada; `in_review`;
+7. calendário e eras — não iniciado; aguarda aprovação do item 6;
 8. idiomas;
 9. culturas;
 10. cosmologia necessária;

@@ -1,6 +1,6 @@
 # Estado do conteúdo
 
-Fase 0 concluída. Fase 1 concluída e encerrada após auditoria editorial final aprovada: contratos editoriais concluídos, 28 templates concluídos e consolidados e entidades reais existentes iguais a zero. O contrato conceitual de geração opcional por projetos públicos do GitHub também está concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. A Fase 2 é a próxima fase e ainda não foi iniciada.
+Fase 0 concluída. Fase 1 concluída e encerrada após auditoria editorial final aprovada. A Fase 2 foi iniciada com a criação da identidade geral de Eldrath: existe 1 mundo planejado e 1 mundo real, `world.eldrath`, atualmente `in_review`. O contrato conceitual de geração opcional por projetos públicos do GitHub permanece concluído. Objetivos, medos, segredos, memórias, crenças, conhecimento e relações usam subregistros incorporados; eventos concretos, transmissões, grupos, hordas, ataques, incursões e demais estados atuais pertencem ao save. As quantidades existentes contam entidades reais nos arquivos de conteúdo, não menções, schemas ou templates. Todas as demais categorias continuam com quantidade existente igual a zero; o calendário ainda não foi iniciado. A próxima atividade é revisar a identidade e, depois de sua aprovação, criar o calendário.
 
 Estado das subetapas recentes da Fase 1:
 
@@ -26,11 +26,14 @@ Estado das subetapas recentes da Fase 1:
 - conteúdo real de eventos, rumores, conflitos, criaturas e ameaças: não iniciado;
 - auditoria editorial final e consolidação: concluídas;
 - Fase 1: concluída e encerrada;
-- Fase 2: não iniciada; próxima atividade será a identidade geral de Eldrath.
+- identidade geral de Eldrath: criada como `world.eldrath` e em revisão;
+- calendários: não iniciados;
+- Fase 2: iniciada; próxima atividade é a revisão da identidade e, após aprovação, o calendário.
 
 | Categoria | Quantidade planejada | Quantidade existente | Estado | Dependências | Fase responsável | Documento responsável | Observações | Última atualização |
 |---|---:|---:|---|---|---|---|---|---|
-| Reino | 1 | 0 | não iniciado | identidade, calendário, culturas e contratos editoriais | Fase 2 | `content/worlds/eldrath/kingdom.yaml` (futuro) | O arquivo não deve ser criado nesta fase. | 2026-07-15 |
+| Mundo | 1 | 1 | em revisão | contratos editoriais fundamentais | Fase 2 | `content/worlds/eldrath/world.yaml` | `world.eldrath` contém somente a identidade geral; calendário, idiomas, culturas, reino e geografia permanecem fora do escopo. | 2026-07-15 |
+| Reino | 1 | 0 | não iniciado | identidade, calendário, culturas e contratos editoriais | Fase 2 | `content/worlds/eldrath/kingdom.yaml` (futuro) | O arquivo não deve ser criado nesta atividade. | 2026-07-15 |
 | Regiões | 4 | 0 | não iniciado | reino, culturas, geografia e contratos editoriais | Fase 3 | `content/worlds/eldrath/regions/` | Schema e template concluídos; nenhuma região foi criada. | 2026-07-15 |
 | Capital | 1 | 0 | não iniciado | reino e região correspondente | Fase 3 | `content/worlds/eldrath/settlements/` | É papel administrativo de assentamento; nenhuma capital foi criada. | 2026-07-15 |
 | Cidades | 3 | 0 | não iniciado | regiões, rotas, recursos e economia | Fase 3 | `content/worlds/eldrath/settlements/` | Schema e template concluídos; não inclui a capital na contagem canônica. | 2026-07-15 |
@@ -61,4 +64,4 @@ Estado das subetapas recentes da Fase 1:
 | Doenças | a definir | 0 | não iniciado | ambiente, criaturas, saúde, recursos, profissões, magia, leis e percepção | Fase 4 | `content/worlds/eldrath/diseases/` | Schema e template concluídos; instâncias pertencem ao save; o GDD não fixa quantidade e nenhuma doença foi criada. | 2026-07-15 |
 | Leis | a definir | 0 | não iniciado | reino, política, culturas e magia | Fases 2 e 4 | `content/worlds/eldrath/laws/` | Schema e template concluídos; abrange leis gerais, mágicas e detalhadas; quantidade não definida e nenhuma lei foi criada. | 2026-07-15 |
 
-O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. Todas as metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. O contrato GitHub não cria categoria contável, não altera o manifesto de Eldrath e não substitui o cenário canônico. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações futuras devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.
+O estado `não iniciado` significa que a pasta foi reservada, mas não contém entidades. A única entidade real existente é `world.eldrath`; todas as demais metas canônicas continuam com quantidade existente igual a zero. Schemas e templates concluídos, inclusive os de criaturas, doenças, NPCs, eventos, rumores e conflitos, não alteram essas quantidades. O contrato GitHub não cria categoria contável, não altera as contagens de Eldrath e não substitui o cenário canônico. Saúde e condições são estruturas compartilhadas; objetivos, medos, segredos, memórias, crenças, conhecimento e relações do NPC são subregistros incorporados. Hordas, ataques e incursões concretos são estado da campanha, não categorias contáveis de conteúdo inicial. Alterações posteriores devem atualizar quantidade existente, estado, documento responsável e data somente depois que o conteúdo real for criado e validado.

@@ -10,7 +10,7 @@ Também está prevista a geração opcional de mundos a partir de projetos públ
 
 ## Estado atual
 
-Os contratos editoriais e templates foram concluídos, auditados e consolidados. O projeto está pronto para iniciar a construção de Eldrath por sua identidade geral e seus fundamentos do mundo. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte; a construção do mundo continua precedendo a programação.
+Os contratos editoriais e templates foram concluídos, auditados e consolidados. A construção do mundo foi iniciada, e a identidade inicial de Eldrath está em revisão. Ainda não existe aplicação executável, frontend, backend, banco de dados, framework, dependência instalada ou código-fonte; a construção do mundo continua precedendo a programação.
 
 Eldrath será construído, auditado e congelado antes das especificações de produto e interface, da preparação visual e da programação.
 

@@ -62,6 +62,6 @@ empty_categories:
   - "magic/artifacts"
   - "magic/effects"
 pending_content_files:
-  world_yaml: "not_created"
+  world_yaml: "in_review"
   kingdom_yaml: "not_created"
 implementation_status: "not_started"
