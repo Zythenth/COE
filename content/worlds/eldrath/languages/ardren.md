@@ -2,7 +2,7 @@
 schema_version: "1.0.0"
 id: "language.ardren"
 name: "Ardren Clássico"
-content_status: in_review
+content_status: approved
 tags: []
 aliases:
   - "Ardren Documental"
@@ -35,7 +35,8 @@ writing_systems:
       A escrita é conservadora e registra contrastes perdidos em Valdren. A
       pronúncia reconstruída varia conforme período e gênero documental, e a
       grafia isolada não resolve essa variação.
-culture_ids: []
+culture_ids:
+  - "culture.ostelar"
 region_ids: []
 speaker_groups:
   - type: "trained_readers_and_specialists"

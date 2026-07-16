@@ -2,7 +2,7 @@
 schema_version: "1.0.0"
 id: "language.senkar"
 name: "Senkar"
-content_status: in_review
+content_status: approved
 tags: []
 aliases:
   - "Fala Senkar"
@@ -34,7 +34,10 @@ writing_systems:
       A escrita representa raízes e sufixos de modo regular. Fala rápida pode
       reduzir vogais entre morfemas, mas a transliteração editorial conserva a
       forma completa.
-culture_ids: []
+culture_ids:
+  - "culture.dorven"
+  - "culture.namaru"
+  - "culture.tessari"
 region_ids: []
 speaker_groups:
   - type: "native_and_additional_speakers"

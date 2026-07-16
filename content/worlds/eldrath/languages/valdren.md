@@ -2,7 +2,7 @@
 schema_version: "1.0.0"
 id: "language.valdren"
 name: "Valdren"
-content_status: in_review
+content_status: approved
 tags: []
 aliases:
   - "Fala Valdrena"
@@ -35,7 +35,11 @@ writing_systems:
       A ortografia corrente acompanha a fala formal de perto, mas preserva
       algumas grafias históricas e não permite deduzir pronúncia regional sem
       aprendizagem adicional.
-culture_ids: []
+culture_ids:
+  - "culture.dorven"
+  - "culture.namaru"
+  - "culture.tessari"
+  - "culture.ostelar"
 region_ids: []
 speaker_groups:
   - type: "native_and_additional_speakers"

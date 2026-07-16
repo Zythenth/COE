@@ -56,7 +56,11 @@ language_ids:
   - "language.valdren"
   - "language.ardren"
   - "language.senkar"
-culture_ids: []
+culture_ids:
+  - "culture.dorven"
+  - "culture.namaru"
+  - "culture.tessari"
+  - "culture.ostelar"
 initial_kingdom_id: null
 unit_system:
   system_key: "eldrath_units"
