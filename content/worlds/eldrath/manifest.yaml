@@ -59,7 +59,7 @@ empty_categories:
   - "magic/artifacts"
   - "magic/effects"
 pending_content_files:
-  world_yaml: "in_review"
+  world_yaml: "approved"
   calendar_marco_md: "approved"
   language_valdren_md: "approved"
   language_ardren_md: "approved"
@@ -68,5 +68,5 @@ pending_content_files:
   culture_namaru_md: "approved"
   culture_tessari_md: "approved"
   culture_ostelar_md: "approved"
-  kingdom_yaml: "not_created"
+  kingdom_yaml: "in_review"
 implementation_status: "not_started"

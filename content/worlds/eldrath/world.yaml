@@ -1,7 +1,7 @@
 schema_version: "1.0.0"
 id: "world.eldrath"
 name: "Eldrath"
-content_status: in_review
+content_status: approved
 tags: []
 aliases: []
 summary: >-
@@ -187,7 +187,7 @@ culture_ids:
   - "culture.namaru"
   - "culture.tessari"
   - "culture.ostelar"
-initial_kingdom_id: null
+initial_kingdom_id: "kingdom.averen"
 unit_system:
   system_key: "eldrath_units"
   name: "Unidades de Eldrath"

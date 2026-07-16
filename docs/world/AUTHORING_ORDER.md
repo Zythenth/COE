@@ -1,6 +1,6 @@
 # Ordem de autoria
 
-Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem iniciar implementação. A Fase 1 está encerrada e a Fase 2 está em andamento: a identidade geral de Eldrath foi aprovada no item 6 e permanece preservada, `calendar.marco` foi aprovado no item 7, os três idiomas foram aprovados no item 8 e as quatro culturas foram auditadas e aprovadas no item 9. A cosmologia necessária e os princípios religiosos gerais foram definidos no item 10 e estão em revisão, deixando `world.eldrath` temporariamente em `in_review`. A próxima atividade é aprovar essa nova camada, restaurar `world.eldrath` para `approved` e avançar aos itens 11 a 13, criando o reino, seu sistema político e suas regras de sucessão. Toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
+Esta é a sequência obrigatória de construção definida para Chronicles of Eldrath. A fundação editorial, os contratos, os templates, a auditoria editorial final e a consolidação da Fase 1 foram concluídos sem iniciar implementação. A Fase 1 está encerrada e a Fase 2 está em andamento: a identidade geral de Eldrath foi aprovada no item 6 e permanece preservada, `calendar.marco` foi aprovado no item 7, os três idiomas foram aprovados no item 8 e as quatro culturas foram auditadas e aprovadas no item 9. A cosmologia necessária e os princípios religiosos gerais foram auditados e aprovados no item 10, restaurando `world.eldrath` para `approved`. Os itens 11 a 13 foram definidos em `kingdom.averen`, que permanece `in_review`. A próxima atividade é auditar e aprovar o reino e então avançar aos itens 14 e 15, incluindo moeda, tesouro, fundamentos econômicos, data inicial, situação macro inicial e princípios gerais das leis comuns e mágicas. Toda a ordem posterior permanece preservada. Esta ordem registra dependências editoriais e de produção, sem desenvolver antecipadamente o conteúdo de nenhuma etapa.
 
 1. fundação editorial;
 2. convenções definitivas de arquivos e IDs;
@@ -11,12 +11,12 @@ Esta é a sequência obrigatória de construção definida para Chronicles of El
 7. calendário e eras — `calendar.marco` aprovado;
 8. idiomas — `language.valdren`, `language.ardren` e `language.senkar` aprovados;
 9. culturas — `culture.dorven`, `culture.namaru`, `culture.tessari` e `culture.ostelar` auditadas e aprovadas;
-10. cosmologia necessária e princípios religiosos gerais — definidos em `world.eldrath`; nova camada `in_review`, sem entidade `religion.*` criada;
-11. reino — próxima criação após a aprovação do item 10;
-12. sistema político;
-13. sucessão;
-14. moeda;
-15. leis gerais e mágicas;
+10. cosmologia necessária e princípios religiosos gerais — auditados e aprovados em `world.eldrath`, sem entidade `religion.*` criada;
+11. reino — `kingdom.averen` criado e em revisão;
+12. sistema político — monarquia pactuada, competências, limites, confirmação, fiscalização e emergência definidos em `kingdom.averen`;
+13. sucessão — reivindicação, prioridade, prova, confirmação, regência, interregno, disputa, destituição e restauração definidos em `kingdom.averen`;
+14. moeda, tesouro, fundamentos econômicos, data inicial e situação macro inicial — próxima criação depois da aprovação do reino;
+15. princípios gerais das leis comuns e mágicas;
 16. regiões;
 17. capital;
 18. cidades;

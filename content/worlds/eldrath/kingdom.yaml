@@ -1,0 +1,703 @@
+schema_version: "1.0.0"
+id: "kingdom.averen"
+name: "Coroa Pactuada de Averen"
+content_status: in_review
+tags: []
+aliases:
+  - "Averen"
+summary: >-
+  Único reino inicial de Eldrath, organizado como uma monarquia pactuada na
+  qual a Coroa exerce direção executiva sem concentrar a produção normativa, a
+  fiscalização, a justiça ou a confirmação sucessória. A autoridade depende de
+  competência reconhecida, registro público, confirmação institucional e
+  aceitação social, permitindo cooperação, disputa e abuso sem garantir
+  obediência ou estabilidade.
+references: []
+art: []
+notes: |-
+  Identidade e etimologia:
+  Averen é a forma curta valdrena do nome político. Sua forma de três sílabas e
+  final em -en segue as convenções fonológicas aprovadas de Valdren sem reutilizar
+  os exemplos lexicais anteriores. A interpretação corrente “compromisso
+  mantido” explica o uso político do nome, mas não constitui doutrina religiosa,
+  evento de fundação ou prova histórica. O gentílico averenense descreve vínculo
+  político ou social com o reino e não determina cultura, idioma, religião,
+  linhagem, caráter ou domínio de qualquer conhecimento.
+
+  Escopo editorial:
+  Este arquivo define identidade política, distribuição de autoridade e regras
+  de sucessão. A composição concreta dos órgãos, seus membros, ocupantes,
+  patrimônios e sedes não pertence a esta etapa. Órgãos permanentes que precisem
+  de identidade persistente serão materializados futuramente como `faction.*`;
+  essa materialização foi adiada e nenhum ID de facção é antecipado aqui.
+  Fundação histórica, família dinástica, governante, sucessor, capital, regiões,
+  assentamentos, moeda, tesouro, métricas iniciais, relações exteriores, crises,
+  religiões, leis detalhadas e acontecimentos permanecem ausentes conforme seus
+  campos estruturados.
+demonym: "averenense"
+symbol:
+  description: >-
+    Uma coroa aberta, sem joias ou figura humana, erguida sobre três laços
+    entrecruzados e cercada por um aro interrompido.
+  institutional_meaning: >-
+    A abertura indica que a Coroa não encerra toda a autoridade; os laços
+    representam execução, deliberação e justiça em dependência recíproca; o aro
+    interrompido representa continuidade sujeita a revisão. O símbolo não possui
+    significado religioso obrigatório e não representa culturas como blocos.
+colors:
+  - "vermelho profundo"
+  - "dourado envelhecido"
+  - "cinza-carvão"
+motto: "A Coroa sustenta o pacto; o pacto limita a Coroa."
+foundation: null
+political_system:
+  formal_description: >-
+    Monarquia pactuada e limitada, com direção executiva na Coroa, deliberação e
+    confirmação no Conselho do Pacto, revisão no Tribunal de Garantias e
+    publicidade documental no Registro da Coroa. Nenhum desses componentes
+    possui ocupante ou entidade `faction.*` nesta etapa.
+  crown:
+    nature: >-
+      Cargo político singular e contínuo, distinto da pessoa que o ocupa. A
+      Coroa representa o reino, coordena a administração e executa decisões
+      reconhecidas, mas não é proprietária do território, das pessoas ou das
+      demais autoridades.
+    ordinary_competences:
+      - >-
+        Coordenar a administração geral e expedir instruções executivas dentro
+        de competências já reconhecidas.
+      - >-
+        Propor normas gerais, orçamento, tributação, tratados, mobilizações e
+        nomeações sujeitas ao procedimento aplicável.
+      - >-
+        Representar o reino e negociar compromissos externos sem ratificá-los
+        unilateralmente quando criarem obrigações protegidas.
+      - >-
+        Nomear e remover agentes ordinários dentro de mandatos reconhecidos,
+        preservadas confirmação, causa registrada e revisão quando exigidas.
+      - >-
+        Organizar resposta defensiva imediata e declarar emergência nos limites
+        temporais e materiais deste sistema.
+    limits:
+      - >-
+        Não criar tributo geral, iniciar guerra ofensiva, alterar sucessão,
+        ceder território, prolongar emergência ou assumir obrigação externa
+        protegida sem confirmação institucional.
+      - >-
+        Não julgar definitivamente disputa sobre a própria competência,
+        sucessão, incapacidade, destituição ou validade de seus atos.
+      - >-
+        Não transformar instrução executiva, tradição, crença ou apoio político
+        em norma pública por declaração unilateral.
+      - >-
+        Não conceder cargo, direito político, conhecimento ou autoridade com
+        base automática em cultura, idioma, religião, linhagem ou poder mágico.
+  council:
+    name: "Conselho do Pacto"
+    future_faction_id: null
+    purpose: >-
+      Deliberar sobre matérias protegidas, confirmar atos da Coroa, fiscalizar a
+      administração e representar autoridades territoriais e institucionais que
+      serão criadas em suas fases próprias.
+    composition_principles:
+      - >-
+        Assentos futuros derivarão de jurisdições territoriais e instituições
+        reconhecidas, sem equivaler automaticamente a culturas, idiomas,
+        religiões, famílias ou blocos regionais fechados.
+      - >-
+        Nenhuma pessoa ocupa assento por nascimento, riqueza, magia ou adesão
+        religiosa sem uma base institucional futura verificável.
+      - >-
+        A quantidade, a distribuição e os titulares dos assentos dependem das
+        futuras regiões e facções e não são simulados neste arquivo.
+    decision_rules:
+      quorum: >-
+        Dois terços dos assentos válidos e atualmente preenchidos precisam estar
+        presentes, salvo regra sucessória mais exigente.
+      ordinary_decision: >-
+        Maioria simples dos votos válidos emitidos depois de atingido o quórum.
+      protected_decision: >-
+        Dois terços de todos os assentos válidos e preenchidos para tributação
+        geral, guerra, tratado protegido, confirmação sucessória, extensão de
+        emergência, confirmação de alto cargo ou censura institucional.
+      exceptional_decision: >-
+        Três quartos de todos os assentos válidos e preenchidos quando este
+        arquivo exigir destituição, extensão final de emergência, restauração de
+        soberano destituído ou escolha extraordinária de nova raiz sucessória.
+      record: >-
+        Proposta, presença, votos, impedimentos, fundamento e resultado devem ser
+        registrados; apoio político não substitui o procedimento.
+  adjudication:
+    name: "Tribunal de Garantias"
+    future_faction_id: null
+    purpose: >-
+      Resolver disputas de competência, revisar atos da Coroa e do Conselho,
+      proteger o procedimento pactuado e decidir questões jurídicas de sucessão
+      com fundamento e evidência registrados.
+    limits:
+      - >-
+        Não administra ordinariamente, não cria tributos, não escolhe políticas
+        por preferência e não ocupa a Coroa.
+      - >-
+        Não pode converter prestígio, consenso, texto antigo, magia ou crença em
+        prova suficiente sem examinar origem, autenticidade e pertinência.
+    decision_standard: >-
+      Decisão colegiada, motivada e registrada após oportunidade de contestação.
+      A composição futura e seus ocupantes pertencerão à entidade institucional
+      correspondente e ao estado da campanha.
+  public_registry:
+    name: "Registro da Coroa"
+    future_faction_id: null
+    purpose: >-
+      Preservar promulgações, confirmações, atos administrativos, reivindicações
+      sucessórias, provas apresentadas, correções e versões, sem tornar o registro
+      infalível ou substituir a decisão competente.
+    integrity_rule: >-
+      Correções preservam a versão anterior, a autoria, o motivo, a data e a
+      autoridade responsável. Documento registrado continua sujeito a fraude,
+      lacuna, tradução e contestação.
+  legitimacy:
+    legal_sources:
+      - >-
+        Continuidade do cargo segundo o pacto político, a sucessão e os atos de
+        confirmação registrados.
+      - >-
+        Exercício dentro da competência, dos limites, da publicidade e dos
+        procedimentos de revisão definidos.
+      - >-
+        Reconhecimento recíproco entre Coroa, Conselho, adjudicação e futuras
+        autoridades territoriais dentro de suas competências.
+    social_sources:
+      - >-
+        Confiança de grupos e pessoas na capacidade de proteger compromissos,
+        oferecer vias de contestação e responder por abusos.
+      - >-
+        Cooperação efetiva de autoridades, comunidades e agentes, que pode
+        divergir da legitimidade jurídica.
+      - >-
+        Continuidade administrativa perceptível sem exigir uniformidade cultural,
+        linguística ou religiosa.
+    distinctions: >-
+      Legalidade, prioridade sucessória, legitimidade social, prestígio e apoio
+      político são dimensões diferentes. Nenhuma delas garante obediência,
+      competência pessoal, valor moral ou resultado de uma disputa.
+  ordinary_administration:
+    rule: >-
+      A Coroa e seus agentes executam normas reconhecidas, mantêm registros,
+      coordenam serviços gerais e prestam contas. Autoridades territoriais
+      futuras conservarão administração ordinária de matérias locais, enquanto
+      a direção central cuidará de interesses comuns e conflitos de competência.
+    continuity: >-
+      Vacância, menoridade, incapacidade ou disputa sucessória não extinguem
+      automaticamente atos válidos, serviços, deveres de registro ou competências
+      ordinárias; a regência ou administração interina assume somente poderes
+      necessários à continuidade.
+  norms:
+    proposal: >-
+      A Coroa, integrantes habilitados do Conselho e futuras autoridades
+      territoriais poderão apresentar propostas dentro de sua competência.
+    recognition: >-
+      Norma geral exige deliberação do Conselho, promulgação pela Coroa e
+      publicação acessível. A Coroa pode devolver a proposta uma vez, em até
+      doze dias, com razões registradas; confirmação posterior por dois terços
+      do Conselho supera a objeção e autoriza publicação pelo Registro.
+    territorial_norms: >-
+      Normas futuras de regiões valerão dentro de competências locais sem
+      autorização caso a caso da Coroa, sujeitas a publicidade e revisão por
+      conflito com competências gerais. Nenhuma região é criada por esta regra.
+    legal_entities: >-
+      Normas concretas com força jurídica serão futuramente representadas por
+      `law.*`; este mapa define somente o processo político geral.
+  taxation:
+    authority: >-
+      A Coroa administra arrecadação autorizada, mas criação, ampliação ou
+      renovação de tributo geral exige decisão protegida do Conselho com base,
+      duração, responsáveis e forma de prestação de contas registradas.
+    limits: >-
+      Nenhuma taxa, base de cálculo, valor, moeda ou arrecadação inicial é
+      definida aqui. Cobrança emergencial obedece aos mesmos prazos da emergência
+      e não se converte automaticamente em tributo permanente.
+  war_and_mobilization:
+    immediate_defense: >-
+      A Coroa pode ordenar defesa e mobilização estritamente necessárias por até
+      doze dias diante de ameaça material imediata, com registro de causa,
+      alcance e recursos mobilizados.
+    protected_actions: >-
+      Guerra ofensiva, mobilização além de doze dias, alteração territorial ou
+      compromisso militar prolongado exige decisão protegida do Conselho.
+    accountability: >-
+      Necessidade militar não elimina revisão, registro de perdas, limites de
+      comando, responsabilidade por abuso ou encerramento quando cessar a base.
+  treaties:
+    negotiation: >-
+      A Coroa conduz negociação e pode concluir acordos administrativos dentro
+      de competência previamente delegada.
+    ratification: >-
+      Tratado que afete território, sucessão, tributação, obrigação militar,
+      competência regional ou compromisso duradouro exige decisão protegida do
+      Conselho antes de produzir obrigação interna.
+    scope: >-
+      Nenhuma contraparte, relação exterior ou tratado concreto é criado nesta
+      etapa.
+  appointments_and_removals:
+    ordinary_offices: >-
+      A Coroa nomeia e remove cargos executivos ordinários conforme competência,
+      motivo registrado e eventual revisão do ato.
+    protected_offices: >-
+      Direção de órgão de fiscalização, adjudicação, registro, comando geral ou
+      administração regional futura exige confirmação protegida do Conselho.
+    safeguards: >-
+      Remoção de cargo protegido exige causa registrada, oportunidade de defesa
+      e revisão; mandato institucional não se torna propriedade pessoal nem
+      hereditária.
+  emergency_powers:
+    triggers: >-
+      Ameaça material imediata à continuidade do reino, incapacidade súbita de
+      funcionamento institucional ou desastre que impeça o processo ordinário.
+    initial_duration: >-
+      Declaração unilateral da Coroa dura no máximo doze dias do Calendário do
+      Marco e precisa indicar causa, território alcançado, poderes utilizados e
+      condições de encerramento.
+    extension: >-
+      Dois terços do Conselho podem estender a emergência até o limite total de
+      trinta e seis dias. Uma única extensão final de até mais trinta e seis dias
+      exige três quartos do Conselho e revisão do Tribunal de Garantias. O mesmo
+      fundamento não admite nova declaração para reiniciar a contagem.
+    termination: >-
+      A emergência termina na primeira ocorrência entre expiração do prazo,
+      desaparecimento da causa, revogação pela Coroa, decisão da maioria do
+      Conselho ou decisão do Tribunal por ausência de fundamento.
+    aftercare: >-
+      Poderes e nomeações temporários cessam com o encerramento; registros,
+      obrigações válidas, reparação de danos e revisão de abusos permanecem.
+    non_derogable_limits:
+      - "A emergência não altera a sucessão nem cria herdeiro."
+      - "A emergência não torna a Coroa imune a fiscalização ou destituição."
+      - "A emergência não transforma crença, magia ou rumor em prova."
+      - "A emergência não permite obrigação permanente sem processo ordinário."
+  oversight:
+    mechanisms:
+      - >-
+        Publicação de atos, razões, votos, despesas autorizadas e correções em
+        registro sujeito a consulta e contestação.
+      - >-
+        Revisão de competência e de procedimento pelo Tribunal de Garantias.
+      - >-
+        Convocação, censura, recusa de confirmação e investigação pelo Conselho.
+      - >-
+        Prestação de contas periódica de agentes executivos e preservação de
+        versões para impedir correção silenciosa.
+      - >-
+        Petição individual ou coletiva e contestação por autoridades territoriais
+        futuras quando um ato ultrapassar competência.
+    abuse_possibilities:
+      - >-
+        A Coroa pode tentar governar por instruções executivas, manipular urgência
+        ou condicionar nomeações e recursos a apoio pessoal.
+      - >-
+        O Conselho pode bloquear funções ordinárias para obter concessões,
+        excluir interesses sem assento ou converter confirmação em governo direto.
+      - >-
+        Órgãos de registro podem atrasar, selecionar ou adulterar publicidade; a
+        adjudicação pode ampliar a própria competência ou favorecer interpretações.
+      - >-
+        Autoridades territoriais futuras podem recusar atos válidos, ocultar
+        informações ou invocar autonomia para evitar fiscalização.
+  political_contestation:
+    legitimate:
+      - "Petição, crítica pública, organização política e busca de apoio."
+      - "Contestação judicial de competência, prova, procedimento ou sucessão."
+      - "Voto contrário, censura, recusa fundamentada de confirmação e oposição institucional."
+      - "Recusa temporária de executar ato manifestamente fora de competência enquanto houver revisão."
+      - "Apresentação de reivindicação sucessória com fontes e oportunidade de contestação."
+    illegitimate_within_the_pact:
+      - "Falsificar, ocultar ou destruir prova para alterar competência ou sucessão."
+      - "Usar coerção, suborno ou ameaça para obter voto, confirmação, renúncia ou abdicação."
+      - "Atribuir autoridade automática a nascimento, cultura, idioma, religião ou poder mágico."
+      - "Tomar cargo ou território sem procedimento e apresentar o fato consumado como legitimidade jurídica."
+    consequence_rule: >-
+      A classificação política não predetermina culpa, apoio social, êxito ou
+      resposta; atos concretos dependerão de futuras leis, evidências, decisões e
+      eventos.
+  territorial_order:
+    future_nature: >-
+      Reino territorial único composto futuramente por regiões com governo
+      ordinário próprio e participação no pacto comum, sem que região seja
+      sinônimo de cultura, idioma, religião, facção ou eleitorado uniforme.
+    central_competence: >-
+      Continuidade da Coroa, relações externas gerais, defesa comum, coordenação
+      entre jurisdições, padrões gerais de registro e matérias cuja escala exceda
+      uma região.
+    regional_competence: >-
+      Administração ordinária e normas locais dentro de limites futuros, com
+      autonomia suficiente para produzir divergência política e responsabilidade
+      própria sem soberania externa automática.
+    dispute_rule: >-
+      Conflitos de competência exigem registro, tentativa de composição e revisão
+      adjudicada; força política pode influenciar cumprimento, mas não redefine a
+      competência por si só.
+  magic_competence:
+    general_scope: >-
+      O governo central poderá coordenar padrões gerais para risco público,
+      evidência, fiscalização, ensino ou exercício institucional da magia quando
+      a escala ultrapassar uma jurisdição futura.
+    limits: >-
+      Magia não comprova legitimidade, culpa, divindade, intenção ou autoridade.
+      Medidas concretas, licenças, proibições, sanções e posições sobre escolas,
+      práticas ou efeitos dependerão de futuras entidades `law.*`, `faction.*` e
+      do sistema mágico, sem serem antecipadas aqui.
+  diversity:
+    citizenship_and_office: >-
+      Vínculo político, proteção, deveres, acesso a procedimento e elegibilidade
+      institucional não dependem automaticamente de cultura, idioma, religião,
+      linhagem ou capacidade mágica.
+    culture_ids:
+      - "culture.dorven"
+      - "culture.namaru"
+      - "culture.tessari"
+      - "culture.ostelar"
+    cultural_rule: >-
+      As quatro culturas fundamentais podem estar presentes no reino de forma
+      sobreposta e desigual. Elas não equivalem às futuras regiões, não recebem
+      assentos como blocos automáticos e não determinam a identidade de pessoas.
+    language_functions:
+      - language_id: "language.valdren"
+        function: >-
+          Idioma corrente da administração geral e da circulação entre órgãos,
+          sem presumir domínio por toda pessoa.
+      - language_id: "language.ardren"
+        function: >-
+          Idioma documental e histórico para preservação, citação e comparação;
+          sua antiguidade ou uso formal não lhe concede verdade superior.
+      - language_id: "language.senkar"
+        function: >-
+          Idioma reconhecido para petições, testemunhos, registros e administração
+          nos contextos que o utilizem; falta de Valdren não pode, por si só,
+          invalidar participação ou prova.
+    language_access: >-
+      Atos que afetem direitos, deveres ou sucessão exigem acesso linguístico
+      suficiente, com versões, tradução e incertezas registradas quando
+      necessário. Falar, ler, escrever e traduzir permanecem capacidades
+      distintas e nenhuma língua concede conhecimento automático.
+    religious_rule: >-
+      A Coroa não deriva verdade metafísica nem elegibilidade política de uma
+      tradição religiosa. Religião, ausência de religião, dúvida, conversão,
+      sincretismo e abandono de crença não determinam cidadania, cargo ou valor
+      moral; organizações e leis religiosas concretas continuam futuras.
+succession:
+  system: >-
+    Sucessão dinástica por ordem parentélica de primogenitura absoluta, corrigida
+    por reconhecimento jurídico e sujeita a confirmação pactuada. Gênero não
+    altera elegibilidade ou prioridade, parentesco não prova competência e a
+    instalação nunca garante obediência.
+  dynastic_family_id: null
+  claim_sources:
+    - >-
+      Descendência juridicamente reconhecida de soberano regularmente instalado,
+      inclusive filiação adotiva com efeito sucessório válido.
+    - >-
+      Parentesco colateral juridicamente reconhecido por descendência de soberano
+      anterior regularmente instalado, quando linhas mais próximas se extinguem
+      ou ficam sem pessoa elegível.
+    - >-
+      Indicação da Coroa entre pessoas já elegíveis, com efeito somente depois de
+      confirmação e sem criar parentesco ou reivindicação para pessoa estranha à
+      ordem dinástica.
+    - >-
+      Escolha extraordinária de nova raiz sucessória apenas quando nenhuma
+      reivindicação dinástica elegível subsistir, por três quartos do Conselho e
+      decisão do Tribunal que certifique a ausência de linha preferente.
+  eligibility:
+    requirements:
+      - "Possuir uma fonte de reivindicação reconhecida e identidade juridicamente verificável."
+      - "Não ter renunciado validamente à própria reivindicação sem restauração posterior."
+      - "Não estar sob destituição ou exclusão sucessória válida e vigente."
+      - "Aceitar a Coroa ou possuir representação válida quando a menoridade impedir o ato pessoal."
+    non_requirements:
+      - "Gênero, cultura, idioma, religião, riqueza, profissão, magia ou popularidade."
+      - "Maioridade para possuir reivindicação; menoridade limita o exercício pessoal e exige regência."
+    distinctions: >-
+      Elegibilidade responde quem pode ser considerado; prioridade ordena pessoas
+      elegíveis; confirmação verifica prova e procedimento; legitimidade social
+      e apoio político medem aceitação. Uma dimensão não substitui as demais.
+  priority_calculation:
+    primary_rule: >-
+      Entre descendentes da referência dinástica aplicável, cada linha de filho
+      precede as linhas dos filhos seguintes, e descendentes ocupam o lugar de seu
+      ascendente antes que a ordem passe à linha seguinte. Dentro de cada linha,
+      aplica-se a mesma regra sem distinção de gênero.
+    branch_order: >-
+      A ordem entre linhas usa a data de nascimento juridicamente reconhecida do
+      primeiro integrante da geração. Para adoção, usa-se a data em que a filiação
+      adotiva adquiriu efeito sucessório. Se a ordem factual não puder ser provada,
+      as linhas permanecem concorrentes e seguem o procedimento de disputa.
+    collateral_order: >-
+      Extintas ou inelegíveis as linhas de descendentes do último soberano
+      regularmente instalado, examinam-se irmãos e suas linhas pela mesma regra;
+      depois, o parentesco sobe ao soberano anterior mais próximo e desce por seus
+      demais ramos. Grau geracional menor precede maior dentro do mesmo ramo.
+    nomination_effect: >-
+      A Coroa pode indicar uma pessoa elegível. A indicação não altera prioridade
+      por si só; dois terços do Conselho e o Tribunal precisam confirmar motivo,
+      capacidade, ausência de coerção e publicidade. Nova pessoa com prioridade
+      superior ou nova prova reabre a confirmação.
+    unresolved_tie: >-
+      Empate não comprovadamente resolvível não é decidido por gênero, riqueza,
+      magia, antiguidade de documento ou apoio popular. As pessoas permanecem
+      pretendentes concorrentes até decisão do procedimento de disputa.
+  proof_of_descent_and_identity:
+    admissible_sources:
+      - "Registros de nascimento, filiação, adoção, união e reconhecimento preservados com proveniência."
+      - "Decisões anteriores, documentos independentes, testemunhos e evidências materiais pertinentes."
+      - "Cópias e traduções acompanhadas de origem, cadeia de custódia, lacunas e correções."
+    evaluation: >-
+      Registro, texto em Ardren, forma em Valdren ou Senkar, testemunho, magia ou
+      consenso não é prova infalível isolada. Autenticidade, independência,
+      coerência, acesso e possibilidade de contestação precisam ser examinadas.
+    recognition: >-
+      Parentesco produz efeito sucessório somente depois de reconhecimento pelo
+      registro competente ou por decisão adjudicada. O fato biológico alegado,
+      seu conhecimento público e seu efeito jurídico permanecem separados.
+  adoption:
+    ordinary_effect: >-
+      Adoção com efeito sucessório reconhecido cria filiação e reivindicação sem
+      inferioridade moral ou jurídica. Sua posição entre linhas começa na data em
+      que o efeito sucessório foi constituído e não apaga vínculos anteriores.
+    sovereign_adoption: >-
+      Adoção realizada por soberano depois de sua instalação só altera a sucessão
+      se dois terços do Conselho a confirmarem antes da vacância, após revisão de
+      consentimento, conflito de interesse e publicidade.
+    limits: >-
+      Adoção não pode ser presumida por cuidado, convivência, nome compartilhado
+      ou prática cultural e não invalida automaticamente pessoa já confirmada;
+      nesse caso, a confirmação precisa ser formalmente reaberta.
+  unrecognized_or_late_birth:
+    unrecognized: >-
+      Nascimento ou filiação não reconhecidos não produzem prioridade operacional,
+      nem se tornam conhecidos por autoridades ou população sem fonte e
+      comunicação válidas.
+    later_recognition: >-
+      Reconhecimento posterior produz efeitos sucessórios prospectivos e recalcula
+      a ordem pela filiação e data de nascimento reconhecidas. Não invalida
+      retroativamente atos praticados de boa-fé antes do reconhecimento.
+    after_accession: >-
+      Se outra pessoa já tiver sido instalada, a nova prova abre contestação e
+      possível restauração de direitos, mas não remove nem instala ninguém
+      automaticamente.
+  presumptive_and_confirmed_successor:
+    presumptive: >-
+      Pessoa que ocupa a primeira posição segundo os registros aceitos no momento.
+      O status é provisório, pode existir sem conhecimento geral e não concede
+      cargo, comando, renda, imunidade ou acesso automático a segredos.
+    confirmed: >-
+      Pessoa cuja identidade, elegibilidade e prioridade foram examinadas e
+      confirmadas por dois terços do Conselho após revisão adjudicada. A
+      confirmação aumenta segurança jurídica, mas não concede a Coroa antes da
+      vacância, não garante apoio e pode ser reaberta por fraude, nova filiação,
+      renúncia, incapacidade relevante ou prova material nova.
+    current_holder: null
+  renunciation:
+    form: >-
+      Ato pessoal, expresso, informado, registrado e testemunhado, revisto quanto
+      a capacidade, fraude e coerção e aceito por dois terços do Conselho.
+    scope: >-
+      Por padrão atinge apenas a pessoa. Descendente adulto precisa renunciar por
+      ato próprio; ninguém renuncia validamente em nome de descendente futuro ou
+      menor. A renúncia não cria mérito ou culpa para outros ramos.
+    withdrawal_and_restoration: >-
+      Antes de outra instalação, a pessoa pode pedir retirada da renúncia; exige
+      decisão adjudicada e dois terços do Conselho. Coerção ou fraude comprovada
+      tornam o ato inválido. Depois de outra instalação, restauração reconhece a
+      reivindicação sem recuperar automaticamente a Coroa.
+  abdication:
+    form: >-
+      Encerramento voluntário do exercício da Coroa por declaração pública,
+      registrada e examinada quanto a capacidade, fraude e coerção, com ciência
+      do Conselho e do Tribunal.
+    effect: >-
+      Produz vacância na data declarada, ativa a sucessão e impede que a pessoa
+      abdique em nome do sucessor ou altere prioridade pela própria declaração.
+      Retorno ao cargo exige o procedimento de restauração aplicável.
+  incapacity:
+    temporary: >-
+      Incapacidade temporária suspende o exercício pessoal e ativa regência sem
+      extinguir o título ou a reivindicação.
+    permanent: >-
+      Incapacidade duradoura só produz destituição quando o Tribunal reconhecer
+      evidência suficiente e três quartos do Conselho confirmarem que a regência
+      não preserva funcionamento responsável.
+    safeguards: >-
+      Diagnóstico, rumor, deficiência, idade ou divergência política não bastam
+      isoladamente. A pessoa recebe representação, acesso à prova e revisão.
+  minority:
+    exercise_age: >-
+      A Coroa pode ser herdada antes da maioridade, mas seu exercício pessoal
+      exige dezoito anos completos pelo Calendário do Marco.
+    effect: >-
+      Pessoa menor elegível conserva prioridade e pode ser instalada sob regência;
+      menoridade não transfere a reivindicação ao regente nem prova incapacidade
+      permanente.
+  regency:
+    triggers:
+      - "Menoridade de soberano instalado."
+      - "Incapacidade temporária reconhecida."
+      - "Desaparecimento que impeça o exercício sem comprovar morte."
+      - "Interregno no qual a continuidade administrativa não possa aguardar a decisão final."
+    composition: >-
+      Colégio de três regentes escolhidos individualmente por dois terços do
+      Conselho e revistos pelo Tribunal quanto a elegibilidade e conflito de
+      interesse. Pretendente ativo não pode integrar o colégio, e nenhuma pessoa
+      recebe o cargo por parentesco automático.
+    decision_rule: >-
+      Dois votos concordantes bastam para administração ordinária. Matéria
+      protegida continua exigindo o Conselho; regentes não podem alterar
+      sucessão, criar adoção dinástica, ceder território, assumir obrigação
+      permanente ou impedir a própria fiscalização.
+    end: >-
+      Encerra quando o soberano atinge dezoito anos, recupera capacidade, retorna
+      com direitos reconhecidos, é validamente destituído ou quando um soberano é
+      instalado após o interregno. Atos e contas continuam sujeitos a revisão.
+    current_regent_ids: []
+  vacancy_and_interregnum:
+    opening: >-
+      Morte confirmada, abdicação eficaz, destituição válida ou declaração final
+      de vacância abre a sucessão. O Registro publica aviso em até seis dias e o
+      Conselho instala administração interina ou regência sem atribuir a Coroa.
+    claim_window: >-
+      Reivindicações conhecidas são registradas por dezoito dias após o aviso;
+      seguem-se dezoito dias para contestação e complementação de provas. Prova
+      inacessível por motivo demonstrado pode justificar uma única extensão de
+      dezoito dias por decisão do Tribunal.
+    decision_window: >-
+      Encerrada a prova, o Tribunal decide elegibilidade e prioridade em até
+      trinta e seis dias. O Conselho delibera a confirmação em até seis dias
+      depois da decisão.
+    caretaker_limits: >-
+      Durante o interregno, administração interina preserva serviços, defesa e
+      registros, mas não cria obrigação permanente, altera sucessão, faz
+      nomeação protegida definitiva ou usa a vacância para redistribuir
+      competência.
+    no_uncontested_successor: >-
+      Ausência de pessoa incontestável mantém a Coroa vaga e ativa o procedimento;
+      não transforma regente, conselheiro, parente próximo ou pessoa popular em
+      soberano automático.
+  disputes:
+    multiple_claimants: >-
+      Todas as reivindicações tempestivas são registradas separadamente, com
+      fontes, argumentos, impugnações e relações alegadas. Apoio político pode
+      ser documentado, mas não substitui elegibilidade ou prioridade.
+    document_challenge: >-
+      Documento contestado permanece identificado, não é apagado e pode ser
+      comparado com original, cópias, traduções, testemunhos e cadeia de custódia.
+      A parte afetada recebe acesso suficiente e oportunidade de resposta.
+    fraud: >-
+      Fraude comprovada invalida a prova ou ato afetado e pode suspender a
+      reivindicação de quem participou conscientemente. Fraude de terceiro não
+      desqualifica automaticamente pessoa que não a conhecia, nem contamina seus
+      descendentes por nascimento.
+    deadlock: >-
+      Recusa do Conselho em confirmar a prioridade decidida precisa indicar uma
+      causa jurídica específica e pode ser revista. Recusa sem fundamento não
+      cria outro sucessor legal; pode prolongar o interregno, dividir obediência e
+      produzir crise política sem predeterminar resultado.
+  disappearance_and_return:
+    missing_sovereign: >-
+      Ausência sem comunicação válida ativa regência quando impedir o exercício,
+      mas não comprova morte. Evidência direta de morte pode abrir sucessão antes;
+      sem ela, declaração de vacância por ausência exige três anos completos,
+      decisão do Tribunal e três quartos do Conselho.
+    missing_claimant: >-
+      Pretendente ausente conserva registro da reivindicação, mas não pode ser
+      instalado sem aceitação ou representação válida. Depois das janelas de
+      prova, o Tribunal pode autorizar que a ordem prossiga provisoriamente,
+      preservando o direito de contestação no retorno.
+    return: >-
+      Retorno exige verificação de identidade, capacidade e continuidade dos
+      direitos. Não desfaz atos válidos, não remove soberano instalado e não
+      restaura cargo automaticamente; abre procedimento de restauração ou disputa.
+  removal:
+    grounds:
+      - "Fraude consciente ou usurpação comprovada na própria instalação."
+      - "Violação grave e reiterada dos limites pactuados depois de ordem válida de correção."
+      - "Incapacidade permanente segundo o procedimento próprio."
+      - "Abandono reconhecido pelo procedimento de desaparecimento."
+    procedure: >-
+      Acusação subscrita por um terço do Conselho abre instrução. Dois terços
+      podem suspender temporariamente o exercício e ativar regência. Destituição
+      exige decisão fundamentada do Tribunal e três quartos de todos os assentos
+      válidos e preenchidos do Conselho.
+    effect: >-
+      Remove a pessoa do cargo e pode suspender sua reivindicação conforme a
+      decisão, sem atribuir culpa, incapacidade ou perda de direitos a
+      descendentes e parentes por associação.
+  restoration:
+    grounds:
+      - "Anulação de renúncia, abdicação, destituição ou prova por fraude, coerção ou erro material."
+      - "Recuperação de capacidade quando a pessoa conservou o título."
+      - "Retorno de pessoa desaparecida e verificação de seus direitos."
+      - "Nova prova material capaz de alterar elegibilidade ou prioridade."
+    procedure: >-
+      O Tribunal decide a existência do direito. Dois terços do Conselho
+      reconhecem restauração de reivindicação; restauração de pessoa validamente
+      destituída à própria Coroa exige três quartos. Soberano já instalado não é
+      removido sem processo de disputa e destituição aplicável.
+    temporal_effect: >-
+      Restauração vale prospectivamente, preserva atos válidos praticados antes e
+      não converte conhecimento privado em conhecimento público sem comunicação.
+  dispute_resolution_procedure:
+    steps:
+      - "Publicar a vacância ou a controvérsia sem declarar vencedor."
+      - "Registrar cada reivindicação, fonte, representante e alcance conhecido."
+      - "Notificar pessoas e órgãos alcançáveis por canais disponíveis, sem presumir conhecimento universal."
+      - "Abrir acesso às provas compatível com privacidade, segurança e contestação efetiva."
+      - "Receber impugnações, traduções, perícias e correções preservando versões."
+      - "Decidir identidade, elegibilidade e prioridade separadamente no Tribunal."
+      - "Submeter a pessoa prioritária à confirmação do Conselho e registrar votos e fundamentos."
+      - "Instalar a pessoa confirmada ou manter interregno se a confirmação válida não ocorrer."
+      - "Preservar vias de revisão para fraude, nova prova, retorno ou vício do procedimento."
+    outcome_limits: >-
+      A decisão estabelece situação jurídica, não garante apoio, obediência,
+      competência, segurança ou duração do reinado. Resultado efetivo dependerá
+      de ações, relações, informações e eventos futuros.
+  crisis_conditions:
+    - "Registros ausentes, contraditórios, destruídos, falsificados ou inacessíveis."
+    - "Reconhecimento tardio de filiação, adoção contestada ou nascimento durante a vacância."
+    - "Dois ou mais ramos sem ordem factual comprovável."
+    - "Sucessor presumido desaparecido, incapaz, menor ou resistente à instalação."
+    - "Retorno de soberano ou pretendente depois de regência, interregno ou nova instalação."
+    - "Conselho sem quórum, dividido ou recusando prioridade decidida sem fundamento aceito."
+    - "Tribunal, Registro, Coroa, Conselho ou futuras autoridades territoriais reconhecendo resultados diferentes."
+    - "Fraude atribuída ao pretendente, a apoiadores ou a agentes de registro sem prova conclusiva."
+    - "Grande divergência entre prioridade jurídica, legitimidade social e apoio político."
+    - "Regência excedendo limites, prolongando a vacância ou favorecendo um ramo."
+capital_id: null
+primary_currency_key: null
+currencies: []
+calendar_id: "calendar.marco"
+language_ids:
+  - "language.valdren"
+  - "language.ardren"
+  - "language.senkar"
+initial_state:
+  era_id: null
+  ruler_id: null
+  council_faction_ids: []
+  external_relations: []
+  metrics:
+    stability: null
+    legitimacy: null
+    prosperity: null
+    security: null
+    cohesion: null
+    freedom: null
+    inequality: null
+    magical_tension: null
+    trust_in_crown: null
+    religious_influence: null
+  treasury:
+    money:
+      amount: null
+      currency_key: null
+  administrative_capacity: null
+  crisis_ids: []
+founding_event_ids: []
